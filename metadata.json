@@ -1,0 +1,5 @@
+{
+  "name": "Cloudflare Skills Module",
+  "description": "An AI Studio application featuring a new skill to host and deploy website and application frameworks on Cloudflare Hosting Services.",
+  "requestFramePermissions": []
+}
