@@ -24,43 +24,61 @@ export async function onRequest(context) {
     }
   );
 
-  // 2. Define Resources (The Skills)
+  // 2. Define Resources
   server.setRequestHandler(ListResourcesRequestSchema, async () => {
     return {
       resources: [
         {
-          uri: "skill://surgical-debugger",
-          name: "Surgical Debugger",
-          description: "Targeted code fixes for breaking bugs",
-          mimeType: "text/markdown",
+          uri: "https://bkraiskillsmcp.pages.dev/llms-full.txt",
+          name: "All Skills (Full Text)",
+          description: "A single document containing all system instruction templates.",
+          mimeType: "text/plain",
         },
         {
-          uri: "skill://systems-architect",
-          name: "Systems Architect",
-          description: "High-level planning for repo structures",
-          mimeType: "text/markdown",
+          uri: "https://bkraiskillsmcp.pages.dev/llms.txt",
+          name: "Skills Index",
+          description: "Machine-readable list of available skills.",
+          mimeType: "text/plain",
         }
       ],
     };
   });
 
-  // 3. Define Resource Content Handler
-  server.setRequestHandler(ReadResourceRequestSchema, async (request) => {
-    const uri = request.params.uri;
-    
-    // In a real implementation, we would fetch from the KV or static host
-    // For this POC, we return high-impact templates
-    if (uri === "skill://surgical-debugger") {
+  // 3. Define Tools (to help AI fetch specific skills)
+  server.setRequestHandler(ListToolsRequestSchema, async () => {
+    return {
+      tools: [
+        {
+          name: "get_skill",
+          description: "Fetch the raw system instruction for a specific skill.",
+          inputSchema: {
+            type: "object",
+            properties: {
+              skill_id: { 
+                type: "string", 
+                description: "The filename of the skill (e.g., 'surgical-debugger')" 
+              },
+            },
+            required: ["skill_id"],
+          },
+        },
+      ],
+    };
+  });
+
+  server.setRequestHandler(CallToolRequestSchema, async (request) => {
+    if (request.params.name === "get_skill") {
+      const skillId = request.params.arguments?.skill_id;
       return {
-        contents: [{
-          uri,
-          mimeType: "text/markdown",
-          text: "# Surgical Debugger\nRole: Senior Debugger...\n" 
-        }]
+        content: [
+          {
+            type: "text",
+            text: `To use this skill, please visit: https://bkraiskillsmcp.pages.dev/skills/${skillId}.md`
+          },
+        ],
       };
     }
-    
-    throw new Error("Resource not found");
+    throw new Error("Tool not found");
   });
 
   // 4. Handle Transport

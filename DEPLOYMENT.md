@@ -40,9 +40,23 @@ We have added the following deployment scripts to `package.json`:
 - `npm run pages:deploy`: Runs Wrangler to push the `dist/` directory to Cloudflare Pages.
 - `npm run deploy`: Combines both steps. It first runs the build, then deploys to Cloudflare Pages.
 
-### How to Deploy
-Run the following command:
-```bash
-npm run deploy
-```
-*Note: Make sure your API Token and Account ID are set in the environment or the deployment will fail.*
+## 4. MCP & LLM Context Discovery
+
+This project is optimized for AI consumption via two main protocols:
+
+### A. Simple LLM Ingestion (URL-based)
+If you are using a tool like **Cursor**, **Windsurf**, or **Gemini/Claude** with long context:
+1. Provide the URL: `https://bkraiskillsmcp.pages.dev/llms-full.txt`
+2. This file contains the **entire** skills knowledge base in a single document for one-shot ingestion.
+
+### B. MCP Server (Protocol-based)
+For AI clients that support the **Model Context Protocol (MCP)**:
+- **SSE Endpoint:** `https://bkraiskillsmcp.pages.dev/api/mcp`
+- This endpoint allows agents to dynamically discover and retrieve skills as tools or resources.
+
+### C. Raw GitHub Context
+If you are pointing an AI to your GitHub repository, ensure you reference the correct paths:
+- Skills Source: `https://github.com/alhader-ind/bkraiskillsmcp/tree/main/src/raw-skills`
+- Raw Link Example: `https://raw.githubusercontent.com/alhader-ind/bkraiskillsmcp/main/src/raw-skills/surgical-debugger.md`
+
+*Note: Ensure your GitHub branch matches `main` or update the links accordingly.*
