@@ -1,0 +1,41 @@
+# SkillsGem AI - Full Skills Index
+
+This file provides raw links and descriptions for every skill in the knowledge base.
+
+## Core App Building
+- [Systems Architect](/skills/systems-architect.md): Architecture and file tree planning.
+- [Frontend Engineer](/skills/frontend-engineer.md): UI development with zero placeholders.
+- [Backend Engineer](/skills/backend-engineer.md): Secure server-side routes and logic.
+- [Surgical Debugger](/skills/surgical-debugger.md): Pinpointing and fixing exact logic errors.
+- [Context Manager](/skills/context-manager.md): Summarizing codebase state for session handoffs.
+
+## Frameworks & Hosting
+- [Hono Framework](/skills/hono-framework.md): Edge-optimized API development.
+- [Laravel Framework](/skills/laravel-framework.md): Full-stack PHP application guidelines.
+- [Cloudflare Hosting](/skills/cloudflare-hosting.md): Deploying to Pages and Workers.
+- [Remix Framework](/skills/remix-framework.md): Full-stack React routing.
+- [Next.js Framework](/skills/nextjs-framework.md): Optimization and App Router guidelines.
+- [Svelte Framework](/skills/svelte-framework.md): Reactive UI patterns.
+- [Astro / Qwik](/skills/astro-qwik-framework.md): Island architecture and hydration.
+
+## Specialized Engineering
+- [Database Architect](/skills/database-architect.md): SQL/NoSQL schema normalization.
+- [API Integrator](/skills/api-integrator.md): Secure connections to external services.
+- [QA Test Engineer](/skills/qa-test-engineer.md): Unit and edge-case testing.
+- [Git Master](/skills/git-master.md): Conflict resolution and version control.
+- [Regex Crafter](/skills/regex-crafter.md): Efficient pattern matching logic.
+- [State Strategist](/skills/state-management-strategist.md): Global vs local data flow.
+- [SecOps Engineer](/skills/secops-security-engineer.md): Threat mitigation and auth hardening.
+
+## Debugging & Meta
+- [Rubber Duck Debugger](/skills/rubber-duck-debugger.md): Socratic unblocking.
+- [Surgical Debugger](/skills/surgical-debugger.md): Targeted bug fixing.
+- [Step-by-Step Reasoner](/skills/step-by-step-reasoner.md): Logical deduction.
+- [Prompt Optimizer](/skills/prompt-optimizer.md): Refining vague instructions.
+- [Data Extractor](/skills/data-extraction-specialist.md): Unstructured text to JSON.
+
+## Quality & Polishing
+- [Code Refactoring Specialist](/skills/code-refactoring-specialist.md): Cleaning messy logic (SOLID/DRY).
+- [Performance Profiler](/skills/performance-profiler.md): Lighthouse and bundle optimization.
+- [UI/UX Polisher](/skills/ui-ux-polisher.md): Micro-interactions and animations.
+- [A11y Auditor](/skills/a11y-accessibility-auditor.md): WCAG accessibility compliance.

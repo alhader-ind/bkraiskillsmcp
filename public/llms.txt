@@ -1,0 +1,22 @@
+# SkillsGem Intelligence (MCP)
+
+> A high-fidelity repository of System Instruction templates and technical skills for AI Agentic workflows.
+
+## Discovery
+This site serves as an MCP (Model Context Protocol) context provider. You can access individual skills as raw Markdown for your system instructions.
+
+- [Main AI Skills Index](/llms-full.txt): Detailed list of all 40+ skills with short descriptions.
+- [MCP Discovery](/api/mcp): JSON-RPC endpoint for MCP-compatible clients.
+
+## High-Impact Skills
+- [Systems Architect](/skills/systems-architect.md): Planning full-stack tech stacks and file trees.
+- [Surgical Debugger](/skills/surgical-debugger.md): Minimal diff fixes for breaking bugs.
+- [Frontend Engineer](/skills/frontend-engineer.md): Building clean, responsive UI components.
+- [Backend Engineer](/skills/backend-engineer.md): Secure API and authentication architecture.
+- [Database Architect](/skills/database-architect.md): Normalized schema design (3NF).
+- [API Integrator](/skills/api-integrator.md): Connecting Stripe, OAuth, and Third-party services.
+- [Rubber Duck](/skills/rubber-duck-debugger.md): Socratic debugging for complex logic loops.
+
+## Deployment Context
+- [Cloudflare Hosting](/skills/cloudflare-hosting.md): Guidelines for deploying to Cloudflare Pages/Workers.
+- [Hono Framework](/skills/hono-framework.md): Building ultrafast edge APIs.
