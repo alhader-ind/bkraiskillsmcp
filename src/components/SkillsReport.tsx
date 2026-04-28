@@ -24,6 +24,12 @@ export const SkillsReport = () => {
 
   return (
     <div className="grid grid-cols-1 gap-4 animate-in fade-in duration-500">
+      <div className="p-4 bg-slate-50 rounded-xl border border-slate-200 mb-2">
+        <p className="text-xs text-slate-500 leading-relaxed">
+          This knowledge base is served as an <span className="font-semibold text-blue-600">MCP (Model Context Protocol)</span> resource. 
+          AI agents can access the raw instructions via the machine-readable <a href="/llms.txt" className="text-blue-600 font-medium hover:underline">/llms.txt</a>.
+        </p>
+      </div>
       {SKILLS_LIST.map((skill) => {
         const isExpanded = expandedSkill === skill.id;
         const markdownContent = skillsData[skill.id] ? stripFrontmatter(skillsData[skill.id]) : 'No data available.';

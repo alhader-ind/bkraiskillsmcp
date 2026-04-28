@@ -4,10 +4,11 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "npm run sync-skills && vite build",
+    "sync-skills": "node scripts/sync-skills.js",
     "preview": "vite preview",
     "pages:deploy": "wrangler pages deploy dist",
-    "deploy": "npm run build && npm run pages:deploy"
+    "deploy": "npm run sync-skills && npm run build && npm run pages:deploy"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.29.0",
