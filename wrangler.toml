@@ -1,0 +1,10 @@
+name = "agent-analysis-report"
+compatibility_date = "2026-04-28"
+pages_build_output_dir = "dist"
+
+[vars]
+# Add public environment variables here
+VITE_APP_ENV = "production"
+
+# [site]
+# bucket = "./dist"
