@@ -49,7 +49,7 @@ import stateManagementStrategist from './raw-skills/state-management-strategist.
 // @ts-ignore
 import devopsDeploymentEngineer from './raw-skills/devops-deployment-engineer.md?raw';
 // @ts-ignore
-import codeRefactoringSpecialist from './raw-skills/code-refactoring-specialist.md?raw';
+import cleanCoder from './raw-skills/code-refactoring-specialist.md?raw';
 // @ts-ignore
 import performanceProfiler from './raw-skills/performance-profiler.md?raw';
 // @ts-ignore
@@ -95,7 +95,7 @@ import honoFramework from './raw-skills/hono-framework.md?raw';
 // @ts-ignore
 import laravelFramework from './raw-skills/laravel-framework.md?raw';
 // @ts-ignore
-import codeRefactoring from './raw-skills/code-refactoring.md?raw';
+import mysqlArchitect from './raw-skills/mysql-architect.md?raw';
 
 export const skillsData: Record<string, string> = {
   "google-search-grounding": googleSearchGrounding,
@@ -123,7 +123,7 @@ export const skillsData: Record<string, string> = {
   "regex-crafter": regexCrafter,
   "state-management-strategist": stateManagementStrategist,
   "devops-deployment-engineer": devopsDeploymentEngineer,
-  "code-refactoring-specialist": codeRefactoringSpecialist,
+  "clean-coder": cleanCoder,
   "performance-profiler": performanceProfiler,
   "ui-ux-polisher": uiUxPolisher,
   "a11y-accessibility-auditor": a11yAccessibilityAuditor,
@@ -146,5 +146,5 @@ export const skillsData: Record<string, string> = {
   "nuxt-framework": nuxtFramework,
   "hono-framework": honoFramework,
   "laravel-framework": laravelFramework,
-  "code-refactoring": codeRefactoring
+  "mysql-architect": mysqlArchitect
 };

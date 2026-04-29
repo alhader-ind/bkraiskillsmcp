@@ -312,14 +312,14 @@ export const SKILLS_LIST: Skill[] = [
   },
   {
     name: "Clean Coder",
-    id: "code-refactoring-specialist",
+    id: "clean-coder",
     icon: <Wrench className="w-5 h-5" />,
     color: "bg-teal-50 text-teal-600",
-    description: "Modular restructuring and cyclomatic reduction.",
+    description: "Advanced structural engineering and high-fidelity architectural synthesis.",
     examples: [
-      "Refactoring monolith files into small modules.",
-      "Applying SOLID and DRY principles to messy logic.",
-      "Adding professional JSDoc to existing code."
+      "Refactoring chaotic logic into modular systems.",
+      "Applying SOLID principles to systemic debt.",
+      "Optimizing cognitive load and functional purity."
     ]
   },
   {
@@ -587,15 +587,15 @@ export const SKILLS_LIST: Skill[] = [
     ]
   },
   {
-    name: "Code Refactoring",
-    id: "code-refactoring",
-    icon: <Wrench className="w-5 h-5" />,
-    color: "bg-teal-100 text-teal-700",
-    description: "Guidelines for refactoring bloated or messy code blocks into modular functions.",
+    name: "MySQL Architect",
+    id: "mysql-architect",
+    icon: <Database className="w-5 h-5" />,
+    color: "bg-blue-100 text-blue-700",
+    description: "Advanced schema engineering, query optimization, and high-performance data orchestration.",
     examples: [
-      "Reducing cyclomatic complexity and deeply nested logic.",
-      "Extracting repeating code into modular utilities.",
-      "Adding professional JSDoc comments to functions."
+      "Designing scalable, ACID-compliant relational systems.",
+      "Tuning complex SQL query execution plans.",
+      "Implementing high-availability data topologies."
     ]
   }
 ];
