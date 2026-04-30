@@ -2,7 +2,8 @@ import React from 'react';
 import { 
   Box, Cpu, LayoutTemplate, 
   Image as ImageIcon, Fingerprint, Network, Boxes, TerminalSquare,
-  MousePointer2, Cloud, Wrench, Database, FileText
+  MousePointer2, Cloud, Wrench, Database, FileText, ShieldAlert,
+  BrainCircuit
 } from 'lucide-react';
 import { Skill } from '../types';
 
@@ -596,6 +597,54 @@ export const SKILLS_LIST: Skill[] = [
       "Designing scalable, ACID-compliant relational systems.",
       "Tuning complex SQL query execution plans.",
       "Implementing high-availability data topologies."
+    ]
+  },
+  {
+    name: "Dependency Officer",
+    id: "dependency-integrity-officer",
+    icon: <Boxes className="w-5 h-5" />,
+    color: "bg-orange-100 text-orange-700",
+    description: "Advanced package management, dependency resolution, and version collision mitigation.",
+    examples: [
+      "Fixing complex npm/yarn installation errors.",
+      "Resolving pier-dependency version conflicts.",
+      "Optimizing dependency trees for production builds."
+    ]
+  },
+  {
+    name: "Migration Specialist",
+    id: "orm-migration-specialist",
+    icon: <Database className="w-5 h-5" />,
+    color: "bg-emerald-100 text-emerald-700",
+    description: "Advanced database schema evolution, ORM orchestration, and migration engineering.",
+    examples: [
+      "Designing resilient Prisma/Drizzle schemas.",
+      "Resolving database migration drift issues.",
+      "Implementing zero-data-loss schema evolutions."
+    ]
+  },
+  {
+    name: "Hallucination Shield",
+    id: "failure-mode-preemptor",
+    icon: <ShieldAlert className="w-5 h-5" />,
+    color: "bg-red-100 text-red-700",
+    description: "Advanced root-cause isolation and deterministic recovery paths.",
+    examples: [
+      "Breaking infinite error-fix-error loops.",
+      "Surgical stack-trace deconstruction.",
+      "Providing deterministic paths out of build failures."
+    ]
+  },
+  {
+    name: "Memory Manager",
+    id: "technical-memory-manager",
+    icon: <BrainCircuit className="w-5 h-5" />,
+    color: "bg-purple-100 text-purple-700",
+    description: "Technical memory management and project state persistence.",
+    examples: [
+      "Maintaining CONTEXT.md for state tracking.",
+      "Mapping architectural topography.",
+      "Preventing contextual drift across long sessions."
     ]
   }
 ];

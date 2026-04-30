@@ -96,6 +96,14 @@ import honoFramework from './raw-skills/hono-framework.md?raw';
 import laravelFramework from './raw-skills/laravel-framework.md?raw';
 // @ts-ignore
 import mysqlArchitect from './raw-skills/mysql-architect.md?raw';
+// @ts-ignore
+import dependencyIntegrityOfficer from './raw-skills/dependency-integrity-officer.md?raw';
+// @ts-ignore
+import ormMigrationSpecialist from './raw-skills/orm-migration-specialist.md?raw';
+// @ts-ignore
+import failureModePreemptor from './raw-skills/failure-mode-preemptor.md?raw';
+// @ts-ignore
+import technicalMemoryManager from './raw-skills/technical-memory-manager.md?raw';
 
 export const skillsData: Record<string, string> = {
   "google-search-grounding": googleSearchGrounding,
@@ -146,5 +154,9 @@ export const skillsData: Record<string, string> = {
   "nuxt-framework": nuxtFramework,
   "hono-framework": honoFramework,
   "laravel-framework": laravelFramework,
-  "mysql-architect": mysqlArchitect
+  "mysql-architect": mysqlArchitect,
+  "dependency-integrity-officer": dependencyIntegrityOfficer,
+  "orm-migration-specialist": ormMigrationSpecialist,
+  "failure-mode-preemptor": failureModePreemptor,
+  "technical-memory-manager": technicalMemoryManager
 };
