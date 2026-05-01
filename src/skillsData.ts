@@ -104,6 +104,24 @@ import ormMigrationSpecialist from './raw-skills/orm-migration-specialist.md?raw
 import failureModePreemptor from './raw-skills/failure-mode-preemptor.md?raw';
 // @ts-ignore
 import technicalMemoryManager from './raw-skills/technical-memory-manager.md?raw';
+// @ts-ignore
+import authSchemaArchitect from './raw-skills/auth-schema-architect.md?raw';
+// @ts-ignore
+import jwtServiceEngineer from './raw-skills/jwt-service-engineer.md?raw';
+// @ts-ignore
+import apiRouteOrchestrator from './raw-skills/api-route-orchestrator.md?raw';
+// @ts-ignore
+import loginUiSpecialist from './raw-skills/login-ui-specialist.md?raw';
+// @ts-ignore
+import signupUiSpecialist from './raw-skills/signup-ui-specialist.md?raw';
+// @ts-ignore
+import dbMigrationExpert from './raw-skills/db-migration-expert.md?raw';
+// @ts-ignore
+import middlewareEngineer from './raw-skills/middleware-engineer.md?raw';
+// @ts-ignore
+import rateLimitingOfficer from './raw-skills/rate-limiting-officer.md?raw';
+// @ts-ignore
+import qaTestSpecialist from './raw-skills/qa-test-specialist.md?raw';
 
 export const skillsData: Record<string, string> = {
   "google-search-grounding": googleSearchGrounding,
@@ -158,5 +176,14 @@ export const skillsData: Record<string, string> = {
   "dependency-integrity-officer": dependencyIntegrityOfficer,
   "orm-migration-specialist": ormMigrationSpecialist,
   "failure-mode-preemptor": failureModePreemptor,
-  "technical-memory-manager": technicalMemoryManager
+  "technical-memory-manager": technicalMemoryManager,
+  "auth-schema-architect": authSchemaArchitect,
+  "jwt-service-engineer": jwtServiceEngineer,
+  "api-route-orchestrator": apiRouteOrchestrator,
+  "login-ui-specialist": loginUiSpecialist,
+  "signup-ui-specialist": signupUiSpecialist,
+  "db-migration-expert": dbMigrationExpert,
+  "middleware-engineer": middlewareEngineer,
+  "rate-limiting-officer": rateLimitingOfficer,
+  "qa-test-specialist": qaTestSpecialist
 };

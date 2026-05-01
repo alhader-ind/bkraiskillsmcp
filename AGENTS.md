@@ -57,6 +57,9 @@ API, Integration & Backend Engineering
 Skill Path Use When...
 api-function-caller /skills/api-function-caller.md Advanced tool orchestration, recursive parameter resolution, autonomous action-chaining; transforming conversational intent into high-fidelity system executions
 api-integrator /skills/api-integrator.md Third-party ecosystem integration, secure webhook orchestration, multi-provider OAuth implementation; building production-grade external service connections
+auth-schema-architect /skills/auth-schema-architect.md Advanced authentication data modeling and identity integrity engineering; designing secure user schemas and RBAC models
+jwt-service-engineer /skills/jwt-service-engineer.md Advanced stateless session management and token lifecycle engineering; secure JWT implementation and refresh token rotation
+api-route-orchestrator /skills/api-route-orchestrator.md Advanced endpoint engineering and request-response lifecycle management; designing high-performance REST/GraphQL APIs
 backend-engineer /skills/backend-engineer.md Advanced API orchestration, secure data modeling, high-integrity server-side systems; building robust, scalable backends and complex server logic
 oauth-integration /skills/oauth-integration.md OAuth 2.0/2.1 flows, token management, authorization server integration
 
@@ -69,6 +72,8 @@ frontend-engineer /skills/frontend-engineer.md Advanced UI engineering, componen
 nextjs-framework /skills/nextjs-framework.md Modern React web apps using Next.js App Router; full-stack apps or static sites requiring Server Components and SEO
 nuxt-framework /skills/nuxt-framework.md Modern Vue web apps using Nuxt 3+
 remix-framework /skills/remix-framework.md Full-stack React apps with server-side rendering, nested routing, standard web fetch APIs via loaders and actions
+login-ui-specialist /skills/login-ui-specialist.md High-conversion authentication interface engineering; building accessible and high-performance login flows
+signup-ui-specialist /skills/signup-ui-specialist.md Growth-optimized user onboarding and registration engineering; building high-conversion multi-step signups
 svelte-framework /skills/svelte-framework.md Reactive web apps using Svelte 5 and SvelteKit; modern, highly reactive full-stack apps or static sites
 wasp-framework /skills/wasp-framework.md Full-stack React/Node.js apps with declarative configuration for routing, auth, and database
 laravel-framework /skills/laravel-framework.md Robust full-stack PHP apps using Laravel 11/12/13
@@ -82,12 +87,14 @@ Skill Path Use When...
 data-extraction-specialist /skills/data-extraction-specialist.md Unstructured-to-structured synthesis, semantic entity resolution; transforming chaotic text/documents into production-ready data schemas
 database-architect /skills/database-architect.md Advanced database schema design, multi-model data orchestration; designing high-integrity SQL/NoSQL structures, optimization strategies, transactional stability
 mysql-architect /skills/mysql-architect.md Advanced MySQL schema engineering, query optimization, high-performance data orchestration; scalable ACID-compliant relational systems, complex SQL tuning
+db-migration-expert /skills/db-migration-expert.md Advanced database schema evolution and state-management engineering; zero-downtime migrations and schema versioning
 
 DevOps, Cloud & Deployment
 
 Skill Path Use When...
 orm-migration-specialist /skills/orm-migration-specialist.md Advanced database schema evolution, ORM orchestration (Prisma, Drizzle, TypeORM), and high-fidelity migration engineering
 dependency-integrity-officer /skills/dependency-integrity-officer.md Advanced package management, dependency resolution, and version collision mitigation
+middleware-engineer /skills/middleware-engineer.md Advanced request interception and cross-cutting concern orchestration; building security guards and multi-tenant routing
 devops-deployment-engineer /skills/devops-deployment-engineer.md Cloud infrastructure engineering, CI/CD pipeline automation; deploying complex systems with Docker, Vercel, and Cloud Run configurations
 cloudflare-hosting /skills/cloudflare-hosting.md Deploying websites/apps to Cloudflare Pages and Workers; automated deployments, full-stack Cloudflare configurations
 systems-architect /skills/systems-architect.md Technical stack orchestration, repository engineering, multi-tier scalability roadmapping; production-grade system blueprints and complex refactorings
@@ -104,12 +111,14 @@ github-import-migration /skills/github-import-migration.md GitHub repository imp
 Security & Operations
 
 Skill Path Use When...
+rate-limiting-officer /skills/rate-limiting-officer.md Advanced traffic control and resource exhaustion protection; designing sliding-window limiters and DDoS mitigation
 secops-security-engineer /skills/secops-security-engineer.md Zero-trust architecture, cryptographic integrity, adversarial threat mitigation; building mission-critical, secure-by-default applications
 
 Testing, Debugging & Quality Assurance
 
 Skill Path Use When...
 failure-mode-preemptor /skills/failure-mode-preemptor.md Advanced root-cause isolation, stack-trace deconstruction, and deterministic recovery paths
+qa-test-specialist /skills/qa-test-specialist.md Advanced quality assurance and systemic regression protection; building E2E flows and TDD suites
 qa-test-engineer /skills/qa-test-engineer.md Quality assurance automation, systemic edge-case discovery, full-spectrum testing engineering; building resilient unit, integration, and E2E test suites
 surgical-debugger /skills/surgical-debugger.md Advanced root-cause isolation, stack-trace deconstruction, minimal-disruption bug resolution; identifying and fixing mission-critical system failures
 rubber-duck-debugger /skills/rubber-duck-debugger.md Socratic debugging when fully stuck; user says "nothing works," "completely stuck," "frustrated"

@@ -646,5 +646,113 @@ export const SKILLS_LIST: Skill[] = [
       "Mapping architectural topography.",
       "Preventing contextual drift across long sessions."
     ]
+  },
+  {
+    name: "Auth Architect",
+    id: "auth-schema-architect",
+    icon: <Fingerprint className="w-5 h-5" />,
+    color: "bg-indigo-100 text-indigo-700",
+    description: "Advanced authentication data modeling and identity integrity.",
+    examples: [
+      "Designing secure RBAC user schemas.",
+      "Implementing multi-factor data structures.",
+      "Ensuring cryptographic identity integrity."
+    ]
+  },
+  {
+    name: "JWT Engineer",
+    id: "jwt-service-engineer",
+    icon: <Fingerprint className="w-5 h-5" />,
+    color: "bg-cyan-100 text-cyan-700",
+    description: "Advanced stateless session and token lifecycle engineering.",
+    examples: [
+      "Implementing refresh token rotation.",
+      "Hardening JWT claims for authorization.",
+      "Asymmetric key exchange setup."
+    ]
+  },
+  {
+    name: "API Orchestrator",
+    id: "api-route-orchestrator",
+    icon: <Network className="w-5 h-5" />,
+    color: "bg-blue-100 text-blue-700",
+    description: "Advanced endpoint engineering and request lifecycle management.",
+    examples: [
+      "Designing schema-first REST/GraphQL APIs.",
+      "Decoupling business logic from handlers.",
+      "Implementing uniform error topographies."
+    ]
+  },
+  {
+    name: "Login UI Expo",
+    id: "login-ui-specialist",
+    icon: <LayoutTemplate className="w-5 h-5" />,
+    color: "bg-sky-100 text-sky-700",
+    description: "High-conversion authentication interface engineering.",
+    examples: [
+      "Building accessible, high-performance login flows.",
+      "Implementing real-time form validation.",
+      "Optimizing password manager integration."
+    ]
+  },
+  {
+    name: "Signup UI Expo",
+    id: "signup-ui-specialist",
+    icon: <LayoutTemplate className="w-5 h-5" />,
+    color: "bg-violet-100 text-violet-700",
+    description: "Growth-optimized onboarding and registration engineering.",
+    examples: [
+      "Designing multi-step registration flows.",
+      "Implementing verification magic-link bridges.",
+      "Optimizing growth-centered onboarding UX."
+    ]
+  },
+  {
+    name: "Migration Expert",
+    id: "db-migration-expert",
+    icon: <Database className="w-5 h-5" />,
+    color: "bg-stone-100 text-stone-700",
+    description: "Advanced database schema evolution and state-management.",
+    examples: [
+      "Designing zero-downtime database migrations.",
+      "Implementing declarative data seeding.",
+      "Schema versioning and rollback logic."
+    ]
+  },
+  {
+    name: "Middleware Eng",
+    id: "middleware-engineer",
+    icon: <Cpu className="w-5 h-5" />,
+    color: "bg-slate-100 text-slate-700",
+    description: "Advanced request interception and context orchestration.",
+    examples: [
+      "Building defensive security header guards.",
+      "Injecting multi-tenant routing context.",
+      "Orchestrating global logging pipelines."
+    ]
+  },
+  {
+    name: "Traffic Control",
+    id: "rate-limiting-officer",
+    icon: <ShieldAlert className="w-5 h-5" />,
+    color: "bg-orange-100 text-orange-700",
+    description: "Advanced traffic control and resource protection.",
+    examples: [
+      "Designing sliding-window rate limiters.",
+      "Implementing distributed state throttling.",
+      "Neutralizing Denial of Wallet attacks."
+    ]
+  },
+  {
+    name: "QA Specialist",
+    id: "qa-test-specialist",
+    icon: <TerminalSquare className="w-5 h-5" />,
+    color: "bg-lime-100 text-lime-700",
+    description: "Advanced quality assurance and systemic reliability.",
+    examples: [
+      "Building E2E Playwright regression flows.",
+      "Implementing hermetic database mocking.",
+      "Tracing user stories to automated tests."
+    ]
   }
 ];
