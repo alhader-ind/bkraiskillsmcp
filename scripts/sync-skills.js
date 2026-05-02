@@ -31,10 +31,16 @@ async function fetchRemoteSkills() {
       // Use GitHub API to list files in the skills directory
       // Note: In a real environment we might need a token, but for public repos simple fetch often works for small scale
       const apiUrl = `https://api.github.com/repos/${source.repo}/contents/${source.basePath}?ref=${source.branch}`;
-      const response = await fetch(apiUrl);
+      const headers = process.env.GITHUB_TOKEN ? { Authorization: `token ${process.env.GITHUB_TOKEN}` } : {};
+      const response = await fetch(apiUrl, { headers });
       
       if (!response.ok) {
-        console.error(`Failed to fetch file list for ${source.name}: ${response.statusText}`);
+        // If rate limited and no token to help, just log warning and continue
+        if (response.status === 403 || response.status === 429) {
+          console.warn(`[WARNING] Rate limit exceeded for ${source.name}. Providing a GITHUB_TOKEN environment variable can fix this.`);
+        } else {
+          console.error(`[ERROR] Failed to fetch file list for ${source.name}: ${response.statusText}`);
+        }
         continue;
       }
 
