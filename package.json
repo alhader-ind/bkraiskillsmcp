@@ -16,6 +16,7 @@
     "@tailwindcss/typography": "^0.5.19",
     "express": "^5.2.1",
     "lucide-react": "^0.344.0",
+    "node-fetch": "^3.3.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-markdown": "^10.1.0"

@@ -3,7 +3,7 @@ import {
   Box, Cpu, LayoutTemplate, 
   Image as ImageIcon, Fingerprint, Network, Boxes, TerminalSquare,
   MousePointer2, Cloud, Wrench, Database, FileText, ShieldAlert,
-  BrainCircuit
+  BrainCircuit, Layers, Share2, Server
 } from 'lucide-react';
 import { Skill } from '../types';
 
@@ -753,6 +753,30 @@ export const SKILLS_LIST: Skill[] = [
       "Building E2E Playwright regression flows.",
       "Implementing hermetic database mocking.",
       "Tracing user stories to automated tests."
+    ]
+  },
+  {
+    name: "Agents SDK",
+    id: "cloudflare-agents-sdk",
+    icon: <BrainCircuit className="w-5 h-5" />,
+    color: "bg-orange-50 text-orange-600",
+    description: "Building stateful AI agents with Durable Objects and real-time connectivity.",
+    examples: [
+      "Defining stateful Agent classes on Cloudflare.",
+      "Managing persistent state with storage.put and storage.get.",
+      "Implementing real-time WebSockets and Alarms."
+    ]
+  },
+  {
+    name: "Composition Patterns",
+    id: "react-composition-patterns",
+    icon: <Layers className="w-5 h-5" />,
+    color: "bg-blue-50 text-blue-600",
+    description: "Advanced React architectures using slots, compounds, and modular design.",
+    examples: [
+      "Implementing Compound Component patterns.",
+      "Using Slots for complex, flexible layouts.",
+      "Managing global vs scoped context state."
     ]
   }
 ];

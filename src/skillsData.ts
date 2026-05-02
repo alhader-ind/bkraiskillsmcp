@@ -122,6 +122,10 @@ import middlewareEngineer from './raw-skills/middleware-engineer.md?raw';
 import rateLimitingOfficer from './raw-skills/rate-limiting-officer.md?raw';
 // @ts-ignore
 import qaTestSpecialist from './raw-skills/qa-test-specialist.md?raw';
+// @ts-ignore
+import cloudflareAgentsSdk from './raw-skills/cloudflare-agents-sdk.md?raw';
+// @ts-ignore
+import reactCompositionPatterns from './raw-skills/react-composition-patterns.md?raw';
 
 export const skillsData: Record<string, string> = {
   "google-search-grounding": googleSearchGrounding,
@@ -185,5 +189,7 @@ export const skillsData: Record<string, string> = {
   "db-migration-expert": dbMigrationExpert,
   "middleware-engineer": middlewareEngineer,
   "rate-limiting-officer": rateLimitingOfficer,
-  "qa-test-specialist": qaTestSpecialist
+  "qa-test-specialist": qaTestSpecialist,
+  "cloudflare-agents-sdk": cloudflareAgentsSdk,
+  "react-composition-patterns": reactCompositionPatterns
 };

@@ -1,27 +1,68 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { SkillItem } from './SkillItem';
 import { SKILLS_LIST } from '../constants/skills';
-import { skillsData } from '../skillsData';
 import { stripFrontmatter } from '../lib/utils';
-import { Copy, PackageCheck } from 'lucide-react';
+import { Copy, PackageCheck, Zap, Laptop, BookOpen } from 'lucide-react';
+
+interface DynamicSkill {
+  name: string;
+  description: string;
+  path: string;
+  tags: string[];
+  estimatedTokens: number;
+}
 
 /**
  * Main component to display the Skills Knowledge Base.
  * Manages the expanded state of individual skill items and the Context Cart.
- * 
- * @returns {React.JSX.Element} The rendered SkillsReport component.
  */
 export const SkillsReport = () => {
   const [expandedSkill, setExpandedSkill] = useState<string | null>(null);
   const [cart, setCart] = useState<string[]>([]);
   const [copied, setCopied] = useState(false);
+  const [dynamicSkills, setDynamicSkills] = useState<DynamicSkill[]>([]);
+  const [skillsContent, setSkillsContent] = useState<Record<string, string>>({});
+  const [loading, setLoading] = useState(true);
+
+  // Use the pre-bundled skillsData for core skills to avoid initial waterfall
+  // but we'll fetch others on demand or from the json
+  useEffect(() => {
+    const fetchSkills = async () => {
+      try {
+        const response = await fetch('/llms.json');
+        if (response.ok) {
+          const data = await response.json();
+          setDynamicSkills(data);
+        }
+      } catch (err) {
+        console.error('Failed to load dynamic skills:', err);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchSkills();
+  }, []);
+
+  const fetchSkillContent = async (id: string, path: string) => {
+    if (skillsContent[id]) return;
+    try {
+      const response = await fetch(path);
+      if (response.ok) {
+        const text = await response.text();
+        setSkillsContent(prev => ({ ...prev, [id]: text }));
+      }
+    } catch (err) {
+      console.error(`Failed to fetch content for ${id}:`, err);
+    }
+  };
 
   /**
    * Toggles the expansion state of a skill item based on its ID.
-   * 
-   * @param {string} skillId - The unique identifier of the skill to toggle.
    */
-  const handleToggle = (skillId: string) => {
+  const handleToggle = (skillId: string, path: string) => {
+    if (expandedSkill !== skillId) {
+      fetchSkillContent(skillId, path);
+    }
     setExpandedSkill(prev => prev === skillId ? null : skillId);
   };
 
@@ -41,8 +82,11 @@ export const SkillsReport = () => {
     let payload = `<system_instructions>\n  <context>\n    You are generating code for a project. Please adhere strictly to the following integrated core skills:\n  </context>\n\n`;
     
     cart.forEach(skillId => {
+      const skill = dynamicSkills.find(s => s.name === skillId || s.path.includes(skillId));
+      const content = skillsContent[skillId] || '';
+      
       payload += `  <skill name="${skillId}">\n`;
-      payload += skillsData[skillId] ? stripFrontmatter(skillsData[skillId]).replace(/^/gm, '    ') : '';
+      payload += content ? stripFrontmatter(content).replace(/^/gm, '    ') : '';
       payload += `\n  </skill>\n\n`;
     });
     
@@ -83,23 +127,60 @@ export const SkillsReport = () => {
         </p>
       </div>
       
-      {SKILLS_LIST.map((skill) => {
-        const isExpanded = expandedSkill === skill.id;
-        const inCart = cart.includes(skill.id);
-        const markdownContent = skillsData[skill.id] ? stripFrontmatter(skillsData[skill.id]) : 'No data available.';
+      {loading ? (
+        <div className="py-20 flex flex-col items-center justify-center text-slate-400 gap-4">
+          <div className="w-8 h-8 border-4 border-blue-500 border-t-transparent rounded-full animate-spin" />
+          <p className="text-sm font-medium">Re-indexing Knowledge Base...</p>
+        </div>
+      ) : (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {dynamicSkills.map((skill) => {
+            // Find if it's a native skill to match icons/colors
+            const id = skill.path.split('/').pop()?.replace('.md', '') || skill.name;
+            const nativeSkill = SKILLS_LIST.find(s => s.id === id);
+            
+            const isExpanded = expandedSkill === id;
+            const inCart = cart.includes(id);
+            const markdownContent = skillsContent[id] ? stripFrontmatter(skillsContent[id]) : 'Click to load instructions...';
 
-        return (
-          <SkillItem 
-            key={skill.id}
-            skill={skill}
-            isExpanded={isExpanded}
-            inCart={inCart}
-            onToggle={() => handleToggle(skill.id)}
-            onToggleCart={() => handleToggleCart(skill.id)}
-            markdownContent={markdownContent}
-          />
-        );
-      })}
+            // Map some icons based on tags if no native match
+            const getIcon = () => {
+              if (nativeSkill) return nativeSkill.icon;
+              if (skill.tags.some(t => t.toLowerCase().includes('cloud'))) return <Zap className="w-5 h-5" />;
+              if (skill.tags.some(t => t.toLowerCase().includes('frontend'))) return <Laptop className="w-5 h-5" />;
+              return <BookOpen className="w-5 h-5" />;
+            };
+
+            const getColor = () => {
+              if (nativeSkill) return nativeSkill.color;
+              if (skill.path.includes('cloudflare-')) return 'bg-orange-50 text-orange-600';
+              if (skill.path.includes('vercel-')) return 'bg-blue-50 text-blue-600';
+              return 'bg-slate-50 text-slate-600';
+            };
+
+            const displaySkill = {
+              name: skill.name,
+              id: id,
+              description: skill.description,
+              icon: getIcon(),
+              color: getColor(),
+              examples: [`Tags: ${skill.tags.join(', ')}`, `Est. Context Size: ~${skill.estimatedTokens} tokens`]
+            };
+
+            return (
+              <SkillItem 
+                key={skill.path}
+                skill={displaySkill}
+                isExpanded={isExpanded}
+                inCart={inCart}
+                onToggle={() => handleToggle(id, skill.path)}
+                onToggleCart={() => handleToggleCart(id)}
+                markdownContent={markdownContent}
+              />
+            );
+          })}
+        </div>
+      )}
     </div>
   );
 };

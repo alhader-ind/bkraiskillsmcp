@@ -19,51 +19,41 @@ export async function onRequest(context: any) {
     }
 
     const data = await manifestResponse.json();
+    const { tag, keyword, id, search } = url.searchParams;
     let filtered: any = data;
 
     if (id) {
       const skillId = String(id);
-      const skill = data.find((s: any) => s.path === `/skills/${skillId}.md` || s.name === skillId);
+      const skill = data.find((s: any) => s.path.includes(skillId) || s.name.toLowerCase() === skillId.toLowerCase());
       
-      if (!skill) {
-        return new Response(JSON.stringify({ error: "Skill not found" }), {
-          status: 404,
-          headers: { "Content-Type": "application/json" }
-        });
-      }
+      if (!skill) return new Response(JSON.stringify({ error: "Skill not found" }), { status: 404 });
 
-      // Fetch the actual markdown content
-      const mdUrl = new URL(skill.path, request.url);
-      const mdResponse = await fetch(mdUrl);
+      const mdResponse = await fetch(new URL(skill.path, request.url));
       const content = mdResponse.ok ? await mdResponse.text() : "";
+      return new Response(JSON.stringify({ ...skill, content }), { headers: { "Content-Type": "application/json" } });
+    }
 
-      return new Response(JSON.stringify({ ...skill, content }), {
-        headers: { "Content-Type": "application/json" }
-      });
+    const query = (search || keyword || "").toLowerCase();
+    if (query) {
+      filtered = filtered.filter((s: any) => 
+        s.name.toLowerCase().includes(query) || 
+        s.description.toLowerCase().includes(query) ||
+        (s.tags && s.tags.some((t: string) => t.toLowerCase().includes(query)))
+      );
     }
 
     if (tag) {
-      const tagQuery = String(tag).toLowerCase();
+      const tagQuery = tag.toLowerCase();
       filtered = filtered.filter((s: any) => 
         s.tags && s.tags.some((t: string) => t.toLowerCase().includes(tagQuery))
       );
     }
 
-    if (keyword) {
-      const kwQuery = String(keyword).toLowerCase();
-      filtered = filtered.filter((s: any) => 
-        s.name.toLowerCase().includes(kwQuery) || 
-        s.description.toLowerCase().includes(kwQuery) ||
-        (s.tags && s.tags.some((t: string) => t.toLowerCase().includes(kwQuery)))
-      );
-    }
-
     return new Response(JSON.stringify({
-      total: filtered.length,
+      info: "SkillsGem AI - Dynamic Edge Registry",
+      count: filtered.length,
       results: filtered
-    }), {
-      headers: { "Content-Type": "application/json" }
-    });
+    }), { headers: { "Content-Type": "application/json" } });
 
   } catch (error) {
     return new Response(JSON.stringify({ error: "Internal server error" }), {
