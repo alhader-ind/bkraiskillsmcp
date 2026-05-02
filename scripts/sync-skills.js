@@ -17,9 +17,9 @@ const REMOTE_SOURCES = [
   },
   {
     name: 'Vercel',
-    repo: 'vercel-labs/agent-skills',
+    repo: 'vercel/ai',
     branch: 'main',
-    basePath: 'src/skills'
+    basePath: 'skills'
   }
 ];
 
@@ -38,16 +38,33 @@ async function fetchRemoteSkills() {
         // If rate limited and no token to help, just log warning and continue
         if (response.status === 403 || response.status === 429) {
           console.warn(`[WARNING] Rate limit exceeded for ${source.name}. Providing a GITHUB_TOKEN environment variable can fix this.`);
+        } else if (response.status === 404) {
+          console.warn(`[WARNING] Repository or path not found for ${source.name} (${source.repo}/${source.basePath}). Skipping...`);
         } else {
-          console.error(`[ERROR] Failed to fetch file list for ${source.name}: ${response.statusText}`);
+          console.error(`[ERROR] Failed to fetch file list for ${source.name}: ${response.status} ${response.statusText}`);
         }
         continue;
       }
 
       const files = await response.json();
-      const mdFiles = files.filter(f => f.name.endsWith('.md') && f.type === 'file');
+      const itemsToProcess = [];
 
-      for (const file of mdFiles) {
+      for (const f of files) {
+        if (f.type === 'file' && f.name.endsWith('.md')) {
+          itemsToProcess.push(f);
+        } else if (f.type === 'dir') {
+          const dirRes = await fetch(f.url, { headers });
+          if (dirRes.ok) {
+            const dirFiles = await dirRes.json();
+            const skillMd = dirFiles.find(df => df.name.toLowerCase() === 'skill.md' || df.name.toLowerCase() === 'instructions.md' || df.name.endsWith('.md'));
+            if (skillMd) {
+              itemsToProcess.push({ ...skillMd, name: `${f.name}.md` });
+            }
+          }
+        }
+      }
+
+      for (const file of itemsToProcess) {
         const localPath = path.join(SRC_DIR, `${source.name.toLowerCase()}-${file.name}`);
         
         // Skip if local already exists to prevent accidental overwrite of customized local skills
