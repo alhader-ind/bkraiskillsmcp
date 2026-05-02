@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Code2 } from 'lucide-react';
 import { EnvironmentReport } from './components/EnvironmentReport';
-import { SkillsReport } from './components/SkillsReport';
+import { SkillsReport } from './features/skills/components/SkillsReport';
 
 /**
  * Main application entry point demonstrating the agent profile content and sections.
