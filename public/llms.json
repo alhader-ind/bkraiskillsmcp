@@ -86,6 +86,110 @@
     "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/backend-engineer.md"
   },
   {
+    "name": "bootstrap-astro-hybrid-site",
+    "description": "Strict, step-by-step initialization protocol for building an Astro hybrid site with React and Tailwind Integrations.",
+    "estimatedTokens": 1019,
+    "tags": [
+      "General"
+    ],
+    "path": "/skills/bootstrap-astro-hybrid-site.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/bootstrap-astro-hybrid-site.md"
+  },
+  {
+    "name": "bootstrap-express-react-fullstack",
+    "description": "Strict, step-by-step initialization protocol for building a bulletproof Express.js Backend + Vite React SPA Frontend environment. Solves CORS and port configuration limits.",
+    "estimatedTokens": 732,
+    "tags": [
+      "Step 2: The Backend Environment (`/backend",
+      "Step 3: The Frontend Environment (`/frontend"
+    ],
+    "path": "/skills/bootstrap-express-react-fullstack.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/bootstrap-express-react-fullstack.md"
+  },
+  {
+    "name": "bootstrap-nestjs-api",
+    "description": "Strict, step-by-step initialization protocol for building a NestJS TypeScript API. Bypasses interactive prompts for enterprise backends.",
+    "estimatedTokens": 795,
+    "tags": [
+      "Bootstrap Protocol: NestJS API"
+    ],
+    "path": "/skills/bootstrap-nestjs-api.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/bootstrap-nestjs-api.md"
+  },
+  {
+    "name": "bootstrap-nextjs-app-router",
+    "description": "Strict, step-by-step initialization protocol for building a bulletproof Next.js (App Router) environment. Prevents AI build failures during scaffolding.",
+    "estimatedTokens": 1169,
+    "tags": [
+      "General"
+    ],
+    "path": "/skills/bootstrap-nextjs-app-router.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/bootstrap-nextjs-app-router.md"
+  },
+  {
+    "name": "bootstrap-nuxt-vue3",
+    "description": "Strict, step-by-step initialization protocol for building a Nuxt 3 + Vue 3 environment. Bypasses highly interactive Nuxt CLIs.",
+    "estimatedTokens": 751,
+    "tags": [
+      "Step 2: Install Requi",
+      "Step 4: UI"
+    ],
+    "path": "/skills/bootstrap-nuxt-vue3.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/bootstrap-nuxt-vue3.md"
+  },
+  {
+    "name": "bootstrap-python-fastapi-react",
+    "description": "Strict initialization protocol for a Python FastAPI Backend and Vite React Frontend. Teaches AI to handle venv and requirements.txt alongside Node.",
+    "estimatedTokens": 744,
+    "tags": [
+      "Bootstrap Protocol: Python FastAPI",
+      "Step 2: The Backend Environment (`/backend",
+      "Step 3: The Frontend Environment (`/frontend"
+    ],
+    "path": "/skills/bootstrap-python-fastapi-react.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/bootstrap-python-fastapi-react.md"
+  },
+  {
+    "name": "bootstrap-react-native-expo",
+    "description": "Strict initialization protocol for React Native using Expo Router. Prevents AI from breaking builds by touching native code.",
+    "estimatedTokens": 762,
+    "tags": [
+      "General"
+    ],
+    "path": "/skills/bootstrap-react-native-expo.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/bootstrap-react-native-expo.md"
+  },
+  {
+    "name": "bootstrap-remix-run-stack",
+    "description": "Strict, step-by-step initialization protocol for building a Remix stack. Bypasses interactive prompts and configures official templates.",
+    "estimatedTokens": 806,
+    "tags": [
+      "General"
+    ],
+    "path": "/skills/bootstrap-remix-run-stack.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/bootstrap-remix-run-stack.md"
+  },
+  {
+    "name": "bootstrap-sveltekit-app",
+    "description": "Strict, step-by-step initialization protocol for building a bulletproof SvelteKit + Svelte 5 environment. Bypasses interactive create-svelte CLIs.",
+    "estimatedTokens": 1087,
+    "tags": [
+      "General"
+    ],
+    "path": "/skills/bootstrap-sveltekit-app.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/bootstrap-sveltekit-app.md"
+  },
+  {
+    "name": "bootstrap-vite-react-spa",
+    "description": "Strict, step-by-step initialization protocol for building a bulletproof Vite + React SPA environment. Prevents AI build failures during scaffolding.",
+    "estimatedTokens": 1369,
+    "tags": [
+      "General"
+    ],
+    "path": "/skills/bootstrap-vite-react-spa.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/bootstrap-vite-react-spa.md"
+  },
+  {
     "name": "Cloudflare README",
     "description": "Imported skill from Cloudflare repository.",
     "estimatedTokens": 1018,
@@ -263,6 +367,16 @@
     ],
     "path": "/skills/focus-mode.md",
     "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/focus-mode.md"
+  },
+  {
+    "name": "force-latest-dependencies",
+    "description": "Strict override protocol preventing AI from using outdated package versions from its training data. Enforces live web/npm search to determine the latest framework and library versions.",
+    "estimatedTokens": 760,
+    "tags": [
+      "General"
+    ],
+    "path": "/skills/force-latest-dependencies.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/force-latest-dependencies.md"
   },
   {
     "name": "\"frontend-design\"",

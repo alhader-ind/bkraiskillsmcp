@@ -60,6 +60,66 @@
 - **Tokens**: ~1584
 - **Granular API**: `/api/skills?id=backend-engineer`
 
+### [bootstrap-astro-hybrid-site](/skills/bootstrap-astro-hybrid-site.md)
+- **Description**: Strict, step-by-step initialization protocol for building an Astro hybrid site with React and Tailwind Integrations.
+- **Tags**: General
+- **Tokens**: ~1019
+- **Granular API**: `/api/skills?id=bootstrap-astro-hybrid-site`
+
+### [bootstrap-express-react-fullstack](/skills/bootstrap-express-react-fullstack.md)
+- **Description**: Strict, step-by-step initialization protocol for building a bulletproof Express.js Backend + Vite React SPA Frontend environment. Solves CORS and port configuration limits.
+- **Tags**: Step 2: The Backend Environment (`/backend, Step 3: The Frontend Environment (`/frontend
+- **Tokens**: ~732
+- **Granular API**: `/api/skills?id=bootstrap-express-react-fullstack`
+
+### [bootstrap-nestjs-api](/skills/bootstrap-nestjs-api.md)
+- **Description**: Strict, step-by-step initialization protocol for building a NestJS TypeScript API. Bypasses interactive prompts for enterprise backends.
+- **Tags**: Bootstrap Protocol: NestJS API
+- **Tokens**: ~795
+- **Granular API**: `/api/skills?id=bootstrap-nestjs-api`
+
+### [bootstrap-nextjs-app-router](/skills/bootstrap-nextjs-app-router.md)
+- **Description**: Strict, step-by-step initialization protocol for building a bulletproof Next.js (App Router) environment. Prevents AI build failures during scaffolding.
+- **Tags**: General
+- **Tokens**: ~1169
+- **Granular API**: `/api/skills?id=bootstrap-nextjs-app-router`
+
+### [bootstrap-nuxt-vue3](/skills/bootstrap-nuxt-vue3.md)
+- **Description**: Strict, step-by-step initialization protocol for building a Nuxt 3 + Vue 3 environment. Bypasses highly interactive Nuxt CLIs.
+- **Tags**: Step 2: Install Requi, Step 4: UI
+- **Tokens**: ~751
+- **Granular API**: `/api/skills?id=bootstrap-nuxt-vue3`
+
+### [bootstrap-python-fastapi-react](/skills/bootstrap-python-fastapi-react.md)
+- **Description**: Strict initialization protocol for a Python FastAPI Backend and Vite React Frontend. Teaches AI to handle venv and requirements.txt alongside Node.
+- **Tags**: Bootstrap Protocol: Python FastAPI, Step 2: The Backend Environment (`/backend, Step 3: The Frontend Environment (`/frontend
+- **Tokens**: ~744
+- **Granular API**: `/api/skills?id=bootstrap-python-fastapi-react`
+
+### [bootstrap-react-native-expo](/skills/bootstrap-react-native-expo.md)
+- **Description**: Strict initialization protocol for React Native using Expo Router. Prevents AI from breaking builds by touching native code.
+- **Tags**: General
+- **Tokens**: ~762
+- **Granular API**: `/api/skills?id=bootstrap-react-native-expo`
+
+### [bootstrap-remix-run-stack](/skills/bootstrap-remix-run-stack.md)
+- **Description**: Strict, step-by-step initialization protocol for building a Remix stack. Bypasses interactive prompts and configures official templates.
+- **Tags**: General
+- **Tokens**: ~806
+- **Granular API**: `/api/skills?id=bootstrap-remix-run-stack`
+
+### [bootstrap-sveltekit-app](/skills/bootstrap-sveltekit-app.md)
+- **Description**: Strict, step-by-step initialization protocol for building a bulletproof SvelteKit + Svelte 5 environment. Bypasses interactive create-svelte CLIs.
+- **Tags**: General
+- **Tokens**: ~1087
+- **Granular API**: `/api/skills?id=bootstrap-sveltekit-app`
+
+### [bootstrap-vite-react-spa](/skills/bootstrap-vite-react-spa.md)
+- **Description**: Strict, step-by-step initialization protocol for building a bulletproof Vite + React SPA environment. Prevents AI build failures during scaffolding.
+- **Tags**: General
+- **Tokens**: ~1369
+- **Granular API**: `/api/skills?id=bootstrap-vite-react-spa`
+
 ### [Cloudflare README](/skills/cloudflare-README.md)
 - **Description**: Imported skill from Cloudflare repository.
 - **Tags**: General
@@ -161,6 +221,12 @@
 - **Tags**: General
 - **Tokens**: ~662
 - **Granular API**: `/api/skills?id=focus-mode`
+
+### [force-latest-dependencies](/skills/force-latest-dependencies.md)
+- **Description**: Strict override protocol preventing AI from using outdated package versions from its training data. Enforces live web/npm search to determine the latest framework and library versions.
+- **Tags**: General
+- **Tokens**: ~760
+- **Granular API**: `/api/skills?id=force-latest-dependencies`
 
 ### ["frontend-design"](/skills/frontend-design.md)
 - **Description**: Advanced visual architecture, design systems orchestration, and performance-tuned UI recipes. Use this skill to build distinctive, high-fidelity interfaces across all web applications.

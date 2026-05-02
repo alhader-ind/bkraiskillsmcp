@@ -155,6 +155,21 @@ Skill Path Use When...
 divergent-brainstormer /skills/divergent-brainstormer.md Advanced lateral thinking, combinatorial innovation, speculative conceptual mapping; high-order creative strategy and non-linear problem solving
 step-by-step-reasoner /skills/step-by-step-reasoner.md Advanced recursive logic, first-principles deduction, multi-path decision analysis; complex problem solving, mathematical proofs, high-stakes strategy
 
+Environment Scaffolding & Dependencies
+
+Skill Path Use When...
+bootstrap-nextjs-app-router /skills/bootstrap-nextjs-app-router.md Strict initialization protocol for building a bulletproof Next.js (App Router) environment
+bootstrap-vite-react-spa /skills/bootstrap-vite-react-spa.md Strict initialization protocol for building a bulletproof Vite + React SPA environment
+bootstrap-express-react-fullstack /skills/bootstrap-express-react-fullstack.md Strict initialization protocol for Express.js Backend + Vite React SPA Frontend environment
+bootstrap-nuxt-vue3 /skills/bootstrap-nuxt-vue3.md Strict initialization protocol for Nuxt 3 + Vue 3 environment
+bootstrap-sveltekit-app /skills/bootstrap-sveltekit-app.md Strict initialization protocol for SvelteKit + Svelte 5 environment
+bootstrap-remix-run-stack /skills/bootstrap-remix-run-stack.md Strict initialization protocol for building a Remix stack with React
+bootstrap-nestjs-api /skills/bootstrap-nestjs-api.md Strict initialization protocol for building an enterprise NestJS TypeScript API
+bootstrap-astro-hybrid-site /skills/bootstrap-astro-hybrid-site.md Strict initialization protocol for Astro hybrid site with React and Tailwind
+bootstrap-python-fastapi-react /skills/bootstrap-python-fastapi-react.md Strict initialization protocol for Python FastAPI Backend and Vite React Frontend
+bootstrap-react-native-expo /skills/bootstrap-react-native-expo.md Strict initialization protocol for React Native using Expo Router
+force-latest-dependencies /skills/force-latest-dependencies.md Strict override protocol preventing AI from using outdated package versions from its training data by enforcing live web/npm search.
+
 Specialized Technical Skills
 
 Skill Path Use When...
@@ -177,6 +192,7 @@ Use these decision rules to identify which skill(s) apply:
 4.1 Task-Verb Mapping
 
 User's Core Task Verb Primary Skill Category
+"Bootstrap," "Scaffold Strict," "Initialize Fullstack" Environment Scaffolding Skill (e.g., bootstrap-nextjs-app-router) + force-latest-dependencies
 "Build," "Create," "Scaffold," "Initialize" Framework-specific skill (Next.js, Laravel, etc.) + backend-engineer or frontend-engineer
 "Debug," "Fix," "Why doesn't X work?" failure-mode-preemptor or surgical-debugger or rubber-duck-debugger
 "Review," "Audit," "Check my code" code-reviewer-red-team
@@ -205,6 +221,17 @@ When a user mentions a specific technology, the corresponding framework skill MU
 · "Vue," "Nuxt" → nuxt-framework
 · "Svelte," "SvelteKit" → svelte-framework
 · "Laravel," "PHP" → laravel-framework
+· "Bootstrap Next.js" → bootstrap-nextjs-app-router
+· "Bootstrap React SPA" → bootstrap-vite-react-spa
+· "Bootstrap Fullstack Express" → bootstrap-express-react-fullstack
+· "Bootstrap Nuxt" → bootstrap-nuxt-vue3
+· "Bootstrap SvelteKit" → bootstrap-sveltekit-app
+· "Bootstrap Remix" → bootstrap-remix-run-stack
+· "Bootstrap NestJS" → bootstrap-nestjs-api
+· "Bootstrap Astro" → bootstrap-astro-hybrid-site
+· "Bootstrap Python FastAPI" → bootstrap-python-fastapi-react
+· "Bootstrap React Native" → bootstrap-react-native-expo
+· "Latest versions", "Update dependencies", "Latest React" → force-latest-dependencies
 · "Astro," "Qwik" → astro-qwik-framework
 · "Remix" → remix-framework
 · "Wasp" → wasp-framework
@@ -237,6 +264,7 @@ Query Pattern Required Skill Combination
 "API integration for X" api-integrator + domain skill
 "Migrate X to Y framework" code-converter + target framework skill
 "Build a full-stack app" Framework skill + backend-engineer + frontend-engineer
+"Bootstrap a new strict environment" Bootstrap Skill (e.g., bootstrap-vite-react-spa) + force-latest-dependencies
 "Maintain long-term project memory" technical-memory-manager + context-manager
 
 ---
