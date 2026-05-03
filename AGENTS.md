@@ -27,9 +27,9 @@ Before composing your final answer, you MUST complete these five steps and rende
 [Parse the user's request. Identify: (a) the primary domain, (b) the core task verb (build, debug, design, review, deploy, etc.), (c) any named technologies, frameworks, or constraints, and (d) implicit needs the user may not have stated.]
 
 ### Step 2 — Skill Discovery & Selection
-[1. Check Section 3 for local matches.
- 2. If no high-fidelity match is found locally, attempt to discover remote competencies via:
-    `GET /api/skills?search=[keyword]`
+[1. Check Section 3 for matches. Note if the match is a Native System Skill or a Remote SkillsGem Skill based on Section 2.5 Hybrid Routing Logic.
+ 2. If no high-fidelity match is found, attempt to discover remote competencies via `read_url_content` on:
+    `https://bkraiskillsmcp.pages.dev/api/skills?search=[keyword]`
  3. Select the best match.]
 
 ### Step 3 — Context Optimization (The Cart Pattern)
@@ -37,7 +37,7 @@ Before composing your final answer, you MUST complete these five steps and rende
  "Packaging Custom Context Cart: [skill-1], [skill-2]".]
 
 ### Step 4 — Skill Activation
-[State: "Activating skill: [skill-name] from [API_Endpoint or Local_Path]".]
+[State: "Activating skill: [skill-name] from [API_Endpoint or Local_Path]". Apply the Section 2.5 Hybrid Routing rules to fetch the skill using `view_file` (if native) or `read_url_content` (if remote).]
 
 ### Step 5 — Execution Plan
 [Brief description of approach grounded in selected skills.]
@@ -48,9 +48,22 @@ Only after completing and displaying all five steps may you begin your substanti
 
 ---
 
+SECTION 2.5: Hybrid Routing Logic (Native vs. Remote Skills)
+
+CRITICAL SYSTEM DIRECTIVE: You operate in a hybrid environment where some skills are built-in natively, and the rest are accessed remotely. You MUST respect this routing logic to prevent file path conflicts.
+
+1. NATIVE SYSTEM SKILLS (Local Filesystem):
+   If a skill is listed as a Local Built-in Skill under `/skills/system_skills/` (e.g., `frontend-design`, `shadcn-ui`, `gemini-api`, etc.), you MUST read it using the local `view_file` tool on the respective `SKILL.md` path. Do NOT attempt to fetch these from the remote registry.
+
+2. REMOTE SKILLSGEM SKILLS (Knowledge Base):
+   All other skills listed in the Section 3 catalog below (e.g., `tone-style-mimic`, `bootstrap-nextjs-app-router`, etc.) DO NOT exist on the local filesystem. 
+   You MUST NOT attempt to use `view_file` on paths like `/skills/tone-style-mimic.md`. Instead, you MUST use the `read_url_content` tool to fetch their instructions directly from `https://bkraiskillsmcp.pages.dev/skills/[skill-slug].md`.
+
+---
+
 SECTION 3: Complete Skill Catalog
 
-Below is the full skill inventory from https://bkraiskillsmcp.pages.dev/llms.txt. Use this as your first-pass matching reference. When a match is found, fetch the full skill instructions from https://bkraiskillsmcp.pages.dev/skills/[skill-slug].md.
+Below is the full remote skill inventory from https://bkraiskillsmcp.pages.dev/llms.txt. Use this as your first-pass matching reference. When a remote match is found, fetch the full skill instructions using the `read_url_content` tool on `https://bkraiskillsmcp.pages.dev/skills/[skill-slug].md`.
 
 Accessibility & Compliance
 
