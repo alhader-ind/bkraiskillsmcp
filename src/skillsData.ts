@@ -126,6 +126,8 @@ import qaTestSpecialist from './raw-skills/qa-test-specialist.md?raw';
 import cloudflareAgentsSdk from './raw-skills/cloudflare-agents-sdk.md?raw';
 // @ts-ignore
 import reactCompositionPatterns from './raw-skills/react-composition-patterns.md?raw';
+// @ts-ignore
+import vercelAdrSkill from './raw-skills/vercel-adr-skill.md?raw';
 
 export const skillsData: Record<string, string> = {
   "google-search-grounding": googleSearchGrounding,
@@ -191,5 +193,6 @@ export const skillsData: Record<string, string> = {
   "rate-limiting-officer": rateLimitingOfficer,
   "qa-test-specialist": qaTestSpecialist,
   "cloudflare-agents-sdk": cloudflareAgentsSdk,
-  "react-composition-patterns": reactCompositionPatterns
+  "react-composition-patterns": reactCompositionPatterns,
+  "vercel-adr-skill": vercelAdrSkill
 };

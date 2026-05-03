@@ -3,57 +3,8 @@ import {
   Server, Shield, Box, Cpu,
   Activity, Monitor, HardDrive
 } from 'lucide-react';
-
-/**
- * A sub-component representing a single specification card for the host environment.
- * 
- * @param {object} props - The component properties.
- * @param {React.ElementType} props.icon - The lucide icon to display.
- * @param {string} props.colorClass - The CSS color class for the icon.
- * @param {string} props.title - The primary title of the specification.
- * @param {string} props.subtitle - The secondary subtitle.
- * @param {string} props.details - Further details about the specification.
- * @returns {React.JSX.Element} The rendered SpecCard.
- */
-const SpecCard = ({ icon: Icon, colorClass, title, subtitle, details }: { 
-  icon: React.ElementType, 
-  colorClass: string, 
-  title: string, 
-  subtitle: string, 
-  details: string 
-}) => (
-  <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-sm flex flex-col items-center text-center">
-    <Icon className={`w-8 h-8 ${colorClass} mb-3`} />
-    <h4 className="font-semibold text-slate-900">{title}</h4>
-    <p className="text-sm text-slate-600 mt-1">{subtitle}<br/>{details}</p>
-  </div>
-);
-
-/**
- * A sub-component representing a row in the Build System Dynamics section.
- * 
- * @param {object} props - The component properties.
- * @param {string} props.tagColor - The CSS classes for the tag background and text colors.
- * @param {string} props.tagText - The text displayed inside the tag.
- * @param {React.ReactNode} props.description - Detailed description beside the tag.
- * @returns {React.JSX.Element} The rendered BuildPhaseRow.
- */
-const BuildPhaseRow = ({ tagColor, tagText, description }: {
-  tagColor: string,
-  tagText: string,
-  description: React.ReactNode
-}) => (
-  <div className="p-4 flex flex-col md:flex-row gap-4">
-    <div className="md:w-1/3">
-      <span className={`inline-block px-2 py-1 ${tagColor} rounded text-xs font-semibold uppercase tracking-wider mb-2`}>
-        {tagText}
-      </span>
-    </div>
-    <div className="md:w-2/3">
-      <p className="text-sm text-slate-700">{description}</p>
-    </div>
-  </div>
-);
+import { InfoCard } from '../../../components/ui/InfoCard';
+import { InfoRow } from '../../../components/ui/InfoRow';
 
 /**
  * Renders the native environment report details including host specs, network limits, 
@@ -68,23 +19,23 @@ export const EnvironmentReport = () => (
         <Activity className="w-5 h-5 text-indigo-600" /> Host Specifications
       </h3>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <SpecCard 
+        <InfoCard 
           icon={Monitor} 
-          colorClass="text-slate-400" 
+          iconColorClass="text-slate-400" 
           title="Operating System" 
           subtitle="Linux Environment" 
           details="Containerized runtime" 
         />
-        <SpecCard 
+        <InfoCard 
           icon={Cpu} 
-          colorClass="text-blue-500" 
+          iconColorClass="text-blue-500" 
           title="CPU Architecture" 
           subtitle="x86_64" 
           details="Dynamic allocation" 
         />
-        <SpecCard 
+        <InfoCard 
           icon={HardDrive} 
-          colorClass="text-emerald-500" 
+          iconColorClass="text-emerald-500" 
           title="Memory Limits" 
           subtitle="Container Allocated Memory" 
           details="Ephemeral disk" 
@@ -118,18 +69,18 @@ export const EnvironmentReport = () => (
       </h3>
       <div className="bg-white rounded-xl border border-slate-200 overflow-hidden shadow-sm">
         <div className="divide-y divide-slate-100">
-          <BuildPhaseRow 
-            tagColor="bg-emerald-100 text-emerald-800 overflow-hidden" 
+          <InfoRow 
+            tagColorClass="bg-emerald-100 text-emerald-800 overflow-hidden" 
             tagText="Build Phase"
             description={<> Triggered via <code className="bg-slate-100 px-1 py-0.5 rounded text-pink-600">npm run build</code> with <code className="bg-slate-100 px-1 py-0.5 rounded text-pink-600">NODE_ENV=production</code>. Everything must compile during this phase. No separate `build:server` scripts are guaranteed.</>}
           />
-          <BuildPhaseRow 
-            tagColor="bg-blue-100 text-blue-800" 
+          <InfoRow 
+            tagColorClass="bg-blue-100 text-blue-800" 
             tagText="SPA Hosting"
             description={<>For pure SPAs (React/Vue/Svelte), the system auto-injects a static file server targeting the <code className="bg-slate-100 px-1 py-0.5 rounded text-pink-600">dist/</code> output folder. No custom `start` script is needed.</>}
           />
-          <BuildPhaseRow 
-            tagColor="bg-purple-100 text-purple-800" 
+          <InfoRow 
+            tagColorClass="bg-purple-100 text-purple-800" 
             tagText="Full-Stack Hosting"
             description={<>For custom backend servers (e.g., Express), a <code className="bg-slate-100 px-1 py-0.5 rounded text-pink-600">"start": "node server.ts"</code> script must be explicitly defined in package.json.</>}
           />

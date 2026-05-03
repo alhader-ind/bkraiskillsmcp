@@ -1,7 +1,7 @@
 import React from 'react';
-import ReactMarkdown from 'react-markdown';
 import { FileText, ChevronDown, ChevronUp, PlusCircle, CheckCircle2 } from 'lucide-react';
 import { Skill } from '../types';
+import { MarkdownViewer } from '../../../components/ui/MarkdownViewer';
 
 /**
  * Properties for the SkillItem component.
@@ -66,8 +66,8 @@ export const SkillItem = ({ skill, isExpanded, inCart, onToggle, onToggleCart, m
       
       {isExpanded && (
         <div className="mt-6 pt-6 border-t border-slate-100">
-          <div className="bg-slate-50 border border-slate-200 rounded-lg p-5 prose prose-sm prose-slate max-w-none prose-pre:bg-slate-800 prose-pre:text-slate-100 overflow-x-auto">
-            <ReactMarkdown>{markdownContent}</ReactMarkdown>
+          <div className="bg-white border border-slate-200 rounded-lg p-6 sm:p-8 overflow-x-hidden">
+            <MarkdownViewer content={markdownContent} />
           </div>
         </div>
       )}

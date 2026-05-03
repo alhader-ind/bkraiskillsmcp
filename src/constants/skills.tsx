@@ -778,5 +778,17 @@ export const SKILLS_LIST: Skill[] = [
       "Using Slots for complex, flexible layouts.",
       "Managing global vs scoped context state."
     ]
+  },
+  {
+    name: "ADR Specialist",
+    id: "vercel-adr-skill",
+    icon: <FileText className="w-5 h-5" />,
+    color: "bg-fuchsia-50 text-fuchsia-600",
+    description: "Create and maintain Architecture Decision Records (ADRs) optimized for agentic coding workflows.",
+    examples: [
+      "Proposing a new architectural pattern or dependency.",
+      "Bootstrapping an ADR directory and index.",
+      "Documenting codebase architectural decisions."
+    ]
   }
 ];

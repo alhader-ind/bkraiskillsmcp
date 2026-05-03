@@ -48,17 +48,35 @@
 - **Tokens**: ~1062
 - **Granular API**: `/api/skills?id=astro-qwik-framework`
 
+### [auth-js-v5-architect](/skills/auth-js-v5-architect.md)
+- **Description**: Comprehensive configuration and implementation guide for Auth.js v5 (NextAuth) in modern JS frameworks, covering Next.js setup, JWT/Database sessions, edge compatibility, and CSRF defense.
+- **Tags**: Auth, You can generate this using `npx auth, Configuration (`auth, 4. Edge-Compatible Database, 5. JWT vs. Database
+- **Tokens**: ~1195
+- **Granular API**: `/api/skills?id=auth-js-v5-architect`
+
 ### [auth-schema-architect](/skills/auth-schema-architect.md)
 - **Description**: Advanced authentication data modeling and identity integrity engineering. Use this skill for designing secure user schemas, multi-factor structures, and permission-based relational models.
 - **Tags**: Auth, Phase D: Session & Security
 - **Tokens**: ~454
 - **Granular API**: `/api/skills?id=auth-schema-architect`
 
+### [authgear-identity-expert](/skills/authgear-identity-expert.md)
+- **Description**: Implementation guide for Authgear, covering passkeys, B2B SaaS B2C authentication, UI customization, and multi-factor authentication (MFA).
+- **Tags**: Auth, 4. Auth
+- **Tokens**: ~574
+- **Granular API**: `/api/skills?id=authgear-identity-expert`
+
 ### [backend-engineer](/skills/backend-engineer.md)
 - **Description**: Advanced API orchestration, secure data modeling, and high-integrity server-side systems. Use this skill for building robust, scalable backends and complex server logic.
 - **Tags**: Advanced Backend, 1. The Expert Backend, Phase A: API, Phase C: Zero-Trust Security, 2. Advanced Backend, 3. Implementation: The Backend, 🖥️ Backend, 6. Global Backend, Common Backend
 - **Tokens**: ~1584
 - **Granular API**: `/api/skills?id=backend-engineer`
+
+### [better-auth-integration](/skills/better-auth-integration.md)
+- **Description**: Implementation guide for Better Auth in modern JS/TS frameworks, covering type-safe authentication, database adapters, plugins, and session management.
+- **Tags**: Better Auth, 3. Database, 4. API
+- **Tokens**: ~644
+- **Granular API**: `/api/skills?id=better-auth-integration`
 
 ### [bootstrap-astro-hybrid-site](/skills/bootstrap-astro-hybrid-site.md)
 - **Description**: Strict, step-by-step initialization protocol for building an Astro hybrid site with React and Tailwind Integrations.
@@ -71,6 +89,12 @@
 - **Tags**: Step 2: The Backend Environment (`/backend, Step 3: The Frontend Environment (`/frontend
 - **Tokens**: ~732
 - **Granular API**: `/api/skills?id=bootstrap-express-react-fullstack`
+
+### [bootstrap-firebase-database](/skills/bootstrap-firebase-database.md)
+- **Description**: Instructions for Firebase integration, Firestore setup, and database security rules.
+- **Tags**: Set up ESLint for Firestore Security, Phase 0: Payload-First Security, Auth
+- **Tokens**: ~7637
+- **Granular API**: `/api/skills?id=bootstrap-firebase-database`
 
 ### [bootstrap-nestjs-api](/skills/bootstrap-nestjs-api.md)
 - **Description**: Strict, step-by-step initialization protocol for building a NestJS TypeScript API. Bypasses interactive prompts for enterprise backends.
@@ -119,6 +143,12 @@
 - **Tags**: General
 - **Tokens**: ~1369
 - **Granular API**: `/api/skills?id=bootstrap-vite-react-spa`
+
+### [clerk-auth-architect](/skills/clerk-auth-architect.md)
+- **Description**: Configuration and implementation guide for Clerk Auth in Next.js/React applications, covering UI components, middleware protection, and webhook synchronization.
+- **Tags**: Clerk Auth, 3. Middleware
+- **Tokens**: ~834
+- **Granular API**: `/api/skills?id=clerk-auth-architect`
 
 ### [Cloudflare README](/skills/cloudflare-README.md)
 - **Description**: Imported skill from Cloudflare repository.
@@ -216,6 +246,12 @@
 - **Tokens**: ~1574
 - **Granular API**: `/api/skills?id=failure-mode-preemptor`
 
+### [firebase-database-principles](/skills/firebase-database-principles.md)
+- **Description**: Guidelines for setting up a Firebase database and writing hardened security rules.
+- **Tags**: Firebase Database, 2. Hardened Security
+- **Tokens**: ~688
+- **Granular API**: `/api/skills?id=firebase-database-principles`
+
 ### [focus-mode](/skills/focus-mode.md)
 - **Description**: Instructions for responding to UI element selection (CSS selectors).
 - **Tags**: General
@@ -282,6 +318,12 @@
 - **Tokens**: ~450
 - **Granular API**: `/api/skills?id=jwt-service-engineer`
 
+### [kinde-auth-implementer](/skills/kinde-auth-implementer.md)
+- **Description**: Configuration and implementation instructions for Kinde Auth, focusing on passwordless login, Next.js App Router integration, and feature flags.
+- **Tags**: Kinde Auth, 3. Next.js API Route for Auth
+- **Tokens**: ~465
+- **Granular API**: `/api/skills?id=kinde-auth-implementer`
+
 ### [Laravel Framework](/skills/laravel-framework.md)
 - **Description**: Guidelines for building robust, full-stack PHP applications using Laravel 11/12/13.
 - **Tags**: Laravel Framework Gui, 3. Frontend
@@ -293,6 +335,12 @@
 - **Tags**: Login UI Specialist: Auth, Phase B: guide: In-Line Validation (Gui
 - **Tokens**: ~430
 - **Granular API**: `/api/skills?id=login-ui-specialist`
+
+### [logto-auth-engineer](/skills/logto-auth-engineer.md)
+- **Description**: Guide for setting up Logto as an open-source OIDC identity provider, managing machine-to-machine tokens, RBAC, and frontend SDK integration.
+- **Tags**: Logto Auth, 4. API
+- **Tokens**: ~515
+- **Granular API**: `/api/skills?id=logto-auth-engineer`
 
 ### [middleware-engineer](/skills/middleware-engineer.md)
 - **Description**: Advanced request interception and cross-cutting concern orchestration. Use this skill for building security guards, logging pipelines, and multi-tenant routing logic.
@@ -347,6 +395,12 @@
 - **Tags**: General
 - **Tokens**: ~1234
 - **Granular API**: `/api/skills?id=prompt-optimizer`
+
+### [propelauth-b2b-auth](/skills/propelauth-b2b-auth.md)
+- **Description**: Guide for setting up PropelAuth for B2B/multi-tenant applications, focusing on organization management, RBAC, and SSO integration in React/Next.js environments.
+- **Tags**: PropelAuth B2B Auth Gui, 4. API
+- **Tokens**: ~561
+- **Granular API**: `/api/skills?id=propelauth-b2b-auth`
 
 ### [python-code-execution](/skills/python-code-execution.md)
 - **Description**: Advanced sandboxed data analysis, mathematical modeling, and visualization. Use this skill for complex calculations, chart generation, and data processing.
@@ -431,6 +485,12 @@
 - **Tags**: General
 - **Tokens**: ~1269
 - **Granular API**: `/api/skills?id=step-by-step-reasoner`
+
+### [supabase-auth-specialist](/skills/supabase-auth-specialist.md)
+- **Description**: Comprehensive configuration guide for Supabase Authentication, including SSR setup in Next.js, RLS policies, and OAuth integrations.
+- **Tags**: Supabase Auth, 4. Middleware, 5. Security (Row Level Security
+- **Tokens**: ~674
+- **Granular API**: `/api/skills?id=supabase-auth-specialist`
 
 ### [surgical-debugger](/skills/surgical-debugger.md)
 - **Description**: Advanced root-cause isolation, stack-trace deconstruction, and minimal-disruption bug resolution. Use this skill for identifying and fixing mission-critical system failures.
@@ -533,4 +593,10 @@
 - **Tags**: Wasp Framework Integration Gui, 3. Database
 - **Tokens**: ~1140
 - **Granular API**: `/api/skills?id=wasp-framework`
+
+### [workos-sso-setup](/skills/workos-sso-setup.md)
+- **Description**: Instructions for integrating WorkOS for Enterprise Single Sign-On (SSO), SCIM directory sync, and user identity management APIs.
+- **Tags**: 3. Auth, 4. Manual SSO Integration (Without Auth
+- **Tokens**: ~507
+- **Granular API**: `/api/skills?id=workos-sso-setup`
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Zap, Laptop, BookOpen } from 'lucide-react';
 import { SKILLS_LIST } from '../../../constants/skills';
-import { SkillItem } from '../../../components/SkillItem';
+import { SkillItem } from './SkillItem';
 import { stripFrontmatter } from '../../../lib/utils';
 import { useCartStore } from '../store/useCartStore';
 import { DynamicSkill } from '../types';

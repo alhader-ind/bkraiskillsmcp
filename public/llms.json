@@ -57,6 +57,20 @@
     "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/astro-qwik-framework.md"
   },
   {
+    "name": "auth-js-v5-architect",
+    "description": "Comprehensive configuration and implementation guide for Auth.js v5 (NextAuth) in modern JS frameworks, covering Next.js setup, JWT/Database sessions, edge compatibility, and CSRF defense.",
+    "estimatedTokens": 1195,
+    "tags": [
+      "Auth",
+      "You can generate this using `npx auth",
+      "Configuration (`auth",
+      "4. Edge-Compatible Database",
+      "5. JWT vs. Database"
+    ],
+    "path": "/skills/auth-js-v5-architect.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/auth-js-v5-architect.md"
+  },
+  {
     "name": "auth-schema-architect",
     "description": "Advanced authentication data modeling and identity integrity engineering. Use this skill for designing secure user schemas, multi-factor structures, and permission-based relational models.",
     "estimatedTokens": 454,
@@ -66,6 +80,17 @@
     ],
     "path": "/skills/auth-schema-architect.md",
     "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/auth-schema-architect.md"
+  },
+  {
+    "name": "authgear-identity-expert",
+    "description": "Implementation guide for Authgear, covering passkeys, B2B SaaS B2C authentication, UI customization, and multi-factor authentication (MFA).",
+    "estimatedTokens": 574,
+    "tags": [
+      "Auth",
+      "4. Auth"
+    ],
+    "path": "/skills/authgear-identity-expert.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/authgear-identity-expert.md"
   },
   {
     "name": "backend-engineer",
@@ -84,6 +109,18 @@
     ],
     "path": "/skills/backend-engineer.md",
     "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/backend-engineer.md"
+  },
+  {
+    "name": "better-auth-integration",
+    "description": "Implementation guide for Better Auth in modern JS/TS frameworks, covering type-safe authentication, database adapters, plugins, and session management.",
+    "estimatedTokens": 644,
+    "tags": [
+      "Better Auth",
+      "3. Database",
+      "4. API"
+    ],
+    "path": "/skills/better-auth-integration.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/better-auth-integration.md"
   },
   {
     "name": "bootstrap-astro-hybrid-site",
@@ -105,6 +142,18 @@
     ],
     "path": "/skills/bootstrap-express-react-fullstack.md",
     "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/bootstrap-express-react-fullstack.md"
+  },
+  {
+    "name": "bootstrap-firebase-database",
+    "description": "Instructions for Firebase integration, Firestore setup, and database security rules.",
+    "estimatedTokens": 7637,
+    "tags": [
+      "Set up ESLint for Firestore Security",
+      "Phase 0: Payload-First Security",
+      "Auth"
+    ],
+    "path": "/skills/bootstrap-firebase-database.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/bootstrap-firebase-database.md"
   },
   {
     "name": "bootstrap-nestjs-api",
@@ -188,6 +237,17 @@
     ],
     "path": "/skills/bootstrap-vite-react-spa.md",
     "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/bootstrap-vite-react-spa.md"
+  },
+  {
+    "name": "clerk-auth-architect",
+    "description": "Configuration and implementation guide for Clerk Auth in Next.js/React applications, covering UI components, middleware protection, and webhook synchronization.",
+    "estimatedTokens": 834,
+    "tags": [
+      "Clerk Auth",
+      "3. Middleware"
+    ],
+    "path": "/skills/clerk-auth-architect.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/clerk-auth-architect.md"
   },
   {
     "name": "Cloudflare README",
@@ -359,6 +419,17 @@
     "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/failure-mode-preemptor.md"
   },
   {
+    "name": "firebase-database-principles",
+    "description": "Guidelines for setting up a Firebase database and writing hardened security rules.",
+    "estimatedTokens": 688,
+    "tags": [
+      "Firebase Database",
+      "2. Hardened Security"
+    ],
+    "path": "/skills/firebase-database-principles.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/firebase-database-principles.md"
+  },
+  {
     "name": "focus-mode",
     "description": "Instructions for responding to UI element selection (CSS selectors).",
     "estimatedTokens": 662,
@@ -481,6 +552,17 @@
     "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/jwt-service-engineer.md"
   },
   {
+    "name": "kinde-auth-implementer",
+    "description": "Configuration and implementation instructions for Kinde Auth, focusing on passwordless login, Next.js App Router integration, and feature flags.",
+    "estimatedTokens": 465,
+    "tags": [
+      "Kinde Auth",
+      "3. Next.js API Route for Auth"
+    ],
+    "path": "/skills/kinde-auth-implementer.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/kinde-auth-implementer.md"
+  },
+  {
     "name": "Laravel Framework",
     "description": "Guidelines for building robust, full-stack PHP applications using Laravel 11/12/13.",
     "estimatedTokens": 729,
@@ -501,6 +583,17 @@
     ],
     "path": "/skills/login-ui-specialist.md",
     "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/login-ui-specialist.md"
+  },
+  {
+    "name": "logto-auth-engineer",
+    "description": "Guide for setting up Logto as an open-source OIDC identity provider, managing machine-to-machine tokens, RBAC, and frontend SDK integration.",
+    "estimatedTokens": 515,
+    "tags": [
+      "Logto Auth",
+      "4. API"
+    ],
+    "path": "/skills/logto-auth-engineer.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/logto-auth-engineer.md"
   },
   {
     "name": "middleware-engineer",
@@ -595,6 +688,17 @@
     ],
     "path": "/skills/prompt-optimizer.md",
     "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/prompt-optimizer.md"
+  },
+  {
+    "name": "propelauth-b2b-auth",
+    "description": "Guide for setting up PropelAuth for B2B/multi-tenant applications, focusing on organization management, RBAC, and SSO integration in React/Next.js environments.",
+    "estimatedTokens": 561,
+    "tags": [
+      "PropelAuth B2B Auth Gui",
+      "4. API"
+    ],
+    "path": "/skills/propelauth-b2b-auth.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/propelauth-b2b-auth.md"
   },
   {
     "name": "python-code-execution",
@@ -744,6 +848,18 @@
     ],
     "path": "/skills/step-by-step-reasoner.md",
     "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/step-by-step-reasoner.md"
+  },
+  {
+    "name": "supabase-auth-specialist",
+    "description": "Comprehensive configuration guide for Supabase Authentication, including SSR setup in Next.js, RLS policies, and OAuth integrations.",
+    "estimatedTokens": 674,
+    "tags": [
+      "Supabase Auth",
+      "4. Middleware",
+      "5. Security (Row Level Security"
+    ],
+    "path": "/skills/supabase-auth-specialist.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/supabase-auth-specialist.md"
   },
   {
     "name": "surgical-debugger",
@@ -928,5 +1044,16 @@
     ],
     "path": "/skills/wasp-framework.md",
     "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/wasp-framework.md"
+  },
+  {
+    "name": "workos-sso-setup",
+    "description": "Instructions for integrating WorkOS for Enterprise Single Sign-On (SSO), SCIM directory sync, and user identity management APIs.",
+    "estimatedTokens": 507,
+    "tags": [
+      "3. Auth",
+      "4. Manual SSO Integration (Without Auth"
+    ],
+    "path": "/skills/workos-sso-setup.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/workos-sso-setup.md"
   }
 ]
