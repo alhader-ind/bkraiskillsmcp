@@ -680,6 +680,16 @@
     "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/performance-profiler.md"
   },
   {
+    "name": "prd-documentation-master",
+    "description": "Advanced Product Requirements Document (PRD) engineering, incorporating precise T-shirt sizing for features and Kanban workflows for full-lifecycle execution from inception to production.",
+    "estimatedTokens": 1279,
+    "tags": [
+      "Product Requi"
+    ],
+    "path": "/skills/prd-documentation-master.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/prd-documentation-master.md"
+  },
+  {
     "name": "prompt-optimizer",
     "description": "Advanced linguistic engineering, intent synthesis, and meta-prompt optimization. Use this skill to transform vague user requests into high-fidelity AI instructions.",
     "estimatedTokens": 1234,

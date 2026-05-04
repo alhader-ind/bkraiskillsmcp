@@ -390,6 +390,12 @@
 - **Tokens**: ~1331
 - **Granular API**: `/api/skills?id=performance-profiler`
 
+### [prd-documentation-master](/skills/prd-documentation-master.md)
+- **Description**: Advanced Product Requirements Document (PRD) engineering, incorporating precise T-shirt sizing for features and Kanban workflows for full-lifecycle execution from inception to production.
+- **Tags**: Product Requi
+- **Tokens**: ~1279
+- **Granular API**: `/api/skills?id=prd-documentation-master`
+
 ### [prompt-optimizer](/skills/prompt-optimizer.md)
 - **Description**: Advanced linguistic engineering, intent synthesis, and meta-prompt optimization. Use this skill to transform vague user requests into high-fidelity AI instructions.
 - **Tags**: General
