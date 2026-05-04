@@ -41,20 +41,22 @@ We have added the following deployment scripts to `package.json` for manual or l
 - `npm run pages:deploy`: Runs Wrangler to push the `dist/` directory to Cloudflare Pages.
 - `npm run deploy`: Combines both steps. It first runs the build, then deploys to Cloudflare Pages.
 
-## 4. Automated CI/CD Pipeline (GitHub Actions)
+## 4. Automated CI/CD Pipeline (Cloudflare Git Integration)
 
-A sophisticated deployment pipeline has been engineered in `.github/workflows/deploy.yml`. The system adheres to the *Infrastructure-as-Code* philosophy by automating scoping, engineering, and release mechanisms.
+This project leverages Cloudflare Pages' native Git integration for seamless, automated deployments. 
 
 **How it works:**
-1. **Pull Requests:** When a PR is opened targeting `main`, the pipeline automatically builds and deploys a preview version of the application to a generated URL without affecting production.
-2. **Push to Main:** When commits are merged or pushed to `main`, the pipeline automatically builds and deploys the application directly tracking your primary production domain on Cloudflare Pages.
+1. **Push to GitHub:** Whenever you push code to your GitHub repository, Cloudflare receives a webhook event.
+2. **Automatic Build:** Cloudflare automatically spins up a build environment, runs `npm run build`, and deploys the `dist/` directory.
+3. **Preview Deployments:** If you open a Pull Request or push to a branch other than `main`, Cloudflare generates a unique preview URL.
+4. **Production Deployments:** Pushes to the `main` branch automatically update your production environment.
 
-**Required Secrets:**
-To enable seamless automated deployments, the following secrets **MUST** be supplied in your GitHub repository (`Settings > Secrets and variables > Actions`):
-- `CLOUDFLARE_API_TOKEN`: Your Cloudflare API Token.
-- `CLOUDFLARE_ACCOUNT_ID`: Your Cloudflare Account ID.
+**Configuration:**
+The build settings are controlled either via the Cloudflare Dashboard or the `wrangler.toml` file. Ensure that your Cloudflare Pages build configuration is set to:
+- **Build command:** `npm run build`
+- **Output directory:** `dist`
 
-This continuous release flow optimizes delivery cycles and prevents local build environments from introducing "Works on my machine" failures to production.
+Because Cloudflare handles this natively, you do **not** need a separate GitHub Actions workflow. This prevents redundant builds and race conditions.
 
 ## 5. MCP & LLM Context Discovery
 
