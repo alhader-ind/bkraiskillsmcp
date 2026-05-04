@@ -1,99 +1,38 @@
-import express from "express";
-import fs from "fs";
-import path from "path";
-import { createServer as createViteServer } from "vite";
-import { fileURLToPath } from "url";
+import { serve } from '@hono/node-server';
+import { serveStatic } from '@hono/node-server/serve-static';
+import { Hono } from 'hono';
+import workerApp from './src/worker.js';
+import fs from 'fs';
+import path from 'path';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+const app = new Hono();
 
-async function startServer() {
-  const app = express();
-  const PORT = 3000;
+// Serve static files from /dist FIRST
+app.use('/*', serveStatic({ root: './dist' }));
 
-  app.use(express.json());
+// Add the worker API routes
+app.route('/', workerApp);
 
-  // Dynamic API Endpoint for fetching skills
-  app.get("/api/skills", (req, res) => {
+// SPA Fallback for non-API routes
+app.get('*', async (c) => {
+  if (!c.req.path.startsWith('/api/')) {
     try {
-      const publicDir = process.env.NODE_ENV === "production" ? __dirname : path.resolve(__dirname, "public");
-      const jsonPath = path.join(publicDir, "llms.json");
-
-      if (!fs.existsSync(jsonPath)) {
-        return res.status(404).json({ error: "Manifest not found. Ensure build process completed successfully." });
+      const indexPath = path.resolve('dist/index.html');
+      if (fs.existsSync(indexPath)) {
+        const html = fs.readFileSync(indexPath, 'utf-8');
+        return c.html(html);
       }
-
-      const data = JSON.parse(fs.readFileSync(jsonPath, "utf-8"));
-      const { tag, keyword, id, search } = req.query;
-      
-      let filtered = data;
-
-      // 1. Exact ID Retrieval (High Fidelity)
-      if (id) {
-        const skillId = String(id);
-        const skill = data.find((s: any) => s.path.includes(skillId) || s.name.toLowerCase() === skillId.toLowerCase());
-        
-        if (!skill) return res.status(404).json({ error: `Skill '${skillId}' not found.` });
-        
-        const mdPath = process.env.NODE_ENV === "production" 
-          ? path.join(__dirname, skill.path.startsWith('/') ? skill.path.slice(1) : skill.path)
-          : path.join(__dirname, "public", skill.path.startsWith('/') ? skill.path.slice(1) : skill.path);
-          
-        if (fs.existsSync(mdPath)) {
-          return res.json({ ...skill, content: fs.readFileSync(mdPath, "utf-8") });
-        }
-        return res.status(404).json({ error: "Instruction file missing from storage." });
-      }
-
-      // 2. Semantic/Keyword Search
-      const query = (search || keyword || "").toString().toLowerCase();
-      if (query) {
-        filtered = filtered.filter((s: any) => 
-          s.name.toLowerCase().includes(query) || 
-          s.description.toLowerCase().includes(query) ||
-          (s.tags && s.tags.some((t: string) => t.toLowerCase().includes(query)))
-        );
-      }
-
-      // 3. Tag Filtering
-      if (tag) {
-        const tagQuery = String(tag).toLowerCase();
-        filtered = filtered.filter((s: any) => 
-          s.tags && s.tags.some((t: string) => t.toLowerCase().includes(tagQuery))
-        );
-      }
-
-      res.setHeader('Cache-Control', 'public, max-age=3600');
-      res.json({
-        info: "SkillsGem AI Context API - Use 'id' for content, 'search' for discovery.",
-        count: filtered.length,
-        results: filtered
-      });
-
-    } catch (err) {
-      res.status(500).json({ error: "Internal registry error during skill resolution." });
+    } catch {
+      console.error("Index HTML not found.");
     }
-  });
-
-  // Vite middleware for development
-  if (process.env.NODE_ENV !== "production") {
-    const vite = await createViteServer({
-      server: { middlewareMode: true },
-      appType: "spa",
-    });
-    app.use(vite.middlewares);
-  } else {
-    // In production, serve static files from dist
-    const distPath = __dirname;
-    app.use(express.static(distPath));
-    app.get("*", (req, res) => {
-      res.sendFile(path.join(distPath, "index.html"));
-    });
   }
+  return c.notFound();
+});
 
-  app.listen(PORT, "0.0.0.0", () => {
-    console.log(`Server running on http://localhost:${PORT}`);
-  });
-}
-
-startServer();
+// Start Node server on port 3000
+serve({
+  fetch: app.fetch,
+  port: 3000,
+}, (info) => {
+  console.log(`Node Server (Prod) running on http://localhost:${info.port}`);
+});
