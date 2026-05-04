@@ -790,5 +790,17 @@ export const SKILLS_LIST: Skill[] = [
       "Bootstrapping an ADR directory and index.",
       "Documenting codebase architectural decisions."
     ]
+  },
+  {
+    name: "PRD Doc Master",
+    id: "prd-documentation-master",
+    icon: <FileText className="w-5 h-5" />,
+    color: "bg-emerald-50 text-emerald-600",
+    description: "Advanced PRD engineering with T-shirt sizing and Kanban mapping.",
+    examples: [
+      "Generating a comprehensive PRD from scratch.",
+      "Mapping feature lists to T-shirt sizes and Kanban workflows.",
+      "Translating product vision into technical execution plans."
+    ]
   }
 ];

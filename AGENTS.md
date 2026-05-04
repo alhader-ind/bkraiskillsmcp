@@ -158,6 +158,7 @@ Documentation, Context & Communication
 Skill Path Use When...
 technical-memory-manager /skills/technical-memory-manager.md Technical memory management, project state persistence, and architectural mapping; "The Brain" of the repository
 technical-documenter /skills/technical-documenter.md Technical memory management, multi-audience documentation engineering; building high-fidelity READMEs, API specs, and system walkthroughs
+prd-documentation-master /skills/prd-documentation-master.md Advanced PRD engineering, incorporating precise T-shirt sizing for features and Kanban workflows for full-lifecycle execution from inception to production
 context-manager /skills/context-manager.md Advanced project state persistence, technical memory synthesis, session continuity management; synchronizing codebase state across distributed agent turns
 document-summarization /skills/document-summarization.md Advanced semantic distillation, high-fidelity metadata extraction, multi-document intelligence synthesis; transforming massive text corpora into actionable decision-logic
 tone-style-mimic /skills/tone-style-mimic.md Brand voice, character copywriting; when user asks to rewrite in a specific style or brand voice

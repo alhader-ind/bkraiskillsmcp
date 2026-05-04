@@ -128,6 +128,8 @@ import cloudflareAgentsSdk from './raw-skills/cloudflare-agents-sdk.md?raw';
 import reactCompositionPatterns from './raw-skills/react-composition-patterns.md?raw';
 // @ts-ignore
 import vercelAdrSkill from './raw-skills/vercel-adr-skill.md?raw';
+// @ts-ignore
+import prdDocumentationMaster from './raw-skills/prd-documentation-master.md?raw';
 
 export const skillsData: Record<string, string> = {
   "google-search-grounding": googleSearchGrounding,
@@ -194,5 +196,6 @@ export const skillsData: Record<string, string> = {
   "qa-test-specialist": qaTestSpecialist,
   "cloudflare-agents-sdk": cloudflareAgentsSdk,
   "react-composition-patterns": reactCompositionPatterns,
-  "vercel-adr-skill": vercelAdrSkill
+  "vercel-adr-skill": vercelAdrSkill,
+  "prd-documentation-master": prdDocumentationMaster
 };
