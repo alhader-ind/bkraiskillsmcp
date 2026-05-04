@@ -22,8 +22,9 @@ CLOUDFLARE_ACCOUNT_ID=your_account_id_here
 
 The project uses `wrangler.toml` to define Cloudflare Pages configurations:
 ```toml
-name = "agent-analysis-report"
+name = "bkraiskillsmcp"
 compatibility_date = "2026-04-28"
+compatibility_flags = [ "nodejs_compat" ]
 pages_build_output_dir = "dist"
 
 [vars]
@@ -32,15 +33,30 @@ VITE_APP_ENV = "production"
 - **Node.js Compatibility:** By default Cloudflare uses V8. For most static client-side React apps, no special Node.js compatibility flags are required.
 - **Routing:** Because this is a Vite-based SPA, ensure that your client-side routing is configured so unknown routes fallback to `index.html`. Cloudflare Pages typically handles this automatically for SPA setups, but you can add a `_routes.json` if you need fine-grained control over exclusions.
 
-## 3. Scripts
+## 3. Deployment Scripts
 
-We have added the following deployment scripts to `package.json`:
+We have added the following deployment scripts to `package.json` for manual or local deployment:
 
-- `npm run build`: Compiles the application into the `dist/` directory using Vite.
+- `npm run build`: Compiles the application (and SSR functions) into the `dist/` directory using Vite and syncs LLM skills data.
 - `npm run pages:deploy`: Runs Wrangler to push the `dist/` directory to Cloudflare Pages.
 - `npm run deploy`: Combines both steps. It first runs the build, then deploys to Cloudflare Pages.
 
-## 4. MCP & LLM Context Discovery
+## 4. Automated CI/CD Pipeline (GitHub Actions)
+
+A sophisticated deployment pipeline has been engineered in `.github/workflows/deploy.yml`. The system adheres to the *Infrastructure-as-Code* philosophy by automating scoping, engineering, and release mechanisms.
+
+**How it works:**
+1. **Pull Requests:** When a PR is opened targeting `main`, the pipeline automatically builds and deploys a preview version of the application to a generated URL without affecting production.
+2. **Push to Main:** When commits are merged or pushed to `main`, the pipeline automatically builds and deploys the application directly tracking your primary production domain on Cloudflare Pages.
+
+**Required Secrets:**
+To enable seamless automated deployments, the following secrets **MUST** be supplied in your GitHub repository (`Settings > Secrets and variables > Actions`):
+- `CLOUDFLARE_API_TOKEN`: Your Cloudflare API Token.
+- `CLOUDFLARE_ACCOUNT_ID`: Your Cloudflare Account ID.
+
+This continuous release flow optimizes delivery cycles and prevents local build environments from introducing "Works on my machine" failures to production.
+
+## 5. MCP & LLM Context Discovery
 
 This project is optimized for AI consumption via two main protocols:
 
