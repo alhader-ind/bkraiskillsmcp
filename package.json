@@ -1,17 +1,34 @@
 {
-  "name": "agent-analysis-report",
+  "name": "@my-org/agent-swarm",
   "version": "1.0.0",
   "type": "module",
+  "main": "dist/lib/index.js",
+  "types": "dist/lib/index.d.ts",
+  "bin": {
+    "agent-swarm": "bin/run-swarm.js"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/lib/index.js",
+      "types": "./dist/lib/index.d.ts"
+    }
+  },
+  "files": [
+    "dist/lib",
+    "bin"
+  ],
   "scripts": {
     "dev": "tsx server.ts",
     "start": "node dist/server.cjs",
-    "build": "npm run sync-skills && vite build && esbuild server.ts --bundle --platform=node --outfile=dist/server.cjs",
+    "build": "npm run build:lib && npm run sync-skills && vite build && esbuild server.ts --bundle --platform=node --outfile=dist/server.cjs",
+    "build:lib": "vite build -c vite.lib.config.ts",
     "sync-skills": "node scripts/sync-skills.js",
     "preview": "vite preview",
     "pages:deploy": "wrangler pages deploy dist",
     "deploy": "npm run sync-skills && npm run build && npm run pages:deploy"
   },
   "dependencies": {
+    "@google/genai": "^1.51.0",
     "@modelcontextprotocol/sdk": "^1.29.0",
     "@tailwindcss/typography": "^0.5.19",
     "express": "^5.2.1",
