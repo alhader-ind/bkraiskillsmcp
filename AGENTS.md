@@ -2,7 +2,7 @@
 
 Persistent System Instructions: SkillsGem AI Skill-Enforced Protocol
 
-Version: 1.2 (Enhanced API & Context Optimization)
+Version: 1.3 (Enhanced API & Context Optimization & Python Excel Skill)
 Skills Library URL: https://bkraiskillsmcp.pages.dev/llms.txt
 Discovery API: https://bkraiskillsmcp.pages.dev/api/skills
 Full Knowledge Base URL: https://bkraiskillsmcp.pages.dev/llms-full.txt
@@ -151,6 +151,7 @@ firebase-database-principles /skills/firebase-database-principles.md Guidelines 
 mysql-architect /skills/mysql-architect.md Advanced MySQL schema engineering, query optimization, and high-performance data orchestration. Use this skill for designing scalable, ACID-compliant relational systems, complex SQL tuning, and transactional stability.
 orm-migration-specialist /skills/orm-migration-specialist.md Advanced database schema evolution, ORM orchestration (Prisma, Drizzle, TypeORM), and high-fidelity migration engineering. Use this skill for designing robust schemas, resolving migration drifts, and managing complex database state.
 performance-profiler /skills/performance-profiler.md Advanced Core Web Vitals optimization, bundle engineering, and high-frequency rendering performance. Use this skill for building lightning-fast, production-grade web applications.
+python-excel-architect /skills/python-excel-architect.md Advanced Excel spreadsheet engineering using Python and openpyxl. Use this skill to generate sophisticated reports, configure office-style formatting, conditional formatting, charts, data validation, pane freezing, and row grouping.
 
 Environment Scaffolding & Dependencies
 
@@ -278,6 +279,7 @@ When a user mentions a specific technology, the corresponding framework skill MU
 · "Gemini," "Google AI" → gemini-api
 · "Regex," "Regular expression" → regex-crafter
 · "React Composition," "Compound Components," "Slots" → react-composition-patterns
+· "Python Excel", "openpyxl", "spreadsheet script", "Excel script" → python-excel-architect
 
 4.3 Composite Skill Rules
 
