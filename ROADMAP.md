@@ -21,6 +21,9 @@
 - [x] Multi-tenant support/authentication for private skills.
 
 ## Phase 4: Integrations & Extensions
-- [ ] GitHub App integration allowing PR generation via MCP.
+- [x] GitHub App integration allowing PR generation via MCP.
+  - [x] Stage 1: Webhook Interception, HMAC Signature Verification, & Auth Base.
+  - [x] Stage 2: App Installation & Access Token Generation (Edge JWT signing via `jose`).
+  - [x] Stage 3: MCP Tool Definitions (`github_create_pull_request`) for PR creation.
 - [ ] Build a CLI tool for external agents to pull and sync local `AGENTS.md`.
 - [ ] Introduce User Custom instruction overriding.

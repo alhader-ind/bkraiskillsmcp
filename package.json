@@ -32,6 +32,7 @@
     "@modelcontextprotocol/sdk": "^1.29.0",
     "@tailwindcss/typography": "^0.5.19",
     "hono": "^4.12.16",
+    "jose": "^6.2.3",
     "lucide-react": "^0.344.0",
     "node-fetch": "^3.3.2",
     "react": "^18.2.0",

@@ -13,8 +13,14 @@
   - **Registry/Storage:** Remote GitHub Pages / local `llms.txt`, `llms-full.txt`, and RAW Markdown files (`src/raw-skills/`).
 
 ## 2. In-Flight State (Current Snapshot)
-- **Current Phase:** Ready for Cloudflare Pages DeploymentExecution.
+- **Current Phase:** Phase 4 Stage 3 (GitHub PR Tool via MCP).
 - **Recent Milestones:**
+  - Designed `github_create_pull_request` MCP Tool utilizing precise GitHub REST API git tree primitives.
+  - Deployed `GitHubPRService` allowing AI agents to fully automate pulling context -> pushing code.
+  - Implemented GitHub Auth Service (`src/services/githubAuth.ts`) for stateless edge-compatible RS256 JWT generation using `jose`.
+  - Added temporary Installation Access Token fetching and caching logic.
+  - Added `/api/github/test-auth` endpoint for integration smoke testing.
+  - Integrated GitHub App webhook interception (`/api/github/webhook`) with Web Crypto HMAC SHA-256 validation.
   - Hardened Cloudflare Pages compilation strategy (esbuild target: browser).
   - Drafted custom validation hook `scripts/deploy.js` to guard deployment operations.
   - Implemented Edge-optimized Rate Limiting (Isolate-Local map).

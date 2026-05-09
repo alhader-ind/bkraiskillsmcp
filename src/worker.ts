@@ -1,4 +1,6 @@
 import { Hono } from 'hono';
+import { GitHubAuthService } from './services/githubAuth.js';
+import { GitHubPRService } from './services/githubPRService.js';
 
 type Bindings = {
   ASSETS: { fetch: (req: Request) => Promise<Response> };
@@ -6,9 +8,19 @@ type Bindings = {
   BKRAISKILLSMCP_ENGINE?: any; // Cloudflare Analytics Engine
   API_KEY?: string; // Private Skills API Key
   RATE_LIMIT?: number; // Configurable window limit
+  GITHUB_WEBHOOK_SECRET?: string;
+  GITHUB_APP_ID?: string;
+  GITHUB_PRIVATE_KEY?: string;
 };
 
 const app = new Hono<{ Bindings: Bindings }>();
+
+// Capture env globally for non-route handlers (e.g. MCP Server)
+let _workerEnv: Bindings | null = null;
+app.use('*', async (c, next) => {
+  if (!_workerEnv) _workerEnv = c.env;
+  await next();
+});
 
 import { Server } from "@modelcontextprotocol/sdk/server/index.js";
 import { SSEServerTransport } from "@modelcontextprotocol/sdk/server/sse.js";
@@ -69,6 +81,96 @@ app.get('/api/private/status', (c) => {
   return c.json({ status: "Private zone accessed securely.", authenticated: true });
 });
 
+// --- PHASE 4: GITHUB APP INTEGRATION (Webhook Interception) ---
+
+async function verifyGitHubSignature(secret: string, signature: string, payload: string): Promise<boolean> {
+  const encoder = new TextEncoder();
+  const key = await crypto.subtle.importKey(
+    "raw",
+    encoder.encode(secret),
+    { name: "HMAC", hash: "SHA-256" },
+    false,
+    ["verify", "sign"]
+  );
+  const sigBuffer = await crypto.subtle.sign("HMAC", key, encoder.encode(payload));
+  const hexSig = Array.from(new Uint8Array(sigBuffer)).map(b => b.toString(16).padStart(2, '0')).join('');
+  const expected = `sha256=${hexSig}`;
+  
+  if (signature.length !== expected.length) return false;
+  let isEqual = true;
+  for (let i = 0; i < signature.length; i++) {
+    if (signature[i] !== expected[i]) isEqual = false;
+  }
+  return isEqual;
+}
+
+app.post('/api/github/webhook', async (c) => {
+  const signature = c.req.header('x-hub-signature-256');
+  const event = c.req.header('x-github-event');
+  const secret = c.env?.GITHUB_WEBHOOK_SECRET;
+
+  if (!secret) {
+    return c.json({ error: 'GitHub Integration not configured: Missing Secret' }, 501);
+  }
+
+  if (!signature || !event) {
+    return c.json({ error: 'Missing GitHub Webhook Headers' }, 400);
+  }
+
+  const payload = await c.req.text();
+  
+  const isValid = await verifyGitHubSignature(secret, signature, payload);
+  if (!isValid) {
+    return c.json({ error: 'Invalid Webhook Signature' }, 401);
+  }
+
+  const data = JSON.parse(payload);
+
+  // GitHub Ping Event
+  if (event === 'ping') {
+    return c.json({ status: 'pong', message: 'Webhook connection established!' });
+  }
+
+  // Handle PR actions, Issues, etc., in future milestones
+  if (event === 'pull_request') {
+    console.log(`Received PR interaction: ${data.action} - ${data.pull_request?.title}`);
+  }
+
+  return c.json({ status: 'received', event });
+});
+
+app.get('/api/github/test-auth', async (c) => {
+  const appId = c.env?.GITHUB_APP_ID;
+  const privateKey = c.env?.GITHUB_PRIVATE_KEY;
+
+  if (!appId || !privateKey) {
+    return c.json({ error: 'Missing GitHub Auth Configuration (App ID or Private Key)' }, 501);
+  }
+
+  try {
+    const authService = new GitHubAuthService(appId, privateKey);
+    // 1. Test JWT Generation
+    const jwt = await authService.generateAppJWT();
+    
+    // 2. Test Installation Token Generation (resolves first installation)
+    const installationToken = await authService.getInstallationAccessToken();
+
+    return c.json({
+      status: 'success',
+      message: 'Successfully authenticated as GitHub App and resolved installation token.',
+      jwt_preview: jwt.substring(0, 20) + '...', // Don't leak full JWT
+      token_preview: installationToken.substring(0, 15) + '...',
+      installation_access_granted: true
+    });
+  } catch (error: any) {
+    console.error('GitHub Auth Test Failed:', error);
+    return c.json({
+      error: 'GitHub Authentication Failed',
+      message: error.message
+    }, 500);
+  }
+});
+
 // ------------------------------------------
 
 // Set up MCP Server globally
@@ -127,6 +229,33 @@ mcpServer.setRequestHandler(ListToolsRequestSchema, async () => {
           required: ["skill_id"],
         },
       },
+      {
+        name: "github_create_pull_request",
+        description: "Creates a GitHub Pull Request with multiple file changes by generating a new git commit and branch.",
+        inputSchema: {
+          type: "object",
+          properties: {
+            owner: { type: "string" },
+            repo: { type: "string" },
+            baseBranch: { type: "string", description: "The branch you want to merge into (e.g., main)." },
+            newBranch: { type: "string", description: "The name of the new branch to create." },
+            title: { type: "string", description: "Title of the Pull Request." },
+            body: { type: "string", description: "Markdown description body of the PR." },
+            files: {
+              type: "array",
+              items: {
+                type: "object",
+                properties: {
+                  path: { type: "string", description: "Repository path (e.g., src/index.ts)" },
+                  content: { type: "string", description: "Raw content for the file" }
+                },
+                required: ["path", "content"]
+              }
+            }
+          },
+          required: ["owner", "repo", "baseBranch", "newBranch", "title", "body", "files"]
+        }
+      }
     ],
   };
 });
@@ -143,6 +272,39 @@ mcpServer.setRequestHandler(CallToolRequestSchema, async (request) => {
       ],
     };
   }
+  
+  if (request.params.name === "github_create_pull_request") {
+    if (!_workerEnv?.GITHUB_APP_ID || !_workerEnv?.GITHUB_PRIVATE_KEY) {
+      return {
+        isError: true,
+        content: [{ type: "text", text: "GitHub Integration not configured: Missing App ID or Private Key bindings." }]
+      };
+    }
+    try {
+      const prService = new GitHubPRService(_workerEnv.GITHUB_APP_ID, _workerEnv.GITHUB_PRIVATE_KEY);
+      const args = request.params.arguments as any;
+      const res = await prService.createPullRequest({
+        owner: args.owner,
+        repo: args.repo,
+        baseBranch: args.baseBranch,
+        newBranch: args.newBranch,
+        title: args.title,
+        body: args.body,
+        files: args.files
+      });
+      return {
+        content: [
+          { type: "text", text: `Pull Request created successfully!\nURL: ${res.pr_url}\nNumber: #${res.pr_number}\nBranch: ${res.branch}` }
+        ]
+      };
+    } catch (e: any) {
+      return {
+        isError: true,
+        content: [{ type: "text", text: `Failed to create PR: ${e.message}` }]
+      };
+    }
+  }
+
   throw new Error("Tool not found");
 });
 

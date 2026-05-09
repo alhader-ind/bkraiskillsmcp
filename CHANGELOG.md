@@ -4,6 +4,15 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 ### Added
+- **Phase 4 - GitHub App Integration (Stage 3 Complete)**:
+  - Engineered `GitHubPRService` (`src/services/githubPRService.ts`) for stateless git tree creation, committing, and PR generation via GitHub REST API.
+  - Wired live `github_create_pull_request` execution mapped securely into the Model Context Protocol (MCP) server environment.
+  - Implemented Edge-optimized RS256 JWT Signing mechanism (`src/services/githubAuth.ts`) using `jose` library.
+  - Engineered `/api/github/test-auth` endpoint for verifying GitHub App JWTs and retrieving temporary Installation Access Tokens.
+  - Enhanced memory caching for token rotation and rate limit minimization.
+  - Engineered Webhook Interception endpoint (`/api/github/webhook`).
+  - Implemented Web Crypto API HMAC SHA-256 for GitHub `x-hub-signature-256` verification.
+  - Appended Cloudflare env bindings for GitHub Secrets (`GITHUB_WEBHOOK_SECRET`, `GITHUB_APP_ID`, `GITHUB_PRIVATE_KEY`).
 - **Deployment Implementation**:
   - Engineered bulletproof `scripts/deploy.js` pre-flight matrix checker.
   - Refined `_worker.js` esbuild target parameters to `--platform=browser` aligned directly with Cloudflare Pages execution constraints.
