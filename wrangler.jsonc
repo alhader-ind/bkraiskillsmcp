@@ -1,0 +1,22 @@
+{
+  "name": "bkraiskillsmcp",
+  "compatibility_date": "2026-04-28",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "pages_build_output_dir": "dist",
+  "vars": {
+    "VITE_APP_ENV": "production",
+    "RATE_LIMIT": 100,
+    "API_KEY": "dev_secret_key"
+  },
+  "ai": {
+    "binding": "AI"
+  },
+  "analytics_engine_datasets": [
+    {
+      "binding": "BKRAISKILLSMCP_ENGINE",
+      "dataset": "bkraiskillsmcp_event"
+    }
+  ]
+}

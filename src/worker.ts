@@ -3,7 +3,7 @@ import { Hono } from 'hono';
 type Bindings = {
   ASSETS: { fetch: (req: Request) => Promise<Response> };
   AI?: any; // Cloudflare Workers AI Binding
-  SKILLS_USAGE?: any; // Cloudflare Analytics Engine
+  BKRAISKILLSMCP_ENGINE?: any; // Cloudflare Analytics Engine
   API_KEY?: string; // Private Skills API Key
   RATE_LIMIT?: number; // Configurable window limit
 };
@@ -37,13 +37,13 @@ app.use('/api/*', async (c, next) => {
 // 2. Analytics Telemetry (Cloudflare Analytics Engine)
 app.use('/api/skills/*', async (c, next) => {
   await next();
-  if (c.env?.SKILLS_USAGE && c.res.status === 200) {
+  if (c.env?.BKRAISKILLSMCP_ENGINE && c.res.status === 200) {
     const url = new URL(c.req.url);
     const skillPath = url.pathname;
     const ip = c.req.header('cf-connecting-ip') || 'unknown';
     
     try {
-      c.env.SKILLS_USAGE.writeDataPoint({
+      c.env.BKRAISKILLSMCP_ENGINE.writeDataPoint({
         blobs: [skillPath, ip],
         doubles: [1],
         indexes: [skillPath]

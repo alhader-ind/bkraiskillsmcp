@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 ### Added
+- **Deployment Implementation**:
+  - Engineered bulletproof `scripts/deploy.js` pre-flight matrix checker.
+  - Refined `_worker.js` esbuild target parameters to `--platform=browser` aligned directly with Cloudflare Pages execution constraints.
+  - Vetted `wrangler.toml` for nodejs_compat and bindings.
 - **Phase 3 Deliverables Complete**:
   - Semantic Search endpoint `/api/skills/semantic-search` using Cloudflare Workers AI `bge-base-en-v1.5`.
   - Hono Rate Limiting Middleware protecting `/api/*` endpoints.
