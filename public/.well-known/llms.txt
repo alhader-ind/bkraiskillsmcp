@@ -414,6 +414,12 @@
 - **Tokens**: ~1140
 - **Granular API**: `/api/skills?id=python-code-execution`
 
+### [python-excel-architect](/skills/python-excel-architect.md)
+- **Description**: Advanced Excel spreadsheet engineering using Python and openpyxl. Use this skill to generate sophisticated reports, configure office-style formatting, conditional formatting, charts, data validation, pane freezing, and row grouping.
+- **Tags**: Python Excel Architect (`openpyxl` Gui
+- **Tokens**: ~1146
+- **Granular API**: `/api/skills?id=python-excel-architect`
+
 ### [qa-test-engineer](/skills/qa-test-engineer.md)
 - **Description**: Advanced quality assurance automation, systemic edge-case discovery, and full-spectrum testing engineering. Use this skill for building resilient unit, integration, and E2E test suites with high-fidelity verification.
 - **Tags**: Advanced QA, 3. Implementation: The Test Sui, 6. Global QA
@@ -555,7 +561,7 @@
 ### [adr-skill](/skills/vercel-adr-skill.md)
 - **Description**: Create and maintain Architecture Decision Records (ADRs) optimized for agentic coding workflows. Use when you need to propose, write, update, accept/reject, deprecate, or supersede an ADR; bootstrap an adr folder and index; consult existing ADRs before implementing changes; or enforce ADR conventions. This skill uses Socratic questioning to capture intent before drafting, and validates output against an agent-readiness checklist.
 - **Tags**: General
-- **Tokens**: ~4101
+- **Tokens**: ~4100
 - **Granular API**: `/api/skills?id=vercel-adr-skill`
 
 ### [capture-api-response-test-fixture](/skills/vercel-capture-api-response-test-fixture.md)

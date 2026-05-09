@@ -27,6 +27,23 @@ Before contributing or modifying this repository, Agents **MUST** consult and ma
 
 **Rule:** AI Agents MUST read `MEMORY.md` at the start of a session and edit it at the end of a session if architectural changes were made.
 
+## Dynamic Skill CLI & Synchronizer
+
+A robust Command Line Interface (CLI) is integrated for fetching, listing, and auditing skills from external registries (e.g., GitHub) directly into your local workspace. Built with an extensible `SyncEngine` and `GitHubAdapter`, it operates using highly resilient, parallelized execution pipelines (`Promise.allSettled`), exponential backoff, and strict output mapping supporting machine-readable JSON formats via `--json`.
+
+```bash
+# Sync entire remote registries locally (outputs JSON payload)
+npx tsx src/swarm/cli.ts sync --json
+
+# Download a specific skill
+npx tsx src/swarm/cli.ts pull prd-documentation-master --json
+
+# Validate and Hash Check existing local skills
+npx tsx src/swarm/cli.ts audit --json
+```
+
+For agentic interactions, refer to [CLI_SPECS.md](CLI_SPECS.md).
+
 ## Getting Started (Local Development)
 
 ```bash
@@ -36,8 +53,8 @@ npm install
 # Start Local Dev environment (Hono + Vite)
 npm run dev
 
-# Generate llms.txt and llms.json from raw markdown skills inside src/raw-skills
-npm run sync-skills
+# Generate llms.txt and llms.json from external remote skill repositories via SyncEngine CLI Tool
+npm run sync-skills # (alias for npx tsx src/swarm/cli.ts sync)
 ```
 
 ## Deployment (Cloudflare)

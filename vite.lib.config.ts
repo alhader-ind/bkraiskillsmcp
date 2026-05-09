@@ -15,7 +15,17 @@ export default defineConfig({
     rollupOptions: {
       external: [
         '@google/genai',
-        '@modelcontextprotocol/sdk'
+        '@modelcontextprotocol/sdk',
+        'node-fetch',
+        /^node:.*/,
+        'fs',
+        'path',
+        'node:fs',
+        'node:path',
+        'crypto',
+        'node:crypto',
+        'util',
+        'node:util'
       ]
     }
   }

@@ -19,10 +19,11 @@
   ],
   "scripts": {
     "dev": "vite",
+    "test": "vitest run",
     "start": "node dist/server.cjs",
     "build": "npm run sync-skills && vite build && esbuild src/worker.ts --bundle --platform=browser --format=esm --outfile=dist/_worker.js && esbuild server.ts --bundle --platform=node --outfile=dist/server.cjs && npm run build:lib",
     "build:lib": "vite build -c vite.lib.config.ts",
-    "sync-skills": "node scripts/sync-skills.js",
+    "sync-skills": "tsx src/swarm/cli.ts sync --json",
     "preview": "vite preview",
     "pages:deploy": "npx wrangler pages deploy dist --project-name bkraiskillsmcp",
     "deploy": "node scripts/deploy.js",
@@ -32,6 +33,7 @@
     "@google/genai": "^1.51.0",
     "@modelcontextprotocol/sdk": "^1.29.0",
     "@tailwindcss/typography": "^0.5.19",
+    "commander": "^14.0.3",
     "hono": "^4.12.16",
     "jose": "^6.2.3",
     "lucide-react": "^0.344.0",
@@ -54,6 +56,7 @@
     "tailwindcss": "^4.0.0-alpha.25",
     "tsx": "^4.21.0",
     "vite": "^5.1.4",
+    "vitest": "^4.1.5",
     "wrangler": "^4.86.0"
   }
 }

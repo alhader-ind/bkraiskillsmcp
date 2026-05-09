@@ -2,15 +2,6 @@
 
 All notable changes to this project will be documented in this file.
 
-## [v1.6.0] - 2026-05-09
-### Added
-- **Swarm CLI Architecture & SyncEngine**:
-  - Engineered an extensible, Commander.js-driven CLI (`src/swarm/cli.ts`) supporting commands: `sync`, `pull`, `list`, `audit`, and `demo`.
-  - Built `SyncEngine` (`src/swarm/core/SyncEngine.ts`) mapping parallel asynchronous remote payload fetching utilizing `Promise.allSettled`.
-  - Constructed `GitHubAdapter` (`src/swarm/core/GitHubAdapter.ts`) with robust, rate-limit sensitive exponential backoff and recursive `Link` header pagination capabilities.
-  - Introduced `--json` machine-readable output flags strictly emitting normalized JSON responses, isolating STDOUT artifacts for external AI-agent parsing.
-  - Validated architecture with high-fidelity `vitest` unit test coverage spanning mocking of asynchronous HTTP handlers.
-
 ## [v1.5.0] - 2026-05-09
 ### Added
 - **Phase 4 - GitHub App Integration (Completed)**:
