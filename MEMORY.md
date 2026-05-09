@@ -23,6 +23,7 @@
   - Integrated GitHub App webhook interception (`/api/github/webhook`) with Web Crypto HMAC SHA-256 validation.
   - Hardened Cloudflare Pages compilation strategy (esbuild target: browser).
   - Drafted custom validation hook `scripts/deploy.js` to guard deployment operations.
+  - **Identified & Fixed Deployment Collision:** Removed `GITHUB_*` plaintext keys from `wrangler.jsonc` `vars` block to resolve Cloudflare Pages `Binding already in use` conflict against Dashboard Secrets.
   - Implemented Edge-optimized Rate Limiting (Isolate-Local map).
   - Configured Cloudflare Analytics Engine Telemetry for API requests.
   - Defined Multi-Tenant authentication guard (`/api/private/*`).

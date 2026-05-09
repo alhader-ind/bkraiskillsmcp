@@ -33,6 +33,11 @@ try {
   execSync('npx wrangler pages deploy dist --project-name bkraiskillsmcp', { stdio: 'inherit' });
   
   console.log("🎉 Deployment complete!");
+  console.log("\n⚠️  REMINDER: For GitHub App Integration to work in production, ensure the following SECRETS are set in your Cloudflare Pages Dashboard:");
+  console.log("   - GITHUB_APP_ID");
+  console.log("   - GITHUB_WEBHOOK_SECRET");
+  console.log("   - GITHUB_PRIVATE_KEY");
+  console.log("   (Do NOT add these to plain-text 'vars' in wrangler.jsonc or they will conflict.)\n");
 } catch (error) {
   console.error("\n❌ Deployment failed:", error.message);
   process.exit(1);

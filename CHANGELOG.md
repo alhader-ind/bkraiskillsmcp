@@ -13,6 +13,10 @@ All notable changes to this project will be documented in this file.
   - Engineered Webhook Interception endpoint (`/api/github/webhook`).
   - Implemented Web Crypto API HMAC SHA-256 for GitHub `x-hub-signature-256` verification.
   - Appended Cloudflare env bindings for GitHub Secrets (`GITHUB_WEBHOOK_SECRET`, `GITHUB_APP_ID`, `GITHUB_PRIVATE_KEY`).
+
+### Fixed
+- **Cloudflare Pages Deployment**:
+  - Removed `GITHUB_*` plaintext keys from `wrangler.jsonc` `vars` to prevent collision (`Binding already in use` error) when defining deployment SECRETS in the Cloudflare Dashboard.
 - **Deployment Implementation**:
   - Engineered bulletproof `scripts/deploy.js` pre-flight matrix checker.
   - Refined `_worker.js` esbuild target parameters to `--platform=browser` aligned directly with Cloudflare Pages execution constraints.
