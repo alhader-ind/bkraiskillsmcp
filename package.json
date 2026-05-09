@@ -25,7 +25,8 @@
     "sync-skills": "node scripts/sync-skills.js",
     "preview": "vite preview",
     "pages:deploy": "npx wrangler pages deploy dist --project-name bkraiskillsmcp",
-    "deploy": "node scripts/deploy.js"
+    "deploy": "node scripts/deploy.js",
+    "test:pr": "tsx scripts/test-github-pr.ts"
   },
   "dependencies": {
     "@google/genai": "^1.51.0",
