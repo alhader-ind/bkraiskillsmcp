@@ -13,8 +13,10 @@
   - **Registry/Storage:** Remote GitHub Pages / local `llms.txt`, `llms-full.txt`, and RAW Markdown files (`src/raw-skills/`).
 
 ## 2. In-Flight State (Current Snapshot)
-- **Current Phase:** Phase 4 Stage 3 (GitHub PR Tool via MCP).
+- **Current Phase:** Phase 4 Stage 3 (GitHub PR Tool via MCP & Testing).
 - **Recent Milestones:**
+  - Resolved `SSEServerTransport` Cloudflare isolate proxying by polyfilling Node's `ServerResponse` adapter over standard `TransformStream`. 
+  - Exposed `/api/test-pr` REST fallback endpoint allowing instant GitHub Integration functional evaluation.
   - Designed `github_create_pull_request` MCP Tool utilizing precise GitHub REST API git tree primitives.
   - Deployed `GitHubPRService` allowing AI agents to fully automate pulling context -> pushing code.
   - Implemented GitHub Auth Service (`src/services/githubAuth.ts`) for stateless edge-compatible RS256 JWT generation using `jose`.

@@ -23,8 +23,11 @@ app.use('*', async (c, next) => {
 });
 
 import { Server } from "@modelcontextprotocol/sdk/server/index.js";
-import { SSEServerTransport } from "@modelcontextprotocol/sdk/server/sse.js";
+import { WebStandardStreamableHTTPServerTransport } from "@modelcontextprotocol/sdk/server/webStandardStreamableHttp.js";
 import { CallToolRequestSchema, ListToolsRequestSchema, ListResourcesRequestSchema } from "@modelcontextprotocol/sdk/types.js";
+
+// Global reference for Edge Isolate testing (not strictly durable across CF instances)
+let isolateGlobalTransport: WebStandardStreamableHTTPServerTransport | null = null;
 
 // Healthcheck
 app.get('/api/health', (c) => c.json({ status: 'ok', framework: 'hono' }));
@@ -308,16 +311,42 @@ mcpServer.setRequestHandler(CallToolRequestSchema, async (request) => {
   throw new Error("Tool not found");
 });
 
-app.get('/api/mcp', async (c) => {
-  const { readable, writable } = new TransformStream();
-  // Here we would connect transport to writable stream in a real robust setup
-  return new Response(readable, {
-    headers: {
-      "Content-Type": "text/event-stream",
-      "Cache-Control": "no-cache",
-      "Connection": "keep-alive",
-    },
-  });
+app.all('/api/mcp', async (c) => {
+  if (!isolateGlobalTransport) {
+    isolateGlobalTransport = new WebStandardStreamableHTTPServerTransport();
+    await mcpServer.connect(isolateGlobalTransport);
+  }
+  return await isolateGlobalTransport.handleRequest(c.req.raw);
+});
+
+app.post('/api/mcp/messages', async (c) => {
+  if (isolateGlobalTransport) {
+    return await isolateGlobalTransport.handleRequest(c.req.raw);
+  }
+  return c.json({ status: "message endpoint active, but no global transport in ISOLATE" }, 503);
+});
+
+// Alternative: Temporary REST Test Route for immediate Cloudflare Curl Testing
+app.post('/api/test-pr', async (c) => {
+  if (!_workerEnv?.GITHUB_APP_ID || !_workerEnv?.GITHUB_PRIVATE_KEY) {
+    return c.json({ error: 'Missing GitHub credentials' }, 501);
+  }
+  try {
+    const payload = await c.req.json().catch(() => ({}));
+    const prService = new GitHubPRService(_workerEnv.GITHUB_APP_ID, _workerEnv.GITHUB_PRIVATE_KEY);
+    const res = await prService.createPullRequest({
+      owner: payload.owner || "org",
+      repo: payload.repo || "test-repo",
+      baseBranch: payload.baseBranch || "main",
+      newBranch: payload.newBranch || `feature/test-${Date.now()}`,
+      title: payload.title || "Test Pull Request",
+      body: payload.body || "Adds a test file with Hello World content.",
+      files: payload.files || [{ path: `test-${Date.now()}.txt`, content: "Hello World testing from REST" }]
+    });
+    return c.json(res);
+  } catch (error: any) {
+    return c.json({ error: error.message }, 500);
+  }
 });
 
 

@@ -7,6 +7,8 @@ All notable changes to this project will be documented in this file.
 - **Phase 4 - GitHub App Integration (Stage 3 Complete)**:
   - Engineered `GitHubPRService` (`src/services/githubPRService.ts`) for stateless git tree creation, committing, and PR generation via GitHub REST API.
   - Wired live `github_create_pull_request` execution mapped securely into the Model Context Protocol (MCP) server environment.
+  - Initialized `/api/mcp` capability with Mock `ServerResponse` adapter exposing `@modelcontextprotocol/sdk/server/sse.js` to Cloudflare TransformStreams.
+  - Instantiated `/api/test-pr` ad-hoc REST pathway for frictionless immediate curl testing without full MCP handshake.
   - Implemented Edge-optimized RS256 JWT Signing mechanism (`src/services/githubAuth.ts`) using `jose` library.
   - Engineered `/api/github/test-auth` endpoint for verifying GitHub App JWTs and retrieving temporary Installation Access Tokens.
   - Enhanced memory caching for token rotation and rate limit minimization.
