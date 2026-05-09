@@ -13,8 +13,10 @@
   - **Registry/Storage:** Remote GitHub Pages / local `llms.txt`, `llms-full.txt`, and RAW Markdown files (`src/raw-skills/`).
 
 ## 2. In-Flight State (Current Snapshot)
-- **Current Phase:** Phase 4 Stage 3 (GitHub PR Tool via MCP & Testing).
+- **Current Phase:** Phase 4 Completed (GitHub PR Tool via Edge MCP Live).
 - **Recent Milestones:**
+  - Diagnosed and resolved Web Crypto API incompatibilities for RSA signatures on Cloudflare Edge by engineering a `convertPKCS1toPKCS8` DER/ASN.1 transformation layer. This automatically bridges standard GitHub PKCS#1 private keys to Edge-compatible PKCS#8 structures for fast JWT generation.
+  - Successfully deployed and executed the automated GitHub Pull Request MCP tool directly from the Edge, creating live PRs via GitHub App tokens.
   - Resolved `SSEServerTransport` Cloudflare isolate proxying by polyfilling Node's `ServerResponse` adapter over standard `TransformStream`. 
   - Exposed `/api/test-pr` REST fallback endpoint allowing instant GitHub Integration functional evaluation.
   - Designed `github_create_pull_request` MCP Tool utilizing precise GitHub REST API git tree primitives.
@@ -36,7 +38,6 @@
   - Designed the Memory Blueprint (you are reading it).
 - **Active Challenges/Bugs:**
   - Ensuring Cloudflare ASSETS binding accurately serves static files in remote environment.
-  - Edge compatibility verification for `@modelcontextprotocol/sdk`.
 
 ## 3. Dependency & Infrastructure Matrix
 - **Critical Dependencies:**

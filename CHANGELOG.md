@@ -2,9 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
-## [Unreleased]
+## [v1.5.0] - 2026-05-09
 ### Added
-- **Phase 4 - GitHub App Integration (Stage 3 Complete)**:
+- **Phase 4 - GitHub App Integration (Completed)**:
+  - Validated edge-native automated PR creation via `github_create_pull_request` MCP tool.
+  - Diagnosed and resolved Cloudflare Web Crypto constraint by engineering `convertPKCS1toPKCS8` to automatically wrap raw RSA private keys (PKCS#1) into edge-compatible ASN.1 DER (PKCS#8) formats, restoring full JWT signing capability at the CDN edge.
   - Engineered `GitHubPRService` (`src/services/githubPRService.ts`) for stateless git tree creation, committing, and PR generation via GitHub REST API.
   - Wired live `github_create_pull_request` execution mapped securely into the Model Context Protocol (MCP) server environment.
   - Initialized `/api/mcp` capability with Mock `ServerResponse` adapter exposing `@modelcontextprotocol/sdk/server/sse.js` to Cloudflare TransformStreams.

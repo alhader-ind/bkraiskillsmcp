@@ -10,12 +10,12 @@ async function main() {
     params: {
       name: "github_create_pull_request",
       arguments: {
-        owner: "org",
-        repo: "test-repo",
+        owner: "alhader-ind",
+        repo: "bkraiskillsmcp",
         baseBranch: "main",
-        newBranch: "feature/add-test-txt",
-        title: "Add test.txt",
-        body: "Adds a test file with Hello World content.",
+        newBranch: "feature/edge-test",
+        title: "Automated Edge Test",
+        body: "Hello from Cloudflare Workers edge!",
         files: [{"path": "test.txt", "content": "Hello World"}]
       }
     }

@@ -2,7 +2,7 @@
 
 Persistent System Instructions: SkillsGem AI Skill-Enforced Protocol
 
-Version: 1.4 (GitHub Edge MCP & Advanced Interoperability)
+Version: 1.5 (GitHub Edge MCP, PKCS#8 Crypto & Advanced Interoperability)
 Skills Library URL: https://bkraiskillsmcp.pages.dev/llms.txt
 Discovery API: https://bkraiskillsmcp.pages.dev/api/skills
 Full Knowledge Base URL: https://bkraiskillsmcp.pages.dev/llms-full.txt
@@ -468,7 +468,8 @@ The system is now running an Isolate-based Edge MCP Server natively within the C
 - Cloudflare Isolate Constraints: Native Node.js `fs` module is unavailable. You MUST utilize `ASSETS.fetch` to read static data or process git operations directly through GitHub REST APIs (`src/services/githubPRService.ts`).
 - MCP Transport Handling: The MCP Server leverages `WebStandardStreamableHTTPServerTransport` directly mapping to standard Fetch Request/Response endpoints `/api/mcp` and `/api/mcp/messages`.
 - GitHub Pull Request Execution (`github_create_pull_request`): You can instantly convert generated AI contexts into real GitHub codebases via this MCP tool. Ensure you provide exact formatting for: `owner`, `repo`, `baseBranch`, `newBranch`, `title`, `body`, and `files` array.
-- Edge Authentication Testing: The GitHub App JWT signing utilizes the minimal `jose` library to remain edge-compatible (`src/services/githubAuth.ts`).
+- Edge Authentication Testing: The GitHub App JWT signing utilizes the minimal `jose` library with Web Crypto API (`src/services/githubAuth.ts`). 
+  - To bypass Cloudflare Edge limitations regarding PKCS#1 formatted keys, the system includes a `convertPKCS1toPKCS8` transformation layer, automatically wrapping standard GitHub private keys into Web Crypto-compatible PKCS#8 structures.
   - Test Auth Connectivity: Use `/api/github/test-auth` to verify the `GITHUB_PRIVATE_KEY` and issue Temporary Installation Access Tokens.
   - Test PR Logic Directly: If you encounter an MCP client failure, hit the REST Fallback endpoint `/api/test-pr` via POST payload to bypass the MCP handshake and simulate Pull Request pipelines instantly in production.
 
