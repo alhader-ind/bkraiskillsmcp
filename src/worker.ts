@@ -2,6 +2,10 @@ import { Hono } from 'hono';
 
 type Bindings = {
   ASSETS: { fetch: (req: Request) => Promise<Response> };
+  AI?: any; // Cloudflare Workers AI Binding
+  SKILLS_USAGE?: any; // Cloudflare Analytics Engine
+  API_KEY?: string; // Private Skills API Key
+  RATE_LIMIT?: number; // Configurable window limit
 };
 
 const app = new Hono<{ Bindings: Bindings }>();
@@ -12,6 +16,60 @@ import { CallToolRequestSchema, ListToolsRequestSchema, ListResourcesRequestSche
 
 // Healthcheck
 app.get('/api/health', (c) => c.json({ status: 'ok', framework: 'hono' }));
+
+// --- PHASE 3: MIDDLEWARE ORCHESTRATION ---
+
+// 1. In-Memory Rate Limiter (Isolate-Local for Edge)
+const edgeRateLimitCache = new Map<string, number>();
+app.use('/api/*', async (c, next) => {
+  const ip = c.req.header('cf-connecting-ip') || '127.0.0.1';
+  // Use bound limit or default to 100
+  const limit = c.env?.RATE_LIMIT || 100;
+  const current = edgeRateLimitCache.get(ip) || 0;
+  
+  if (current >= limit) {
+    return c.json({ error: 'Too Many Requests (Rate Limited)', code: 429 }, 429);
+  }
+  edgeRateLimitCache.set(ip, current + 1);
+  await next();
+});
+
+// 2. Analytics Telemetry (Cloudflare Analytics Engine)
+app.use('/api/skills/*', async (c, next) => {
+  await next();
+  if (c.env?.SKILLS_USAGE && c.res.status === 200) {
+    const url = new URL(c.req.url);
+    const skillPath = url.pathname;
+    const ip = c.req.header('cf-connecting-ip') || 'unknown';
+    
+    try {
+      c.env.SKILLS_USAGE.writeDataPoint({
+        blobs: [skillPath, ip],
+        doubles: [1],
+        indexes: [skillPath]
+      });
+    } catch (e) {
+      console.warn("Analytics write failure:", e);
+    }
+  }
+});
+
+// 3. Multi-Tenant / Private Skills Guard (Bearer Token Auth)
+app.use('/api/private/*', async (c, next) => {
+  const auth = c.req.header('Authorization');
+  const expectedKey = c.env?.API_KEY || 'default_dev_key';
+
+  if (!auth || auth !== `Bearer ${expectedKey}`) {
+    return c.json({ error: 'Unauthorized. Invalid or missing API Key.', code: 401 }, 401);
+  }
+  await next();
+});
+
+app.get('/api/private/status', (c) => {
+  return c.json({ status: "Private zone accessed securely.", authenticated: true });
+});
+
+// ------------------------------------------
 
 // Set up MCP Server globally
 const mcpServer = new Server(
@@ -30,6 +88,12 @@ const mcpServer = new Server(
 mcpServer.setRequestHandler(ListResourcesRequestSchema, async () => {
   return {
     resources: [
+      {
+        uri: "https://bkraiskillsmcp.pages.dev/api/context",
+        name: "Technical Memory Continuity Matrix",
+        description: "Aggregate repository context (MEMORY, ROADMAP, CHANGELOG, AGENTS) for absolute session handover.",
+        mimeType: "text/plain",
+      },
       {
         uri: "https://bkraiskillsmcp.pages.dev/llms-full.txt",
         name: "All Skills (Full Text)",
@@ -170,6 +234,95 @@ app.get('/api/skills', async (c) => {
   } catch (error) {
     console.error(error);
     return c.json({ error: "Internal server error" }, 500);
+  }
+});
+
+// --- PHASE 3: SEMANTIC SEARCH ENDPOINT ---
+app.get('/api/skills/semantic-search', async (c) => {
+  const query = c.req.query('q');
+  if (!query) {
+    return c.json({ error: 'Query parameter "q" is required (e.g., ?q=database migration)' }, 400);
+  }
+
+  try {
+    if (!c.env?.AI) {
+      return c.json({ 
+        error: 'Cloudflare Workers AI binding is not configured. Run "wrangler deployment" with [ai].',
+        code: 501 
+      }, 501);
+    }
+
+    // 1. Generate text embeddings via BGE Base En v1.5
+    const embeddingsResponse = await c.env.AI.run('@cf/baai/bge-base-en-v1.5', {
+      text: query,
+    });
+    
+    // 2. Normally this embeddings array is cross-referenced with a Vectorize index.
+    // (Vectorize binding requires explicit indexing process).
+    // For this milestone, we output the abstraction layout and mock the vector DB retrieval output.
+    
+    return c.json({
+      query,
+      vector_shape: embeddingsResponse.shape,
+      matches: [
+        { skill: 'backend-engineer', similarity_score: 0.89 },
+        { skill: 'database-architect', similarity_score: 0.85 },
+        { skill: 'api-route-orchestrator', similarity_score: 0.77 }
+      ],
+      notice: "Real semantic retrieval requires Cloudflare Vectorize DB indexing over llms.txt."
+    });
+  } catch (error: any) {
+    console.error('Semantic search failed:', error);
+    return c.json({ error: 'Semantic search execution failed', details: error.message }, 500);
+  }
+});
+
+// ZERO-FRICTION HANDOVER: Context Continuity Endpoint
+app.get('/api/context', async (c) => {
+  try {
+    const origin = new URL(c.req.url).origin;
+    const memoryFiles = ['MEMORY.md', 'ROADMAP.md', 'CHANGELOG.md', 'APP_ANALYSIS_REPORT.md', 'AGENTS.md'];
+    
+    let bundledContext = `# SkillsGem AI - Absolute Context Continuity (Zero-Friction Handover)\n`;
+    bundledContext += `\n> [!NOTE]\n> This endpoint dynamically aggregates the Project's Technical Memory Matrix for immediate ingestion by remote LLMs.\n\n`;
+
+    const contextData: Record<string, string> = {};
+
+    for (const file of memoryFiles) {
+      const fileUrl = new URL(`/${file}`, origin).toString();
+      let response;
+      if (c.env?.ASSETS) {
+        response = await c.env.ASSETS.fetch(new Request(fileUrl));
+      } else {
+        response = await fetch(fileUrl);
+      }
+
+      if (response.ok) {
+        const content = await response.text();
+        contextData[file] = content;
+        bundledContext += `\n---\n## 📂 File: ${file}\n---\n${content}\n`;
+      } else {
+        contextData[file] = `[File Not Found: Ensure the build pipeline successfully copied ${file} to public/]`;
+      }
+    }
+
+    const mode = c.req.query('mode') || 'text';
+    
+    if (mode === 'json') {
+       return c.json({
+         schema: 'Technical Memory Continuity Matrix',
+         version: '1.0',
+         files: contextData
+       });
+    }
+
+    c.header('Content-Type', 'text/plain; charset=utf-8');
+    c.header('Cache-Control', 'no-store, no-cache, must-revalidate'); // Guarantee fresh handovers 
+    return c.text(bundledContext);
+
+  } catch (error: any) {
+    console.error('Context Endpoint Error:', error);
+    return c.json({ error: "Failed to generate context matrix", details: error.message }, 500);
   }
 });
 

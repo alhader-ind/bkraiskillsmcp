@@ -162,6 +162,14 @@ async function runSync() {
   }
   fs.writeFileSync(path.join(WELL_KNOWN_DIR, 'llms.txt'), llmsTxt);
 
+  // Copy Technical Memory files to public for raw edge access
+  const MEMORY_FILES = ['MEMORY.md', 'ROADMAP.md', 'CHANGELOG.md', 'APP_ANALYSIS_REPORT.md', 'AGENTS.md'];
+  MEMORY_FILES.forEach(file => {
+    if (fs.existsSync(`./${file}`)) {
+      fs.copyFileSync(`./${file}`, path.join('./public', file));
+    }
+  });
+
   console.log('Sync complete. Index generated at /llms.txt and /.well-known/llms.txt');
 }
 
