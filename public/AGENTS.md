@@ -60,165 +60,370 @@ CRITICAL SYSTEM DIRECTIVE: You operate in a hybrid environment where some skills
 
 2. REMOTE SKILLSGEM SKILLS (Knowledge Base):
    All other skills listed in the Section 3 catalog below (e.g., `tone-style-mimic`, `bootstrap-nextjs-app-router`, etc.) DO NOT exist on the local filesystem. 
-   You MUST NOT attempt to use `view_file` on paths like `/skills/tone-style-mimic.md`. Instead, you MUST use the `read_url_content` tool to fetch their instructions directly from `https://bkraiskillsmcp.pages.dev/skills/[skill-slug].md`.
+   You MUST NOT attempt to use `view_file` on paths like `/skills/tone-style-mimic.md`. Instead, you MUST use the `read_url_content` tool to fetch their instructions directly from the Fetch API endpoint at `https://bkraiskillsmcp.pages.dev/api/skills?id=[skill-slug]&mode=text`.
 
 ---
 
 SECTION 3: Complete Skill Catalog
 
-Below is the full remote skill inventory from https://bkraiskillsmcp.pages.dev/llms.txt. Use this as your first-pass matching reference. When a remote match is found, fetch the full skill instructions using the `read_url_content` tool on `https://bkraiskillsmcp.pages.dev/skills/[skill-slug].md`.
+Below is the full remote skill inventory from https://bkraiskillsmcp.pages.dev/llms.txt. Use this as your first-pass matching reference. When a remote match is found, fetch the full skill instructions using the `read_url_content` tool on `https://bkraiskillsmcp.pages.dev/api/skills?id=[skill-slug]&mode=text`.
 
-Other Specialized Skills
+5. UI
 
 Skill Path Use When...
 a11y-accessibility-auditor /skills/a11y-accessibility-auditor.md Advanced WCAG 2.1/2.2 compliance, semantic structural auditing, and assistive technology optimization. Use this skill for building inclusive, a11y-first web interfaces.
-data-extraction-specialist /skills/data-extraction-specialist.md Advanced unstructured-to-structured synthesis, semantic entity resolution, and high-fidelity JSON orchestration. Use this skill for transforming chaotic text or documents into production-ready data schemas.
-db-migration-expert /skills/db-migration-expert.md Advanced database schema evolution and state-management engineering. Use this skill for zero-downtime migrations, data seeding, and schema versioning.
-dependency-integrity-officer /skills/dependency-integrity-officer.md Advanced package management, dependency resolution, and version collision mitigation. Use this skill for fixing npm/yarn errors, peer dependency conflicts, and environment-specific installation failures.
-focus-mode /skills/focus-mode.md Instructions for responding to UI element selection (CSS selectors).
-google-search-grounding /skills/google-search-grounding.md Advanced real-time intelligence gathering and verification. Use this skill for deep research, fact-checking, and tracking fast-moving events.
-hono-framework /skills/hono-framework.md Guidelines for building fast, edge-optimized web applications and APIs using the Hono framework.
-jwt-service-engineer /skills/jwt-service-engineer.md Advanced stateless session management and token lifecycle engineering. Use this skill for secure JWT implementation, refresh token rotations, and claim-based authorization.
-middleware-engineer /skills/middleware-engineer.md Advanced request interception and cross-cutting concern orchestration. Use this skill for building security guards, logging pipelines, and multi-tenant routing logic.
-real-time-and-multi-user /skills/real-time-and-multi-user.md >
-regex-crafter /skills/regex-crafter.md Advanced string-matching engineering, catastrophic backtracking prevention, and high-fidelity pattern synthesis. Use this skill for building robust, performant, and secure regular expressions across multiple engines.
-remix-framework /skills/remix-framework.md Guidelines for building full-stack web applications using the Remix framework. Use when creating React-based applications that require robust server-side rendering, nested routing, and standard web fetch APIs via loaders and actions.
-state-management-strategist /skills/state-management-strategist.md Advanced state orchestration, reactivity modeling, and high-fidelity data flow engineering. Use this skill for building scalable, high-performance frontend state systems with atomic stores and optimistic synchronization.
-systems-architect /skills/systems-architect.md Advanced technical stack orchestration, high-fidelity repository engineering, and multi-tier scalability roadmapping. Use this skill for building production-grade system blueprints and complex refactorings.
-tone-style-mimic /skills/tone-style-mimic.md Brand voice, character copywriting. Use this skill when the user asks about rewrite in style, brand voice.
-vercel-add-function-examples /skills/vercel-add-function-examples.md Guide for adding new AI function examples, for testing specific features against the actual provider APIs.
-vercel-add-provider-package /skills/vercel-add-provider-package.md Guide for adding new AI provider packages to the AI SDK. Use when creating a new @ai-sdk/<provider> package to integrate an AI service into the SDK.
-vercel-adr-skill /skills/vercel-adr-skill.md Create and maintain Architecture Decision Records (ADRs) optimized for agentic coding workflows. Use when you need to propose, write, update, accept/reject, deprecate, or supersede an ADR; bootstrap an adr folder and index; consult existing ADRs before implementing changes; or enforce ADR conventions. This skill uses Socratic questioning to capture intent before drafting, and validates output against an agent-readiness checklist.
-vercel-list-npm-package-content /skills/vercel-list-npm-package-content.md List the contents of an npm package tarball before publishing. Use when the user wants to see what files are included in an npm bundle, verify package contents, or debug npm publish issues.
-vercel-major-version-mode /skills/vercel-major-version-mode.md "Context for working on the next AI SDK major release. Only use when explicitly invoked by the user (e.g. via '/major-version-mode'). Do NOT trigger autonomously based on task content."
-vercel-update-provider-models /skills/vercel-update-provider-models.md Add new or remove obsolete model IDs for existing AI SDK providers. Use when adding a model to a provider, removing an obsolete model, or processing a list of model changes from an issue. Triggers on "add model", "remove model", "new model ID", "obsolete model", "update model IDs".
-wasp-framework /skills/wasp-framework.md Guidelines for building full-stack Web applications using the Wasp framework. Use when building React/Node.js full-stack apps where Wasp's declarative configuration handles routing, auth, and database setups.
-workos-sso-setup /skills/workos-sso-setup.md Instructions for integrating WorkOS for Enterprise Single Sign-On (SSO), SCIM directory sync, and user identity management APIs.
 
-API, Integration & Backend Engineering
+Advanced API
 
 Skill Path Use When...
 api-function-caller /skills/api-function-caller.md Advanced tool orchestration, recursive parameter resolution, and autonomous action-chaining. Use this skill for transforming conversational intent into high-fidelity system executions.
+
+API
+
+Skill Path Use When...
 api-integrator /skills/api-integrator.md Advanced third-party ecosystem integration, secure webhook orchestration, and multi-provider OAuth implementation. Use this skill for building production-grade external service connections.
 api-route-orchestrator /skills/api-route-orchestrator.md Advanced endpoint engineering and request-response lifecycle management. Use this skill for designing high-performance REST/GraphQL APIs with strict validation and error consistency.
-backend-engineer /skills/backend-engineer.md Advanced API orchestration, secure data modeling, and high-integrity server-side systems. Use this skill for building robust, scalable backends and complex server logic.
-bootstrap-nestjs-api /skills/bootstrap-nestjs-api.md Strict, step-by-step initialization protocol for building a NestJS TypeScript API. Bypasses interactive prompts for enterprise backends.
-gemini-api /skills/gemini-api.md >
-laravel-framework /skills/laravel-framework.md Guidelines for building robust, full-stack PHP applications using Laravel 11/12/13.
 vercel-capture-api-response-test-fixture /skills/vercel-capture-api-response-test-fixture.md Capture API response test fixture.
 
-Frontend Frameworks & UI Engineering
+Astro & Qwik Framework Integration Gui
 
 Skill Path Use When...
 astro-qwik-framework /skills/astro-qwik-framework.md Guidelines for building ultra-fast, resumable web applications using Astro and Qwik. Use when creating content-heavy sites, highly interactive applications where TTI (Time to Interactive) is critical, or when combining SSG with resumable interactivity.
-bootstrap-astro-hybrid-site /skills/bootstrap-astro-hybrid-site.md Strict, step-by-step initialization protocol for building an Astro hybrid site with React and Tailwind Integrations.
-bootstrap-express-react-fullstack /skills/bootstrap-express-react-fullstack.md Strict, step-by-step initialization protocol for building a bulletproof Express.js Backend + Vite React SPA Frontend environment. Solves CORS and port configuration limits.
-bootstrap-nextjs-app-router /skills/bootstrap-nextjs-app-router.md Strict, step-by-step initialization protocol for building a bulletproof Next.js (App Router) environment. Prevents AI build failures during scaffolding.
-bootstrap-nuxt-vue3 /skills/bootstrap-nuxt-vue3.md Strict, step-by-step initialization protocol for building a Nuxt 3 + Vue 3 environment. Bypasses highly interactive Nuxt CLIs.
-bootstrap-python-fastapi-react /skills/bootstrap-python-fastapi-react.md Strict initialization protocol for a Python FastAPI Backend and Vite React Frontend. Teaches AI to handle venv and requirements.txt alongside Node.
-bootstrap-react-native-expo /skills/bootstrap-react-native-expo.md Strict initialization protocol for React Native using Expo Router. Prevents AI from breaking builds by touching native code.
-bootstrap-sveltekit-app /skills/bootstrap-sveltekit-app.md Strict, step-by-step initialization protocol for building a bulletproof SvelteKit + Svelte 5 environment. Bypasses interactive create-svelte CLIs.
-bootstrap-vite-react-spa /skills/bootstrap-vite-react-spa.md Strict, step-by-step initialization protocol for building a bulletproof Vite + React SPA environment. Prevents AI build failures during scaffolding.
-frontend-design /skills/frontend-design.md Advanced visual architecture, design systems orchestration, and performance-tuned UI recipes. Use this skill to build distinctive, high-fidelity interfaces across all web applications.
-frontend-engineer /skills/frontend-engineer.md Advanced UI engineering, component lifecycle orchestration, and high-performance interactive systems. Use this skill for building complex React/TypeScript applications with production-grade polish.
-login-ui-specialist /skills/login-ui-specialist.md High-conversion authentication interface engineering. Use this skill for building intuitive, accessible, and high-performance login flows with seamless validation.
-nextjs-framework /skills/nextjs-framework.md Guidelines for building modern React web applications using Next.js App Router. Use when creating full-stack apps or static sites that require Server Components and SEO.
-nuxt-framework /skills/nuxt-framework.md Guidelines for building modern Vue web applications using Nuxt 3+.
-react-composition-patterns /skills/react-composition-patterns.md Advanced React component composition patterns focusing on modularity, flexibility, and render performance. Use when building complex UI systems or internal component libraries.
-shadcn-ui /skills/shadcn-ui.md >
-signup-ui-specialist /skills/signup-ui-specialist.md Growth-optimized user onboarding and registration engineering. Use this skill for building high-conversion multi-step signups and verification flows.
-svelte-framework /skills/svelte-framework.md Guidelines for building reactive web applications using Svelte 5 and SvelteKit. Use when creating modern, highly reactive full-stack apps or static sites.
-ui-ux-polisher /skills/ui-ux-polisher.md Advanced interaction engineering, micro-motion orchestration, and aesthetic refinement. Use this skill for transforming functional UI into distinctive, high-fidelity user experiences.
 
-Authentication & Identity
+Auth
 
 Skill Path Use When...
 auth-js-v5-architect /skills/auth-js-v5-architect.md Comprehensive configuration and implementation guide for Auth.js v5 (NextAuth) in modern JS frameworks, covering Next.js setup, JWT/Database sessions, edge compatibility, and CSRF defense.
 auth-schema-architect /skills/auth-schema-architect.md Advanced authentication data modeling and identity integrity engineering. Use this skill for designing secure user schemas, multi-factor structures, and permission-based relational models.
 authgear-identity-expert /skills/authgear-identity-expert.md Implementation guide for Authgear, covering passkeys, B2B SaaS B2C authentication, UI customization, and multi-factor authentication (MFA).
-better-auth-integration /skills/better-auth-integration.md Implementation guide for Better Auth in modern JS/TS frameworks, covering type-safe authentication, database adapters, plugins, and session management.
-clerk-auth-architect /skills/clerk-auth-architect.md Configuration and implementation guide for Clerk Auth in Next.js/React applications, covering UI components, middleware protection, and webhook synchronization.
-kinde-auth-implementer /skills/kinde-auth-implementer.md Configuration and implementation instructions for Kinde Auth, focusing on passwordless login, Next.js App Router integration, and feature flags.
-logto-auth-engineer /skills/logto-auth-engineer.md Guide for setting up Logto as an open-source OIDC identity provider, managing machine-to-machine tokens, RBAC, and frontend SDK integration.
-oauth-integration /skills/oauth-integration.md >
-propelauth-b2b-auth /skills/propelauth-b2b-auth.md Guide for setting up PropelAuth for B2B/multi-tenant applications, focusing on organization management, RBAC, and SSO integration in React/Next.js environments.
-supabase-auth-specialist /skills/supabase-auth-specialist.md Comprehensive configuration guide for Supabase Authentication, including SSR setup in Next.js, RLS policies, and OAuth integrations.
 
-Data, Databases & Extraction
+Advanced Backend
+
+Skill Path Use When...
+backend-engineer /skills/backend-engineer.md Advanced API orchestration, secure data modeling, and high-integrity server-side systems. Use this skill for building robust, scalable backends and complex server logic.
+
+Better Auth
+
+Skill Path Use When...
+better-auth-integration /skills/better-auth-integration.md Implementation guide for Better Auth in modern JS/TS frameworks, covering type-safe authentication, database adapters, plugins, and session management.
+
+General
+
+Skill Path Use When...
+bootstrap-astro-hybrid-site /skills/bootstrap-astro-hybrid-site.md Strict, step-by-step initialization protocol for building an Astro hybrid site with React and Tailwind Integrations.
+bootstrap-nextjs-app-router /skills/bootstrap-nextjs-app-router.md Strict, step-by-step initialization protocol for building a bulletproof Next.js (App Router) environment. Prevents AI build failures during scaffolding.
+bootstrap-react-native-expo /skills/bootstrap-react-native-expo.md Strict initialization protocol for React Native using Expo Router. Prevents AI from breaking builds by touching native code.
+bootstrap-remix-run-stack /skills/bootstrap-remix-run-stack.md Strict, step-by-step initialization protocol for building a Remix stack. Bypasses interactive prompts and configures official templates.
+bootstrap-sveltekit-app /skills/bootstrap-sveltekit-app.md Strict, step-by-step initialization protocol for building a bulletproof SvelteKit + Svelte 5 environment. Bypasses interactive create-svelte CLIs.
+bootstrap-vite-react-spa /skills/bootstrap-vite-react-spa.md Strict, step-by-step initialization protocol for building a bulletproof Vite + React SPA environment. Prevents AI build failures during scaffolding.
+cloudflare-README /skills/cloudflare-README.md Imported skill from Cloudflare repository.
+cloudflare-agents-sdk /skills/cloudflare-agents-sdk.md Expertise in building stateful AI agents on Cloudflare using the Agents SDK, Durable Objects, and MCP.
+code-converter /skills/code-converter.md Advanced cross-language logic translation, idiomatic transpilation, and multi-framework architectural mapping. Use this skill for high-fidelity code migrations and polyglot system integrations.
+code-refactoring-specialist /skills/code-refactoring-specialist.md Advanced structural engineering, systemic debt reduction, and high-fidelity architectural synthesis. Use this skill for transforming chaotic legacy "spaghetti" logic into modular, SOLID, and highly maintainable systems.
+data-extraction-specialist /skills/data-extraction-specialist.md Advanced unstructured-to-structured synthesis, semantic entity resolution, and high-fidelity JSON orchestration. Use this skill for transforming chaotic text or documents into production-ready data schemas.
+divergent-brainstormer /skills/divergent-brainstormer.md Advanced lateral thinking, combinatorial innovation, and speculative conceptual mapping. Use this skill for high-order creative strategy and non-linear problem solving.
+focus-mode /skills/focus-mode.md Instructions for responding to UI element selection (CSS selectors).
+force-latest-dependencies /skills/force-latest-dependencies.md Strict override protocol preventing AI from using outdated package versions from its training data. Enforces live web/npm search to determine the latest framework and library versions.
+github-import-migration /skills/github-import-migration.md >-
+jwt-service-engineer /skills/jwt-service-engineer.md Advanced stateless session management and token lifecycle engineering. Use this skill for secure JWT implementation, refresh token rotations, and claim-based authorization.
+mysql-architect /skills/mysql-architect.md Advanced MySQL schema engineering, query optimization, and high-performance data orchestration. Use this skill for designing scalable, ACID-compliant relational systems, complex SQL tuning, and transactional stability.
+orm-migration-specialist /skills/orm-migration-specialist.md Advanced database schema evolution, ORM orchestration (Prisma, Drizzle, TypeORM), and high-fidelity migration engineering. Use this skill for designing robust schemas, resolving migration drifts, and managing complex database state.
+prompt-optimizer /skills/prompt-optimizer.md Advanced linguistic engineering, intent synthesis, and meta-prompt optimization. Use this skill to transform vague user requests into high-fidelity AI instructions.
+rate-limiting-officer /skills/rate-limiting-officer.md Advanced traffic control and resource exhaustion protection. Use this skill for designing sliding-window limiters, IP-based blocking, and DDoS mitigation strategies.
+react-composition-patterns /skills/react-composition-patterns.md Advanced React component composition patterns focusing on modularity, flexibility, and render performance. Use when building complex UI systems or internal component libraries.
+rubber-duck-debugger /skills/rubber-duck-debugger.md Socratic debugging when fully stuck. Use this skill when the user asks about nothing works, completely stuck, frustrated.
+shadcn-ui /skills/shadcn-ui.md >
+state-management-strategist /skills/state-management-strategist.md Advanced state orchestration, reactivity modeling, and high-fidelity data flow engineering. Use this skill for building scalable, high-performance frontend state systems with atomic stores and optimistic synchronization.
+step-by-step-reasoner /skills/step-by-step-reasoner.md Advanced recursive logic, first-principles deduction, and multi-path decision analysis. Use this skill for complex problem solving, mathematical proofs, and high-stakes strategy.
+surgical-debugger /skills/surgical-debugger.md Advanced root-cause isolation, stack-trace deconstruction, and minimal-disruption bug resolution. Use this skill for identifying and fixing mission-critical system failures.
+vercel-add-function-examples /skills/vercel-add-function-examples.md Guide for adding new AI function examples, for testing specific features against the actual provider APIs.
+vercel-adr-skill /skills/vercel-adr-skill.md Create and maintain Architecture Decision Records (ADRs) optimized for agentic coding workflows. Use when you need to propose, write, update, accept/reject, deprecate, or supersede an ADR; bootstrap an adr folder and index; consult existing ADRs before implementing changes; or enforce ADR conventions. This skill uses Socratic questioning to capture intent before drafting, and validates output against an agent-readiness checklist.
+vercel-develop-ai-functions-example /skills/vercel-develop-ai-functions-example.md Develop examples for AI SDK functions. Use when creating, running, or modifying examples under examples/ai-functions/src to validate provider support, demonstrate features, or create test fixtures.
+vercel-list-npm-package-content /skills/vercel-list-npm-package-content.md List the contents of an npm package tarball before publishing. Use when the user wants to see what files are included in an npm bundle, verify package contents, or debug npm publish issues.
+vercel-update-provider-models /skills/vercel-update-provider-models.md Add new or remove obsolete model IDs for existing AI SDK providers. Use when adding a model to a provider, removing an obsolete model, or processing a list of model changes from an issue. Triggers on "add model", "remove model", "new model ID", "obsolete model", "update model IDs".
+
+Step 2: The Backend Environment (`/backend
+
+Skill Path Use When...
+bootstrap-express-react-fullstack /skills/bootstrap-express-react-fullstack.md Strict, step-by-step initialization protocol for building a bulletproof Express.js Backend + Vite React SPA Frontend environment. Solves CORS and port configuration limits.
+
+Set up ESLint for Firestore Security
 
 Skill Path Use When...
 bootstrap-firebase-database /skills/bootstrap-firebase-database.md Instructions for Firebase integration, Firestore setup, and database security rules.
-database-architect /skills/database-architect.md Advanced database schema design, multi-model data orchestration, and high-performance engineering. Use this skill for designing high-integrity SQL/NoSQL structures, optimization strategies, and transactional stability.
-divergent-brainstormer /skills/divergent-brainstormer.md Advanced lateral thinking, combinatorial innovation, and speculative conceptual mapping. Use this skill for high-order creative strategy and non-linear problem solving.
-firebase-database-principles /skills/firebase-database-principles.md Guidelines for setting up a Firebase database and writing hardened security rules.
-mysql-architect /skills/mysql-architect.md Advanced MySQL schema engineering, query optimization, and high-performance data orchestration. Use this skill for designing scalable, ACID-compliant relational systems, complex SQL tuning, and transactional stability.
-orm-migration-specialist /skills/orm-migration-specialist.md Advanced database schema evolution, ORM orchestration (Prisma, Drizzle, TypeORM), and high-fidelity migration engineering. Use this skill for designing robust schemas, resolving migration drifts, and managing complex database state.
-performance-profiler /skills/performance-profiler.md Advanced Core Web Vitals optimization, bundle engineering, and high-frequency rendering performance. Use this skill for building lightning-fast, production-grade web applications.
-python-excel-architect /skills/python-excel-architect.md Advanced Excel spreadsheet engineering using Python and openpyxl. Use this skill to generate sophisticated reports, configure office-style formatting, conditional formatting, charts, data validation, pane freezing, and row grouping.
 
-Environment Scaffolding & Dependencies
+Bootstrap Protocol: NestJS API
 
 Skill Path Use When...
-bootstrap-remix-run-stack /skills/bootstrap-remix-run-stack.md Strict, step-by-step initialization protocol for building a Remix stack. Bypasses interactive prompts and configures official templates.
+bootstrap-nestjs-api /skills/bootstrap-nestjs-api.md Strict, step-by-step initialization protocol for building a NestJS TypeScript API. Bypasses interactive prompts for enterprise backends.
 
-DevOps, Cloud & Deployment
+Step 2: Install Requi
 
 Skill Path Use When...
-cloudflare-README /skills/cloudflare-README.md Imported skill from Cloudflare repository.
-cloudflare-agents-sdk /skills/cloudflare-agents-sdk.md Expertise in building stateful AI agents on Cloudflare using the Agents SDK, Durable Objects, and MCP.
+bootstrap-nuxt-vue3 /skills/bootstrap-nuxt-vue3.md Strict, step-by-step initialization protocol for building a Nuxt 3 + Vue 3 environment. Bypasses highly interactive Nuxt CLIs.
+
+Bootstrap Protocol: Python FastAPI
+
+Skill Path Use When...
+bootstrap-python-fastapi-react /skills/bootstrap-python-fastapi-react.md Strict initialization protocol for a Python FastAPI Backend and Vite React Frontend. Teaches AI to handle venv and requirements.txt alongside Node.
+
+Clerk Auth
+
+Skill Path Use When...
+clerk-auth-architect /skills/clerk-auth-architect.md Configuration and implementation guide for Clerk Auth in Next.js/React applications, covering UI components, middleware protection, and webhook synchronization.
+
+Bui
+
+Skill Path Use When...
 cloudflare-commands /skills/cloudflare-commands.md Imported skill from Cloudflare repository.
-cloudflare-hosting /skills/cloudflare-hosting.md Guidelines for deploying websites and application frameworks to Cloudflare Hosting Services (Pages and Workers). Use when setting up automated deployments or configuring full-stack applications for Cloudflare.
-devops-deployment-engineer /skills/devops-deployment-engineer.md Advanced cloud infrastructure engineering, CI/CD pipeline automation, and production-grade environment orchestration. Use this skill for deploying complex systems with high-fidelity Docker, Vercel, and Cloud Run configurations.
 
-Code Quality, Review & Transformation
+3. Cloudflare Workers Deployment (API
 
 Skill Path Use When...
-code-converter /skills/code-converter.md Advanced cross-language logic translation, idiomatic transpilation, and multi-framework architectural mapping. Use this skill for high-fidelity code migrations and polyglot system integrations.
-code-refactoring-specialist /skills/code-refactoring-specialist.md Advanced structural engineering, systemic debt reduction, and high-fidelity architectural synthesis. Use this skill for transforming chaotic legacy "spaghetti" logic into modular, SOLID, and highly maintainable systems.
-code-reviewer-red-team /skills/code-reviewer-red-team.md Security audits, vulnerabilities. Use this skill when the user asks about review code, check security.
-git-master /skills/git-master.md Advanced version control engineering, disaster recovery, and high-fidelity repository management. Use this skill for solving complex merge conflicts, rebasing, and repository restoration.
-github-import-migration /skills/github-import-migration.md >-
-python-code-execution /skills/python-code-execution.md Advanced sandboxed data analysis, mathematical modeling, and visualization. Use this skill for complex calculations, chart generation, and data processing.
+cloudflare-hosting /skills/cloudflare-hosting.md Guidelines for deploying websites and application frameworks to Cloudflare Hosting Services (Pages and Workers). Use when setting up automated deployments or configuring full-stack applications for Cloudflare.
 
-Documentation, Context & Communication
+🛡️ Adversarial Security
+
+Skill Path Use When...
+code-reviewer-red-team /skills/code-reviewer-red-team.md Security audits, vulnerabilities. Use this skill when the user asks about review code, check security.
+
+Advanced Context Management & Project Continui
 
 Skill Path Use When...
 context-manager /skills/context-manager.md Advanced project state persistence, technical memory synthesis, and session continuity management. Use this skill for synchronizing codebase state across distributed agent turns or complex project migrations.
-document-summarization /skills/document-summarization.md Advanced semantic distillation, high-fidelity metadata extraction, and multi-document intelligence synthesis. Use this skill for transforming massive text corpora into actionable decision-logic.
-prd-documentation-master /skills/prd-documentation-master.md Advanced Product Requirements Document (PRD) engineering, incorporating precise T-shirt sizing for features and Kanban workflows for full-lifecycle execution from inception to production.
-technical-documenter /skills/technical-documenter.md Advanced technical memory management, multi-audience documentation engineering, and architectural mapping. Use this skill for building high-fidelity READMEs, API specs, and system walkthroughs.
-technical-memory-manager /skills/technical-memory-manager.md Technical memory management, project state persistence, and architectural mapping. Use this skill to maintain a CONTEXT.md or MAP.md that tracks implemented features, technical debt, and pending tasks.
 
-AI, LLM & Prompt Engineering
+Advanced Database
+
+Skill Path Use When...
+database-architect /skills/database-architect.md Advanced database schema design, multi-model data orchestration, and high-performance engineering. Use this skill for designing high-integrity SQL/NoSQL structures, optimization strategies, and transactional stability.
+
+Phase B: Staging & Shadow Testing
+
+Skill Path Use When...
+db-migration-expert /skills/db-migration-expert.md Advanced database schema evolution and state-management engineering. Use this skill for zero-downtime migrations, data seeding, and schema versioning.
+
+Phase D: Automated Security
+
+Skill Path Use When...
+dependency-integrity-officer /skills/dependency-integrity-officer.md Advanced package management, dependency resolution, and version collision mitigation. Use this skill for fixing npm/yarn errors, peer dependency conflicts, and environment-specific installation failures.
+
+4. Security
+
+Skill Path Use When...
+devops-deployment-engineer /skills/devops-deployment-engineer.md Advanced cloud infrastructure engineering, CI/CD pipeline automation, and production-grade environment orchestration. Use this skill for deploying complex systems with high-fidelity Docker, Vercel, and Cloud Run configurations.
+
+5. Security
+
+Skill Path Use When...
+document-summarization /skills/document-summarization.md Advanced semantic distillation, high-fidelity metadata extraction, and multi-document intelligence synthesis. Use this skill for transforming massive text corpora into actionable decision-logic.
+multimodal-vision /skills/multimodal-vision.md Advanced spatial cognition, semantic deconstruction, and visual-to-logic translation. Use this skill when interpreting complex UI screenshots, architectural diagrams, or high-entropy images.
+
+Goal: Break a loop where Prisma is failing to bui
 
 Skill Path Use When...
 failure-mode-preemptor /skills/failure-mode-preemptor.md Advanced root-cause isolation, stack-trace deconstruction, and deterministic recovery paths. Use this skill when a build fails, a runtime error occurs, or when the LLM is stuck in an "Error-Fix-Error" loop.
+
+Firebase Database
+
+Skill Path Use When...
+firebase-database-principles /skills/firebase-database-principles.md Guidelines for setting up a Firebase database and writing hardened security rules.
+
+4. Continuity & Flui
+
+Skill Path Use When...
+frontend-design /skills/frontend-design.md Advanced visual architecture, design systems orchestration, and performance-tuned UI recipes. Use this skill to build distinctive, high-fidelity interfaces across all web applications.
+
+Advanced Frontend
+
+Skill Path Use When...
+frontend-engineer /skills/frontend-engineer.md Advanced UI engineering, component lifecycle orchestration, and high-performance interactive systems. Use this skill for building complex React/TypeScript applications with production-grade polish.
+
+Gemini API gui
+
+Skill Path Use When...
+gemini-api /skills/gemini-api.md >
+
+Result: 2 clean, bui
+
+Skill Path Use When...
+git-master /skills/git-master.md Advanced version control engineering, disaster recovery, and high-fidelity repository management. Use this skill for solving complex merge conflicts, rebasing, and repository restoration.
+
+5. Handling "No Results" or Ambigui
+
+Skill Path Use When...
+google-search-grounding /skills/google-search-grounding.md Advanced real-time intelligence gathering and verification. Use this skill for deep research, fact-checking, and tracking fast-moving events.
+
+Hono Framework Gui
+
+Skill Path Use When...
+hono-framework /skills/hono-framework.md Guidelines for building fast, edge-optimized web applications and APIs using the Hono framework.
+
+Prompt Gui
+
+Skill Path Use When...
 image-generation /skills/image-generation.md >
-multimodal-vision /skills/multimodal-vision.md Advanced spatial cognition, semantic deconstruction, and visual-to-logic translation. Use this skill when interpreting complex UI screenshots, architectural diagrams, or high-entropy images.
-prompt-optimizer /skills/prompt-optimizer.md Advanced linguistic engineering, intent synthesis, and meta-prompt optimization. Use this skill to transform vague user requests into high-fidelity AI instructions.
-vercel-develop-ai-functions-example /skills/vercel-develop-ai-functions-example.md Develop examples for AI SDK functions. Use when creating, running, or modifying examples under examples/ai-functions/src to validate provider support, demonstrate features, or create test fixtures.
-vercel-use-ai-sdk /skills/vercel-use-ai-sdk.md 'Answer questions about the AI SDK and help build AI-powered features. Use when developers: (1) Ask about AI SDK functions like generateText, streamText, ToolLoopAgent, embed, or tools, (2) Want to build AI agents, chatbots, RAG systems, or text generation features, (3) Have questions about AI providers (OpenAI, Anthropic, Google, etc.), streaming, tool calling, structured output, or embeddings, (4) Use React hooks like useChat or useCompletion. Triggers on: "AI SDK", "Vercel AI SDK", "generateText", "streamText", "add AI to my app", "build an agent", "tool calling", "structured output", "useChat".'
+
+Kinde Auth
+
+Skill Path Use When...
+kinde-auth-implementer /skills/kinde-auth-implementer.md Configuration and implementation instructions for Kinde Auth, focusing on passwordless login, Next.js App Router integration, and feature flags.
+
+Laravel Framework Gui
+
+Skill Path Use When...
+laravel-framework /skills/laravel-framework.md Guidelines for building robust, full-stack PHP applications using Laravel 11/12/13.
+
+Login UI Specialist: Auth
+
+Skill Path Use When...
+login-ui-specialist /skills/login-ui-specialist.md High-conversion authentication interface engineering. Use this skill for building intuitive, accessible, and high-performance login flows with seamless validation.
+
+Logto Auth
+
+Skill Path Use When...
+logto-auth-engineer /skills/logto-auth-engineer.md Guide for setting up Logto as an open-source OIDC identity provider, managing machine-to-machine tokens, RBAC, and frontend SDK integration.
+
+Middleware
+
+Skill Path Use When...
+middleware-engineer /skills/middleware-engineer.md Advanced request interception and cross-cutting concern orchestration. Use this skill for building security guards, logging pipelines, and multi-tenant routing logic.
+
+Next.js (App Router) Integration Gui
+
+Skill Path Use When...
+nextjs-framework /skills/nextjs-framework.md Guidelines for building modern React web applications using Next.js App Router. Use when creating full-stack apps or static sites that require Server Components and SEO.
+
+Nuxt 3+ Framework Gui
+
+Skill Path Use When...
+nuxt-framework /skills/nuxt-framework.md Guidelines for building modern Vue web applications using Nuxt 3+.
+
+OAuth Integration Gui
+
+Skill Path Use When...
+oauth-integration /skills/oauth-integration.md >
+
+4. Stability & Flui
+
+Skill Path Use When...
+performance-profiler /skills/performance-profiler.md Advanced Core Web Vitals optimization, bundle engineering, and high-frequency rendering performance. Use this skill for building lightning-fast, production-grade web applications.
+
+Product Requi
+
+Skill Path Use When...
+prd-documentation-master /skills/prd-documentation-master.md Advanced Product Requirements Document (PRD) engineering, incorporating precise T-shirt sizing for features and Kanban workflows for full-lifecycle execution from inception to production.
+
+PropelAuth B2B Auth Gui
+
+Skill Path Use When...
+propelauth-b2b-auth /skills/propelauth-b2b-auth.md Guide for setting up PropelAuth for B2B/multi-tenant applications, focusing on organization management, RBAC, and SSO integration in React/Next.js environments.
+
+4. Sandbox Constraints & Security
+
+Skill Path Use When...
+python-code-execution /skills/python-code-execution.md Advanced sandboxed data analysis, mathematical modeling, and visualization. Use this skill for complex calculations, chart generation, and data processing.
+
+Python Excel Architect (`openpyxl` Gui
+
+Skill Path Use When...
+python-excel-architect /skills/python-excel-architect.md Advanced Excel spreadsheet engineering using Python and openpyxl. Use this skill to generate sophisticated reports, configure office-style formatting, conditional formatting, charts, data validation, pane freezing, and row grouping.
+
+Advanced QA
+
+Skill Path Use When...
+qa-test-engineer /skills/qa-test-engineer.md Advanced quality assurance automation, systemic edge-case discovery, and full-spectrum testing engineering. Use this skill for building resilient unit, integration, and E2E test suites with high-fidelity verification.
 
 Testing, Debugging & Quality Assurance
 
 Skill Path Use When...
-force-latest-dependencies /skills/force-latest-dependencies.md Strict override protocol preventing AI from using outdated package versions from its training data. Enforces live web/npm search to determine the latest framework and library versions.
-qa-test-engineer /skills/qa-test-engineer.md Advanced quality assurance automation, systemic edge-case discovery, and full-spectrum testing engineering. Use this skill for building resilient unit, integration, and E2E test suites with high-fidelity verification.
 qa-test-specialist /skills/qa-test-specialist.md Advanced quality assurance and systemic regression protection. Use this skill for building E2E Playwright flows, TDD unit suites, and CI/CD testing pipelines.
-rubber-duck-debugger /skills/rubber-duck-debugger.md Socratic debugging when fully stuck. Use this skill when the user asks about nothing works, completely stuck, frustrated.
-surgical-debugger /skills/surgical-debugger.md Advanced root-cause isolation, stack-trace deconstruction, and minimal-disruption bug resolution. Use this skill for identifying and fixing mission-critical system failures.
 
-Security & Operations
+Real-Time & Multi-User Gui
 
 Skill Path Use When...
-rate-limiting-officer /skills/rate-limiting-officer.md Advanced traffic control and resource exhaustion protection. Use this skill for designing sliding-window limiters, IP-based blocking, and DDoS mitigation strategies.
+real-time-and-multi-user /skills/real-time-and-multi-user.md >
+
+4. Performance & Security
+
+Skill Path Use When...
+regex-crafter /skills/regex-crafter.md Advanced string-matching engineering, catastrophic backtracking prevention, and high-fidelity pattern synthesis. Use this skill for building robust, performant, and secure regular expressions across multiple engines.
+
+Remix Framework Integration Gui
+
+Skill Path Use When...
+remix-framework /skills/remix-framework.md Guidelines for building full-stack web applications using the Remix framework. Use when creating React-based applications that require robust server-side rendering, nested routing, and standard web fetch APIs via loaders and actions.
+
+1. The Zero-Trust Security
+
+Skill Path Use When...
 secops-security-engineer /skills/secops-security-engineer.md Advanced zero-trust architecture, cryptographic integrity, and adversarial threat mitigation. Use this skill for building mission-critical, secure-by-default applications.
 
-Reasoning, Strategy & Problem-Solving
+Signup UI
 
 Skill Path Use When...
-step-by-step-reasoner /skills/step-by-step-reasoner.md Advanced recursive logic, first-principles deduction, and multi-path decision analysis. Use this skill for complex problem solving, mathematical proofs, and high-stakes strategy.
+signup-ui-specialist /skills/signup-ui-specialist.md Growth-optimized user onboarding and registration engineering. Use this skill for building high-conversion multi-step signups and verification flows.
 
+Supabase Auth
+
+Skill Path Use When...
+supabase-auth-specialist /skills/supabase-auth-specialist.md Comprehensive configuration guide for Supabase Authentication, including SSR setup in Next.js, RLS policies, and OAuth integrations.
+
+Svelte & SvelteKit Integration Gui
+
+Skill Path Use When...
+svelte-framework /skills/svelte-framework.md Guidelines for building reactive web applications using Svelte 5 and SvelteKit. Use when creating modern, highly reactive full-stack apps or static sites.
+
+Atomic UI
+
+Skill Path Use When...
+systems-architect /skills/systems-architect.md Advanced technical stack orchestration, high-fidelity repository engineering, and multi-tier scalability roadmapping. Use this skill for building production-grade system blueprints and complex refactorings.
+
+🛠️ Qui
+
+Skill Path Use When...
+technical-documenter /skills/technical-documenter.md Advanced technical memory management, multi-audience documentation engineering, and architectural mapping. Use this skill for building high-fidelity READMEs, API specs, and system walkthroughs.
+
+4. Continui
+
+Skill Path Use When...
+technical-memory-manager /skills/technical-memory-manager.md Technical memory management, project state persistence, and architectural mapping. Use this skill to maintain a CONTEXT.md or MAP.md that tracks implemented features, technical debt, and pending tasks.
+
+Phase A: Lingui
+
+Skill Path Use When...
+tone-style-mimic /skills/tone-style-mimic.md Brand voice, character copywriting. Use this skill when the user asks about rewrite in style, brand voice.
+
+UI
+
+Skill Path Use When...
+ui-ux-polisher /skills/ui-ux-polisher.md Advanced interaction engineering, micro-motion orchestration, and aesthetic refinement. Use this skill for transforming functional UI into distinctive, high-fidelity user experiences.
+
+Step-by-Step Gui
+
+Skill Path Use When...
+vercel-add-provider-package /skills/vercel-add-provider-package.md Guide for adding new AI provider packages to the AI SDK. Use when creating a new @ai-sdk/<provider> package to integrate an AI service into the SDK.
+
+Breaking Change Gui
+
+Skill Path Use When...
+vercel-major-version-mode /skills/vercel-major-version-mode.md "Context for working on the next AI SDK major release. Only use when explicitly invoked by the user (e.g. via '/major-version-mode'). Do NOT trigger autonomously based on task content."
+
+Prerequi
+
+Skill Path Use When...
+vercel-use-ai-sdk /skills/vercel-use-ai-sdk.md 'Answer questions about the AI SDK and help build AI-powered features. Use when developers: (1) Ask about AI SDK functions like generateText, streamText, ToolLoopAgent, embed, or tools, (2) Want to build AI agents, chatbots, RAG systems, or text generation features, (3) Have questions about AI providers (OpenAI, Anthropic, Google, etc.), streaming, tool calling, structured output, or embeddings, (4) Use React hooks like useChat or useCompletion. Triggers on: "AI SDK", "Vercel AI SDK", "generateText", "streamText", "add AI to my app", "build an agent", "tool calling", "structured output", "useChat".'
+
+Wasp Framework Integration Gui
+
+Skill Path Use When...
+wasp-framework /skills/wasp-framework.md Guidelines for building full-stack Web applications using the Wasp framework. Use when building React/Node.js full-stack apps where Wasp's declarative configuration handles routing, auth, and database setups.
+
+3. Auth
+
+Skill Path Use When...
+workos-sso-setup /skills/workos-sso-setup.md Instructions for integrating WorkOS for Enterprise Single Sign-On (SSO), SCIM directory sync, and user identity management APIs.
+
+---
 ---
 
 SECTION 4: Skill Matching Heuristics
@@ -478,7 +683,7 @@ The system is now running an Isolate-based Edge MCP Server natively within the C
 When a skill needs to be activated programmatically, you can fetch the full instructions directly from the granular endpoint instead of loading the entire bloat:
 
 ```
-https://bkraiskillsmcp.pages.dev/api/skills?id=[skill-slug]
+https://bkraiskillsmcp.pages.dev/api/skills?id=[skill-slug]&mode=text
 ```
 
 To search for specific competencies dynamically without reading the whole registry, agents should query the JSON API endpoint using tags or keywords:

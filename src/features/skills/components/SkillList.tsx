@@ -10,7 +10,7 @@ interface SkillListProps {
   dynamicSkills: DynamicSkill[];
   skillsContent: Record<string, string>;
   expandedSkill: string | null;
-  onToggleSkill: (id: string, path: string) => void;
+  onToggleSkill: (id: string) => void;
 }
 
 /**
@@ -67,7 +67,7 @@ export const SkillList: React.FC<SkillListProps> = ({
             skill={displaySkill}
             isExpanded={isExpanded}
             inCart={inCart}
-            onToggle={() => onToggleSkill(id, skill.path)}
+            onToggle={() => onToggleSkill(id)}
             onToggleCart={() => toggleCart(id)}
             markdownContent={markdownContent}
           />

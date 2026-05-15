@@ -20,7 +20,7 @@ for (const skill of llmsJson) {
   sections[category].push(`${slug} ${skill.path} ${skill.description}`);
 }
 
-let newSection3 = `SECTION 3: Complete Skill Catalog\n\nBelow is the full remote skill inventory from https://bkraiskillsmcp.pages.dev/llms.txt. Use this as your first-pass matching reference. When a remote match is found, fetch the full skill instructions using the \`read_url_content\` tool on \`https://bkraiskillsmcp.pages.dev/skills/[skill-slug].md\`.\n\n`;
+let newSection3 = `SECTION 3: Complete Skill Catalog\n\nBelow is the full remote skill inventory from https://bkraiskillsmcp.pages.dev/llms.txt. Use this as your first-pass matching reference. When a remote match is found, fetch the full skill instructions using the \`read_url_content\` tool on \`https://bkraiskillsmcp.pages.dev/api/skills?id=[skill-slug]&mode=text\`.\n\n`;
 
 for (const [cat, items] of Object.entries(sections)) {
   newSection3 += `${cat}\n\nSkill Path Use When...\n`;

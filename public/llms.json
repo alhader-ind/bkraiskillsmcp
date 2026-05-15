@@ -8,7 +8,7 @@
     ],
     "hash": "9be2ce00e8ad2822c5e2d381584832b14347e877a49bae3ee8c383cc84123e10",
     "path": "/skills/a11y-accessibility-auditor.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/a11y-accessibility-auditor.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=a11y-accessibility-auditor&mode=text"
   },
   {
     "name": "api-function-caller",
@@ -19,7 +19,7 @@
     ],
     "hash": "ddd3745bb735b16009fa7c85b2afddc46ef9c303cefe3a156d58ea34b9ff9a93",
     "path": "/skills/api-function-caller.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/api-function-caller.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=api-function-caller&mode=text"
   },
   {
     "name": "api-integrator",
@@ -35,7 +35,7 @@
     ],
     "hash": "f073674aa879440bed5ac74fb8f2cf6587a1bb9603d81faa8884cc72337b3e95",
     "path": "/skills/api-integrator.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/api-integrator.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=api-integrator&mode=text"
   },
   {
     "name": "api-route-orchestrator",
@@ -46,7 +46,7 @@
     ],
     "hash": "0a54c65e3626eda8f1ad59ca7df6314705b3954bbea9f59ad54471c26f4f5759",
     "path": "/skills/api-route-orchestrator.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/api-route-orchestrator.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=api-route-orchestrator&mode=text"
   },
   {
     "name": "astro-qwik-framework",
@@ -59,7 +59,7 @@
     ],
     "hash": "f07622521601fa9c68900c7d741afd1bbf99d645d17ee528e684ef7602944609",
     "path": "/skills/astro-qwik-framework.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/astro-qwik-framework.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=astro-qwik-framework&mode=text"
   },
   {
     "name": "auth-js-v5-architect",
@@ -74,7 +74,7 @@
     ],
     "hash": "0b3fa5915d8530bfc3ff6204889283edfd0f8ab6afb11dfb370049faa391f244",
     "path": "/skills/auth-js-v5-architect.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/auth-js-v5-architect.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=auth-js-v5-architect&mode=text"
   },
   {
     "name": "auth-schema-architect",
@@ -86,7 +86,7 @@
     ],
     "hash": "f5337295d767dad260c90d836e5f30302687dc8b3c9f03a0337727ce9f974afb",
     "path": "/skills/auth-schema-architect.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/auth-schema-architect.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=auth-schema-architect&mode=text"
   },
   {
     "name": "authgear-identity-expert",
@@ -98,7 +98,7 @@
     ],
     "hash": "2536554fc9400dbaa114351d4aa84699dc65190700e1c725142260c5e9b26b4b",
     "path": "/skills/authgear-identity-expert.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/authgear-identity-expert.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=authgear-identity-expert&mode=text"
   },
   {
     "name": "backend-engineer",
@@ -117,7 +117,7 @@
     ],
     "hash": "bbb192bed843901d8560b956eca49e486c7b61fa46d75ce2843bba91f670ae38",
     "path": "/skills/backend-engineer.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/backend-engineer.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=backend-engineer&mode=text"
   },
   {
     "name": "better-auth-integration",
@@ -130,7 +130,7 @@
     ],
     "hash": "f935b6297d6617414dea0e7a12ee542ae1b072015db731fc939e946edda66e15",
     "path": "/skills/better-auth-integration.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/better-auth-integration.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=better-auth-integration&mode=text"
   },
   {
     "name": "bootstrap-astro-hybrid-site",
@@ -141,7 +141,7 @@
     ],
     "hash": "a0ba51e24d3f3bfebe0c058892473e59877fc99d8cc9bca37adad5145beaf303",
     "path": "/skills/bootstrap-astro-hybrid-site.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/bootstrap-astro-hybrid-site.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=bootstrap-astro-hybrid-site&mode=text"
   },
   {
     "name": "bootstrap-express-react-fullstack",
@@ -153,7 +153,7 @@
     ],
     "hash": "37668bbd12ce8abd55371bad8d1a109a336d44d419c4d11553569d6e837a804b",
     "path": "/skills/bootstrap-express-react-fullstack.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/bootstrap-express-react-fullstack.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=bootstrap-express-react-fullstack&mode=text"
   },
   {
     "name": "bootstrap-firebase-database",
@@ -166,7 +166,7 @@
     ],
     "hash": "19d35c7c38bc34ed02ad4d6df24377c4c12e1ad9b1e7f60773402fbfd979530b",
     "path": "/skills/bootstrap-firebase-database.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/bootstrap-firebase-database.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=bootstrap-firebase-database&mode=text"
   },
   {
     "name": "bootstrap-nestjs-api",
@@ -177,7 +177,7 @@
     ],
     "hash": "cbdef93c344965314d0cc195b487e3147a2bf5484f8379a8b8ff6a40264c9469",
     "path": "/skills/bootstrap-nestjs-api.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/bootstrap-nestjs-api.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=bootstrap-nestjs-api&mode=text"
   },
   {
     "name": "bootstrap-nextjs-app-router",
@@ -188,7 +188,7 @@
     ],
     "hash": "02ffc144fe5269086ccde97517faf7b9b361cf0ef43bc733ac09a4caaa9183c2",
     "path": "/skills/bootstrap-nextjs-app-router.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/bootstrap-nextjs-app-router.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=bootstrap-nextjs-app-router&mode=text"
   },
   {
     "name": "bootstrap-nuxt-vue3",
@@ -200,7 +200,7 @@
     ],
     "hash": "3bbb92e79f44c5fc8a2c3bf9f7287fcabc7fab7f5130154fefd5a0c0379e612f",
     "path": "/skills/bootstrap-nuxt-vue3.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/bootstrap-nuxt-vue3.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=bootstrap-nuxt-vue3&mode=text"
   },
   {
     "name": "bootstrap-python-fastapi-react",
@@ -213,7 +213,7 @@
     ],
     "hash": "9dce8fd4a354229c6e503a6e1b670ec90e00841e909b4b384ed6eee1c219075b",
     "path": "/skills/bootstrap-python-fastapi-react.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/bootstrap-python-fastapi-react.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=bootstrap-python-fastapi-react&mode=text"
   },
   {
     "name": "bootstrap-react-native-expo",
@@ -224,7 +224,7 @@
     ],
     "hash": "e5292c6ce73b67184f6f441d2126885eb936df1ec351fd5c60b60e1119372dee",
     "path": "/skills/bootstrap-react-native-expo.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/bootstrap-react-native-expo.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=bootstrap-react-native-expo&mode=text"
   },
   {
     "name": "bootstrap-remix-run-stack",
@@ -235,7 +235,7 @@
     ],
     "hash": "3e8808babc567b8500f431a46011045944925182bc41e7dd14bc9f5fdc3ce50e",
     "path": "/skills/bootstrap-remix-run-stack.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/bootstrap-remix-run-stack.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=bootstrap-remix-run-stack&mode=text"
   },
   {
     "name": "bootstrap-sveltekit-app",
@@ -246,7 +246,7 @@
     ],
     "hash": "afc29358a48d23e28b32bab73aa10a33b30fee0476dd37cbdf50e7638c690450",
     "path": "/skills/bootstrap-sveltekit-app.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/bootstrap-sveltekit-app.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=bootstrap-sveltekit-app&mode=text"
   },
   {
     "name": "bootstrap-vite-react-spa",
@@ -257,7 +257,7 @@
     ],
     "hash": "27ee898bbf5a600bc4d8a9008da145724a712fde24e4de52137bc5854e823a84",
     "path": "/skills/bootstrap-vite-react-spa.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/bootstrap-vite-react-spa.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=bootstrap-vite-react-spa&mode=text"
   },
   {
     "name": "clerk-auth-architect",
@@ -269,7 +269,7 @@
     ],
     "hash": "981241c03f0c6eb0588898d876135b5b50a9da9040e09ffa058063587378f320",
     "path": "/skills/clerk-auth-architect.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/clerk-auth-architect.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=clerk-auth-architect&mode=text"
   },
   {
     "name": "Cloudflare README",
@@ -280,7 +280,7 @@
     ],
     "hash": "ed236f7d3da6426ed4019d61041e1aec2ca4d330b65ad7c077e01336a12739f2",
     "path": "/skills/cloudflare-README.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/cloudflare-README.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=cloudflare-README&mode=text"
   },
   {
     "name": "cloudflare-agents-sdk",
@@ -291,7 +291,7 @@
     ],
     "hash": "5044b07b688374b9fb0e18ae11f1944fda14e39efc9397d781e7dd1eacefe7e0",
     "path": "/skills/cloudflare-agents-sdk.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/cloudflare-agents-sdk.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=cloudflare-agents-sdk&mode=text"
   },
   {
     "name": "Cloudflare commands",
@@ -302,7 +302,7 @@
     ],
     "hash": "ca05d7faa9bb63ffefdedc4c66b8e925992628d341dd1fe20c87d4801c8da108",
     "path": "/skills/cloudflare-commands.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/cloudflare-commands.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=cloudflare-commands&mode=text"
   },
   {
     "name": "cloudflare-hosting",
@@ -315,7 +315,7 @@
     ],
     "hash": "8da34b2caceae2d834409f42f8ac6fbaf8e91ce51c3d9011e9ad81c006d7fe85",
     "path": "/skills/cloudflare-hosting.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/cloudflare-hosting.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=cloudflare-hosting&mode=text"
   },
   {
     "name": "code-converter",
@@ -326,7 +326,7 @@
     ],
     "hash": "f9a8e6e20f33e4c814c69bae9dafdc0cc966c32c1f1707bb3734aca3e417e9c7",
     "path": "/skills/code-converter.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/code-converter.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=code-converter&mode=text"
   },
   {
     "name": "clean-coder",
@@ -337,7 +337,7 @@
     ],
     "hash": "1682895f96b97b1511cdd35095b02261398b0c6dbd487b1e3ec199864dc72461",
     "path": "/skills/code-refactoring-specialist.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/code-refactoring-specialist.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=code-refactoring-specialist&mode=text"
   },
   {
     "name": "code-reviewer-red-team",
@@ -349,7 +349,7 @@
     ],
     "hash": "9a29830354019eb4254c7a098a5a982c29fe6d4ac01e7642f0011460ed96cd3b",
     "path": "/skills/code-reviewer-red-team.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/code-reviewer-red-team.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=code-reviewer-red-team&mode=text"
   },
   {
     "name": "context-manager",
@@ -360,7 +360,7 @@
     ],
     "hash": "03ac79b1a2861d12a12954e0bedbe4e146f84553f73e99f6626fc8ab368b5d4d",
     "path": "/skills/context-manager.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/context-manager.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=context-manager&mode=text"
   },
   {
     "name": "data-extraction-specialist",
@@ -371,7 +371,7 @@
     ],
     "hash": "7a9077c0255a62e11091d62e3d02568fb0ae483cc9242af294b1cdc8640a8647",
     "path": "/skills/data-extraction-specialist.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/data-extraction-specialist.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=data-extraction-specialist&mode=text"
   },
   {
     "name": "database-architect",
@@ -385,7 +385,7 @@
     ],
     "hash": "0b0025632768b1b55f58bf0a1d8dfa2859f54f7541bab10b756a85d3c2ea7774",
     "path": "/skills/database-architect.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/database-architect.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=database-architect&mode=text"
   },
   {
     "name": "db-migration-expert",
@@ -396,7 +396,7 @@
     ],
     "hash": "b13b1233c9046cbbdb52ab22621bca78469d7c2fa154e6260567183482688cc6",
     "path": "/skills/db-migration-expert.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/db-migration-expert.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=db-migration-expert&mode=text"
   },
   {
     "name": "dependency-integrity-officer",
@@ -408,7 +408,7 @@
     ],
     "hash": "e89198a7414c38f37e8c2119ea1aabea19f66c1f0cfb38ad290a47f964b3f422",
     "path": "/skills/dependency-integrity-officer.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/dependency-integrity-officer.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=dependency-integrity-officer&mode=text"
   },
   {
     "name": "devops-deployment-engineer",
@@ -420,7 +420,7 @@
     ],
     "hash": "d01d4407651f273c3d9c6740425e4783c9070a18b0f20e84c01dc55edc5c8add",
     "path": "/skills/devops-deployment-engineer.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/devops-deployment-engineer.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=devops-deployment-engineer&mode=text"
   },
   {
     "name": "divergent-brainstormer",
@@ -431,7 +431,7 @@
     ],
     "hash": "7e2750c4772e4c8055fc0043883abb169ac70ddeae9f04efbb80b4e77dbae9f2",
     "path": "/skills/divergent-brainstormer.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/divergent-brainstormer.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=divergent-brainstormer&mode=text"
   },
   {
     "name": "document-summarization",
@@ -442,7 +442,7 @@
     ],
     "hash": "47a8daa2105051f9b9935fdd0951ae19a4e665b0f9aeb1572337fdf094b91193",
     "path": "/skills/document-summarization.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/document-summarization.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=document-summarization&mode=text"
   },
   {
     "name": "failure-mode-preemptor",
@@ -454,7 +454,7 @@
     ],
     "hash": "c7f247442aff84d9883867123ff156d6d1e0797567200934a024493ebe011e5c",
     "path": "/skills/failure-mode-preemptor.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/failure-mode-preemptor.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=failure-mode-preemptor&mode=text"
   },
   {
     "name": "firebase-database-principles",
@@ -466,7 +466,7 @@
     ],
     "hash": "784bab064151b7baa74f96c86ba3a38149f7850f4c42e2c8c5eeb6d2653ae412",
     "path": "/skills/firebase-database-principles.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/firebase-database-principles.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=firebase-database-principles&mode=text"
   },
   {
     "name": "focus-mode",
@@ -477,7 +477,7 @@
     ],
     "hash": "a03c7316acdf768878ccd6b211afa3451481a20416247c1884881cece6a33180",
     "path": "/skills/focus-mode.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/focus-mode.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=focus-mode&mode=text"
   },
   {
     "name": "force-latest-dependencies",
@@ -488,7 +488,7 @@
     ],
     "hash": "43177b1f0ac17d004fe9b9d7142170aaa3350e0d661ac5c89848b4651fcf7841",
     "path": "/skills/force-latest-dependencies.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/force-latest-dependencies.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=force-latest-dependencies&mode=text"
   },
   {
     "name": "\"frontend-design\"",
@@ -500,7 +500,7 @@
     ],
     "hash": "30274bb0c1398d77a8a17ef13158c65d0b83372e3d378a4f75132d71fb1dfe2a",
     "path": "/skills/frontend-design.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/frontend-design.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=frontend-design&mode=text"
   },
   {
     "name": "frontend-engineer",
@@ -514,7 +514,7 @@
     ],
     "hash": "146931cb2f022c40a795c59c428afac12dc4b56deba0e328af9c52c461a5e043",
     "path": "/skills/frontend-engineer.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/frontend-engineer.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=frontend-engineer&mode=text"
   },
   {
     "name": "\"gemini-api\"",
@@ -532,7 +532,7 @@
     ],
     "hash": "b7f52ee8674b10021b8ceeb69d9d982e3107f77ce29ba90a766cb88fc0194948",
     "path": "/skills/gemini-api.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/gemini-api.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=gemini-api&mode=text"
   },
   {
     "name": "git-master",
@@ -543,7 +543,7 @@
     ],
     "hash": "ec8a36942a6f81d3dc47187d154b7991549337c612a6f537c4507dac2d01f391",
     "path": "/skills/git-master.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/git-master.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=git-master&mode=text"
   },
   {
     "name": "\"github-import-migration\"",
@@ -554,7 +554,7 @@
     ],
     "hash": "f5072cfb1e75eea60d24e419e814d441ca856a0d1ec0872db34ba675b0adfc17",
     "path": "/skills/github-import-migration.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/github-import-migration.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=github-import-migration&mode=text"
   },
   {
     "name": "google-search-grounding",
@@ -565,7 +565,7 @@
     ],
     "hash": "e6a0809b8a25d68abe7812a947ebb7a9a4d6903c7dd77c2c0b05484b5d0245eb",
     "path": "/skills/google-search-grounding.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/google-search-grounding.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=google-search-grounding&mode=text"
   },
   {
     "name": "Hono Framework",
@@ -577,7 +577,7 @@
     ],
     "hash": "c66818e39d38ef146e03f34c895e78037081c194cea2a9f15141aea17921abb8",
     "path": "/skills/hono-framework.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/hono-framework.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=hono-framework&mode=text"
   },
   {
     "name": "\"image-generation\"",
@@ -588,7 +588,7 @@
     ],
     "hash": "b0781f47c30e7d396e29147860914d32c4c5944cc33e4a0cf5437592d1e0e8cb",
     "path": "/skills/image-generation.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/image-generation.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=image-generation&mode=text"
   },
   {
     "name": "jwt-service-engineer",
@@ -599,7 +599,7 @@
     ],
     "hash": "54877281f4f4e41f0df4ad429947546d2e04db8747c2ef0bf87a3e32a18550e2",
     "path": "/skills/jwt-service-engineer.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/jwt-service-engineer.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=jwt-service-engineer&mode=text"
   },
   {
     "name": "kinde-auth-implementer",
@@ -611,7 +611,7 @@
     ],
     "hash": "6a7034662a09751341e3c7624b4f39de61c46df8e1074ca50825941d9b6f8978",
     "path": "/skills/kinde-auth-implementer.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/kinde-auth-implementer.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=kinde-auth-implementer&mode=text"
   },
   {
     "name": "Laravel Framework",
@@ -623,7 +623,7 @@
     ],
     "hash": "08977f334e3800ef2d2e24c6b79651cb1e2f5f55d418eaf895ce22bade0cb05b",
     "path": "/skills/laravel-framework.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/laravel-framework.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=laravel-framework&mode=text"
   },
   {
     "name": "login-ui-specialist",
@@ -635,7 +635,7 @@
     ],
     "hash": "d4304a061ef2cb475c162245941dbe8fff74f0fbcd850388cc4d077e4cadf4b1",
     "path": "/skills/login-ui-specialist.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/login-ui-specialist.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=login-ui-specialist&mode=text"
   },
   {
     "name": "logto-auth-engineer",
@@ -647,7 +647,7 @@
     ],
     "hash": "44bcfeb90d8efaebbda9e0eb5f8e4a4dbe591e31158b623914bc9a1bda3071bc",
     "path": "/skills/logto-auth-engineer.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/logto-auth-engineer.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=logto-auth-engineer&mode=text"
   },
   {
     "name": "middleware-engineer",
@@ -658,7 +658,7 @@
     ],
     "hash": "842c67fb2414d735722bc03df10b2fbe3ab1a3bdd38739bebff600da0b567d2d",
     "path": "/skills/middleware-engineer.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/middleware-engineer.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=middleware-engineer&mode=text"
   },
   {
     "name": "multimodal-vision",
@@ -669,7 +669,7 @@
     ],
     "hash": "19b86b8c8d829e743a8649685f6e1b5c95481386adc161be82667f5ca9f186f6",
     "path": "/skills/multimodal-vision.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/multimodal-vision.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=multimodal-vision&mode=text"
   },
   {
     "name": "mysql-architect",
@@ -680,7 +680,7 @@
     ],
     "hash": "8b6afeab799da425cffa8bee6bbea4f75d33eaa42fa48aee516e7a5eb7da47b0",
     "path": "/skills/mysql-architect.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/mysql-architect.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=mysql-architect&mode=text"
   },
   {
     "name": "nextjs-framework",
@@ -692,7 +692,7 @@
     ],
     "hash": "6c53bbe8fec4d3097e2fc2e8c49a1b4efa60d13e89a58882a450bb774ebd4197",
     "path": "/skills/nextjs-framework.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/nextjs-framework.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=nextjs-framework&mode=text"
   },
   {
     "name": "Nuxt Framework",
@@ -703,7 +703,7 @@
     ],
     "hash": "bbf308bdbc99673ab470ec762488fc6d8b15934761a5306f9326ecc1d97a9f8a",
     "path": "/skills/nuxt-framework.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/nuxt-framework.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=nuxt-framework&mode=text"
   },
   {
     "name": "\"oauth-integration\"",
@@ -717,7 +717,7 @@
     ],
     "hash": "3c75cc3b7978d3a42289d18ae67e8a6de0d69e875c883249b021ffd25bfddb51",
     "path": "/skills/oauth-integration.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/oauth-integration.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=oauth-integration&mode=text"
   },
   {
     "name": "orm-migration-specialist",
@@ -728,7 +728,7 @@
     ],
     "hash": "d671cae95555d7b559f07b2c11f6d9098d3c9bf51992e19c2ce526bf590eabd7",
     "path": "/skills/orm-migration-specialist.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/orm-migration-specialist.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=orm-migration-specialist&mode=text"
   },
   {
     "name": "performance-profiler",
@@ -739,7 +739,7 @@
     ],
     "hash": "f21da46a1652549c5196fecf420c7bd1332cdc806ea117eb2638755afe97fcdb",
     "path": "/skills/performance-profiler.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/performance-profiler.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=performance-profiler&mode=text"
   },
   {
     "name": "prd-documentation-master",
@@ -750,7 +750,7 @@
     ],
     "hash": "5d0f1fef893bc29817f7ae2ac5f06a8fc1a662b33076f460d99c6ed2e744a487",
     "path": "/skills/prd-documentation-master.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/prd-documentation-master.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=prd-documentation-master&mode=text"
   },
   {
     "name": "prompt-optimizer",
@@ -761,7 +761,7 @@
     ],
     "hash": "0793891f134844b2386e901f85d0d373a7cc4d298b810e7f4ad12b9fd3a5a511",
     "path": "/skills/prompt-optimizer.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/prompt-optimizer.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=prompt-optimizer&mode=text"
   },
   {
     "name": "propelauth-b2b-auth",
@@ -773,7 +773,7 @@
     ],
     "hash": "3c55afd0133da1bffe22672ae939610005dda2d650e6d72e2ff00550cdc2c201",
     "path": "/skills/propelauth-b2b-auth.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/propelauth-b2b-auth.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=propelauth-b2b-auth&mode=text"
   },
   {
     "name": "python-code-execution",
@@ -784,7 +784,7 @@
     ],
     "hash": "275a6a6da325c0a3358184c93c6a785cad91a0d13a61c400f86bd60fea7b27ac",
     "path": "/skills/python-code-execution.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/python-code-execution.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=python-code-execution&mode=text"
   },
   {
     "name": "python-excel-architect",
@@ -795,7 +795,7 @@
     ],
     "hash": "709c6e6503d376432679600046057b649f3cc77e6edcc3b0d91ac7f0c1e743eb",
     "path": "/skills/python-excel-architect.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/python-excel-architect.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=python-excel-architect&mode=text"
   },
   {
     "name": "qa-test-engineer",
@@ -808,7 +808,7 @@
     ],
     "hash": "4903e3ff2acce8c2a5f0541c2487a5a79e70946b73188259e9e5a10e512d982d",
     "path": "/skills/qa-test-engineer.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/qa-test-engineer.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=qa-test-engineer&mode=text"
   },
   {
     "name": "qa-test-specialist",
@@ -820,7 +820,7 @@
     ],
     "hash": "7be6345213c747b677c295ee0015f5f4b4d9869f44aa1fdcae8d25b1ae27dc74",
     "path": "/skills/qa-test-specialist.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/qa-test-specialist.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=qa-test-specialist&mode=text"
   },
   {
     "name": "rate-limiting-officer",
@@ -831,7 +831,7 @@
     ],
     "hash": "f1b2ba7ffcf9642cd1342ab0b2d6cf68827411fa63ab2132457c907124cde162",
     "path": "/skills/rate-limiting-officer.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/rate-limiting-officer.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=rate-limiting-officer&mode=text"
   },
   {
     "name": "react-composition-patterns",
@@ -842,7 +842,7 @@
     ],
     "hash": "bc58f9f9e8f85bc88a65febea85a1f4a452f54cd782978c360a3dedb38459563",
     "path": "/skills/react-composition-patterns.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/react-composition-patterns.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=react-composition-patterns&mode=text"
   },
   {
     "name": "\"real-time-and-multi-user\"",
@@ -854,7 +854,7 @@
     ],
     "hash": "83b4323571ffbab1ce031e979dcc9a6264291d18dccac888c05b34bf0e344c2c",
     "path": "/skills/real-time-and-multi-user.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/real-time-and-multi-user.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=real-time-and-multi-user&mode=text"
   },
   {
     "name": "regex-crafter",
@@ -865,7 +865,7 @@
     ],
     "hash": "002ca5eb9776775c467128c414e87e45bec5ce6027830c844007bd48b83613c0",
     "path": "/skills/regex-crafter.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/regex-crafter.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=regex-crafter&mode=text"
   },
   {
     "name": "remix-framework",
@@ -876,7 +876,7 @@
     ],
     "hash": "850c83696500651f293cda10c7659c2d73a5dc464f45485ba7a6e5dd19889061",
     "path": "/skills/remix-framework.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/remix-framework.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=remix-framework&mode=text"
   },
   {
     "name": "rubber-duck-debugger",
@@ -887,7 +887,7 @@
     ],
     "hash": "8acd2e957c2d0f7429e3b144df41a5c57506ba2cfd87927d6904eb6a0202808b",
     "path": "/skills/rubber-duck-debugger.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/rubber-duck-debugger.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=rubber-duck-debugger&mode=text"
   },
   {
     "name": "secops-security-engineer",
@@ -903,7 +903,7 @@
     ],
     "hash": "06a8873755b9a9c25dd2d22903f46a98edccd4ca82b74a460299eaab0348c107",
     "path": "/skills/secops-security-engineer.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/secops-security-engineer.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=secops-security-engineer&mode=text"
   },
   {
     "name": "shadcn-ui",
@@ -914,7 +914,7 @@
     ],
     "hash": "36dadb4c66111cde2212d66e52f125a492c5124133a9b7c8b132361814858d26",
     "path": "/skills/shadcn-ui.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/shadcn-ui.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=shadcn-ui&mode=text"
   },
   {
     "name": "signup-ui-specialist",
@@ -925,7 +925,7 @@
     ],
     "hash": "d3e1684daacb371702dca1378e7b51bafe791daec8d930e5ffc4edaebeba70c8",
     "path": "/skills/signup-ui-specialist.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/signup-ui-specialist.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=signup-ui-specialist&mode=text"
   },
   {
     "name": "state-management-strategist",
@@ -936,7 +936,7 @@
     ],
     "hash": "537ca4577bf821e26764bb5f09d2e579bb9c1e67e6287c5f26effde0196c82d6",
     "path": "/skills/state-management-strategist.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/state-management-strategist.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=state-management-strategist&mode=text"
   },
   {
     "name": "step-by-step-reasoner",
@@ -947,7 +947,7 @@
     ],
     "hash": "302f3946aeb35d33f7f324ce0cb0ef808614db5433806d86478890a83d874e39",
     "path": "/skills/step-by-step-reasoner.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/step-by-step-reasoner.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=step-by-step-reasoner&mode=text"
   },
   {
     "name": "supabase-auth-specialist",
@@ -960,7 +960,7 @@
     ],
     "hash": "84f60c6d5cbb5f26b3fd46bf26770e470b7aa0c8c15e3c3ace218cc9e257d412",
     "path": "/skills/supabase-auth-specialist.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/supabase-auth-specialist.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=supabase-auth-specialist&mode=text"
   },
   {
     "name": "surgical-debugger",
@@ -971,7 +971,7 @@
     ],
     "hash": "4b03037df4ad46729dd616276b56dc4e94391db69631e71975c1e11e088be573",
     "path": "/skills/surgical-debugger.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/surgical-debugger.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=surgical-debugger&mode=text"
   },
   {
     "name": "svelte-framework",
@@ -984,7 +984,7 @@
     ],
     "hash": "ba99f3ddef82464d40462d942fdf559fbcc02484830269f2e52b69e37c5a187f",
     "path": "/skills/svelte-framework.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/svelte-framework.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=svelte-framework&mode=text"
   },
   {
     "name": "systems-architect",
@@ -997,7 +997,7 @@
     ],
     "hash": "b466a88ee2d7b3dc43847e0c22e6508de67b5beec616e01955c438460e0c4e5e",
     "path": "/skills/systems-architect.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/systems-architect.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=systems-architect&mode=text"
   },
   {
     "name": "technical-documenter",
@@ -1008,7 +1008,7 @@
     ],
     "hash": "441bb2ae7d79afbe138091b4470b6153dc7c315c0f1156de49e2eac7175a7a09",
     "path": "/skills/technical-documenter.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/technical-documenter.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=technical-documenter&mode=text"
   },
   {
     "name": "technical-memory-manager",
@@ -1019,7 +1019,7 @@
     ],
     "hash": "b037b571a7063e5d43feebd65e3f5a57c78715dd3f87fd359114e871957331b8",
     "path": "/skills/technical-memory-manager.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/technical-memory-manager.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=technical-memory-manager&mode=text"
   },
   {
     "name": "tone-style-mimic",
@@ -1030,7 +1030,7 @@
     ],
     "hash": "f2e3555db8299c5d5672ea1fd23ff03159e9adc11add06cb6b7bd0deadb4853f",
     "path": "/skills/tone-style-mimic.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/tone-style-mimic.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=tone-style-mimic&mode=text"
   },
   {
     "name": "ui-ux-polisher",
@@ -1044,7 +1044,7 @@
     ],
     "hash": "562baa0ee4ea1a05a36c2f04b02deac766afd01922a3e720e9b618f6f92cff62",
     "path": "/skills/ui-ux-polisher.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/ui-ux-polisher.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=ui-ux-polisher&mode=text"
   },
   {
     "name": "add-function-examples",
@@ -1055,7 +1055,7 @@
     ],
     "hash": "b4befbc5a0e0571abac81826be97aa3f457cd93561188974b49048921fe22331",
     "path": "/skills/vercel-add-function-examples.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/vercel-add-function-examples.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=vercel-add-function-examples&mode=text"
   },
   {
     "name": "add-provider-package",
@@ -1069,18 +1069,18 @@
     ],
     "hash": "ace1f177ae3c80505de9def37ca49e06473bef09d06fedb9bea8ec3a3c8b35fb",
     "path": "/skills/vercel-add-provider-package.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/vercel-add-provider-package.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=vercel-add-provider-package&mode=text"
   },
   {
     "name": "adr-skill",
     "description": "Create and maintain Architecture Decision Records (ADRs) optimized for agentic coding workflows. Use when you need to propose, write, update, accept/reject, deprecate, or supersede an ADR; bootstrap an adr folder and index; consult existing ADRs before implementing changes; or enforce ADR conventions. This skill uses Socratic questioning to capture intent before drafting, and validates output against an agent-readiness checklist.",
-    "estimatedTokens": 4100,
+    "estimatedTokens": 4101,
     "tags": [
       "General"
     ],
-    "hash": "98d3ebb3d8298650a647dbda600e4b1955e65d47a6f4e21da152ffa1b5adab99",
+    "hash": "a5799edbbec85af1ddc6b68dafe34408f35e7a6d0ea99c90366cd87f5c0e4c53",
     "path": "/skills/vercel-adr-skill.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/vercel-adr-skill.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=vercel-adr-skill&mode=text"
   },
   {
     "name": "capture-api-response-test-fixture",
@@ -1093,7 +1093,7 @@
     ],
     "hash": "590e748db94b0adcdef24efadf90e977ad74135ecff5e9ab02f89e3f2a43f61a",
     "path": "/skills/vercel-capture-api-response-test-fixture.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/vercel-capture-api-response-test-fixture.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=vercel-capture-api-response-test-fixture&mode=text"
   },
   {
     "name": "develop-ai-functions-example",
@@ -1104,7 +1104,7 @@
     ],
     "hash": "9d77f7652e8edda503bb95db8032db3ce781904c4444ec22ecdc307e3ac7fc0d",
     "path": "/skills/vercel-develop-ai-functions-example.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/vercel-develop-ai-functions-example.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=vercel-develop-ai-functions-example&mode=text"
   },
   {
     "name": "list-npm-package-content",
@@ -1115,7 +1115,7 @@
     ],
     "hash": "77d8cd66c4fdb6a229bdc812894fc98cc81d79bbb548f33ba9bc2f48ef8c44e9",
     "path": "/skills/vercel-list-npm-package-content.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/vercel-list-npm-package-content.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=vercel-list-npm-package-content&mode=text"
   },
   {
     "name": "major-version-mode",
@@ -1124,9 +1124,9 @@
     "tags": [
       "Breaking Change Gui"
     ],
-    "hash": "d1a8fd62e49149a8781dd84c98524ae5adc3a1ee4d16c1d5aace2add61654769",
+    "hash": "941fec617b77804b4200372002d4f440c917c6634c118e72cca8c4254cc48790",
     "path": "/skills/vercel-major-version-mode.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/vercel-major-version-mode.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=vercel-major-version-mode&mode=text"
   },
   {
     "name": "update-provider-models",
@@ -1137,7 +1137,7 @@
     ],
     "hash": "cf44e87acc2a81a72605b07f141becff5a808b02182939d1cdda3d73f79a7a13",
     "path": "/skills/vercel-update-provider-models.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/vercel-update-provider-models.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=vercel-update-provider-models&mode=text"
   },
   {
     "name": "ai-sdk",
@@ -1149,7 +1149,7 @@
     ],
     "hash": "07e3ac5f423104015bb6e324d9840c61f9df52542ad6f3141de0a419d8aefd2f",
     "path": "/skills/vercel-use-ai-sdk.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/vercel-use-ai-sdk.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=vercel-use-ai-sdk&mode=text"
   },
   {
     "name": "wasp-framework",
@@ -1161,7 +1161,7 @@
     ],
     "hash": "f05c391b3721b7f8eeb9246bb6c916333975fd44c421fb32cd48d3ebff89ae35",
     "path": "/skills/wasp-framework.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/wasp-framework.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=wasp-framework&mode=text"
   },
   {
     "name": "workos-sso-setup",
@@ -1173,6 +1173,6 @@
     ],
     "hash": "6f61c1f8c1012644e0f38a29876b9dfdfee94230bbd9b2740a52a30754c34d61",
     "path": "/skills/workos-sso-setup.md",
-    "rawUrl": "https://bkraiskillsmcp.pages.dev/skills/workos-sso-setup.md"
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=workos-sso-setup&mode=text"
   }
 ]

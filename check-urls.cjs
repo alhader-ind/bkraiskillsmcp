@@ -7,8 +7,8 @@ async function checkUrl(url) {
 }
 
 async function run() {
-  await checkUrl('https://bkraiskillsmcp.pages.dev/skills/api-function-caller.md');
-  await checkUrl('https://bkraiskillsmcp.pages.dev/skills/clean-coder.md');
+  await checkUrl('https://bkraiskillsmcp.pages.dev/api/skills?id=api-function-caller&mode=text');
+  await checkUrl('https://bkraiskillsmcp.pages.dev/api/skills?id=code-refactoring-specialist&mode=text');
 }
 
 run();

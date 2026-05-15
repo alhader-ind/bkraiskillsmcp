@@ -1,0 +1,49 @@
+{
+  "tools": [
+    {
+      "functionDeclarations": [
+        {
+          "name": "get_skill_markdown",
+          "description": "Fetch the raw markdown instructions for a specific skill from the SkillsGem Edge API.",
+          "parameters": {
+            "type": "OBJECT",
+            "properties": {
+              "id": {
+                "type": "STRING",
+                "description": "The unique slug ID of the skill (e.g., 'frontend-engineer')."
+              }
+            },
+            "required": ["id"]
+          }
+        },
+        {
+          "name": "semantic_search_skills",
+          "description": "Discover relevant skills using AI semantic embedding search.",
+          "parameters": {
+            "type": "OBJECT",
+            "properties": {
+              "q": {
+                "type": "STRING",
+                "description": "Search query describing the problem or desired capability (e.g., 'database migration')."
+              }
+            },
+            "required": ["q"]
+          }
+        },
+        {
+          "name": "get_technical_memory_matrix",
+          "description": "Retrieves the aggregated session matrix (MEMORY, ROADMAP, CHANGELOG, AGENTS) for absolute state continuity and session handover.",
+          "parameters": {
+             "type": "OBJECT",
+             "properties": {
+               "mode": {
+                 "type": "STRING",
+                 "description": "Set to 'text' to return raw markdown or 'json' for strict schema representation. Default is 'text'."
+               }
+             }
+          }
+        }
+      ]
+    }
+  ]
+}

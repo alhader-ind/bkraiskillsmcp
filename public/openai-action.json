@@ -1,0 +1,117 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "SkillsGem AI",
+    "description": "API for fetching dynamic system instructions and skill protocols for AI agents running on the SkillsGem MCP framework.",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://bkraiskillsmcp.pages.dev",
+      "description": "Production Edge Server"
+    }
+  ],
+  "paths": {
+    "/api/skills": {
+      "get": {
+        "operationId": "getSkillMarkdown",
+        "summary": "Fetch Skill Instructions",
+        "description": "Retrieves the raw markdown instructions for a specific skill.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "description": "The unique slug ID of the skill (e.g., 'frontend-engineer').",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "mode",
+            "in": "query",
+            "required": true,
+            "description": "The response mode. Must be 'text'.",
+            "schema": {
+              "type": "string",
+              "enum": ["text"]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Raw markdown instructions",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/skills/semantic-search": {
+      "get": {
+        "operationId": "searchSkills",
+        "summary": "Semantic Skill Discovery",
+        "description": "Discover relevant skills using AI semantic embedding search.",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "required": true,
+            "description": "Search query describing the problem or desired capability (e.g., 'database migration').",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "List of relevant skill matches",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/context": {
+      "get": {
+        "operationId": "getContextMatrix",
+        "summary": "Technical Memory Continuity Handover",
+        "description": "Retrieves the aggregated session matrix (MEMORY, ROADMAP, CHANGELOG, AGENTS) for absolute state continuity.",
+        "parameters": [
+          {
+            "name": "mode",
+            "in": "query",
+            "required": false,
+            "description": "Set to 'text' or 'json'. Defaults to 'text'.",
+            "schema": {
+              "type": "string",
+              "enum": ["text", "json"]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Aggregated context payload",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

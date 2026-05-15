@@ -154,17 +154,17 @@ export class SyncEngine {
         tags: categories,
         hash,
         path: `/skills/${file}`,
-        rawUrl: `https://bkraiskillsmcp.pages.dev/skills/${file}`
+        rawUrl: `https://bkraiskillsmcp.pages.dev/api/skills?id=${file.replace('.md', '')}&mode=text`
       });
     });
 
     let llmsTxt = `# SkillsGem AI Knowledge Base\n\n> [!IMPORTANT]\n> This is a machine-readable index of high-fidelity AI System Instructions (Skills). \n> These instructions are designed to be ingested by LLMs to augment their capabilities in specific technical domains.\n\n`;
-    llmsTxt += `> [!CRITICAL] CONTEXT BLOAT & COST OPTIMIZATION\n> Avoid ingesting the monolithic \`/llms-full.txt\` unless your context window exceeds 128k tokens.\n> **Recommended Protocol for Autonomous Agents:**\n> 1. Read \`/llms.json\` for semantic discovery and token estimation.\n> 2. Use \`/api/skills?tag=[category]\` or \`/api/skills?keyword=[problem]\` to find relevant competencies.\n> 3. Fetch specific skill instructions via \`/api/skills?id=[skill-id]\` to maintain high focus and low token cost.\n\n`;
+    llmsTxt += `> [!CRITICAL] CONTEXT BLOAT & COST OPTIMIZATION\n> Avoid ingesting the monolithic \`/llms-full.txt\` unless your context window exceeds 128k tokens.\n> **Recommended Protocol for Autonomous Agents:**\n> 1. Read \`/llms.json\` for semantic discovery and token estimation.\n> 2. Use \`/api/skills?tag=[category]\` or \`/api/skills?keyword=[problem]\` to find relevant competencies.\n> 3. Fetch specific skill instructions via \`/api/skills?id=[skill-id]&mode=text\` to maintain high focus and low token cost.\n\n`;
     llmsTxt += `## Primary Manifests\n\n- [Full Knowledge Base (Monolith)](/llms-full.txt): Total platform state (Verbatim content).\n- [Dynamic Manifest (JSON)](/llms.json): Full metadata, tags, and token counts for programmatic ingestion.\n\n## Available Competencies\n\n`;
 
     manifesto.forEach(s => {
       const id = s.path.split('/').pop()?.replace('.md', '');
-      llmsTxt += `### [${s.name}](/skills/${id}.md)\n- **Description**: ${s.description}\n- **Tags**: ${s.tags.join(', ')}\n- **Tokens**: ~${s.estimatedTokens}\n- **Granular API**: \`/api/skills?id=${id}\`\n\n`;
+      llmsTxt += `### [${s.name}](/api/skills?id=${id}&mode=text)\n- **Description**: ${s.description}\n- **Tags**: ${s.tags.join(', ')}\n- **Tokens**: ~${s.estimatedTokens}\n- **Granular API**: \`/api/skills?id=${id}&mode=text\`\n\n`;
     });
 
     fs.writeFileSync(LLMS_TXT_PATH, llmsTxt);

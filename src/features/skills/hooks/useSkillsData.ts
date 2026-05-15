@@ -25,10 +25,10 @@ export const useSkillsData = () => {
     return () => { isMounted = false; };
   }, []);
 
-  const loadSkillContent = useCallback(async (id: string, path: string) => {
+  const loadSkillContent = useCallback(async (id: string) => {
     if (skillsContent[id]) return; // Already cached
     try {
-      const content = await skillsService.fetchSkillMarkdown(path);
+      const content = await skillsService.fetchSkillMarkdown(id);
       setSkillsContent(prev => ({ ...prev, [id]: content }));
     } catch (err) {
       console.error(`Failed to fetch content for ${id}`);

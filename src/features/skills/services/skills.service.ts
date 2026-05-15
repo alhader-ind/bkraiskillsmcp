@@ -17,13 +17,13 @@ export const skillsService = {
   },
 
   /**
-   * Fetches the markdown content for a specific skill.
-   * @param path The URL path to fetch the markdown from
+   * Fetches the markdown content for a specific skill via the Hono API.
+   * @param id The unique skill id to fetch
    */
-  async fetchSkillMarkdown(path: string): Promise<string> {
-    const response = await fetch(path);
+  async fetchSkillMarkdown(id: string): Promise<string> {
+    const response = await fetch(`/api/skills?id=${id}&mode=text`);
     if (!response.ok) {
-      throw new Error(`Failed to fetch content from ${path}`);
+      throw new Error(`Failed to fetch content for skill ID: ${id}`);
     }
     return response.text();
   }

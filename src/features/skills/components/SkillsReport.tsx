@@ -11,9 +11,9 @@ export const SkillsReport: React.FC = () => {
   const { dynamicSkills, skillsContent, loading, error, loadSkillContent } = useSkillsData();
   const [expandedSkill, setExpandedSkill] = useState<string | null>(null);
 
-  const handleToggle = (skillId: string, path: string) => {
+  const handleToggle = (skillId: string) => {
     if (expandedSkill !== skillId) {
-      loadSkillContent(skillId, path);
+      loadSkillContent(skillId);
     }
     setExpandedSkill(prev => prev === skillId ? null : skillId);
   };

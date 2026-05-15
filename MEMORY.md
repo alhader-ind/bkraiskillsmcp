@@ -13,8 +13,11 @@
   - **Registry/Storage:** Remote GitHub Pages / local `llms.txt`, `llms-full.txt`, and RAW Markdown files (`src/raw-skills/`).
 
 ## 2. In-Flight State (Current Snapshot)
-- **Current Phase:** Phase 4 Stage 3 CLI Tooling & Automation (Completed).
+- **Current Phase:** Phase 3 & 4 (Completed Bouncer Edge Enforcement & Platform Assets).
 - **Recent Milestones:**
+  - Implemented Phase 4 Edge Enforcement using Hono middleware to intercept and redirect bots trying to access `/skills/*.md` directly.
+  - Generated Phase 3 integration assets: `openai-action.json`, `claude_desktop_config.json`, and `gemini-tool-schema.json`.
+  - Conducted robust multi-phase system architecture analysis under the guidance of the `systems-architect` and `technical-documenter` protocols, codifying all structural and dependency findings formally into `APP_ANALYSIS_REPORT.md`.
   - Designed and deployed robust CLI (`src/swarm/cli.ts`) mapping sub-commands (`pull`, `sync`, `list`, `audit`, `demo`) equipped with `--json` outputs isolating artifacts.
   - Formulated `SyncEngine` (`src/swarm/core/SyncEngine.ts`) wrapping scalable asynchronous asset fetching with automated Markdown header parsers and caching mechanisms.
   - Built `GitHubAdapter` mapped with intelligent `Link` header pagination, exponential rate-limit back-offs, and normalized data extraction.

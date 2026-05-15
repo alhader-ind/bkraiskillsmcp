@@ -2,8 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
-## [v1.6.0] - 2026-05-09
+## [Unreleased]
+### Documented
+- Executed comprehensive architectural analysis, rewriting `APP_ANALYSIS_REPORT.md` following **systems-architect** and **technical-documenter** constraints. Encompasses the Hono Edge configurations, Swarm Core ingestion logic (`SyncEngine.ts`, `GitHubAdapter.ts`), multi-stage deployment patterns, and MCP interoperability.
+
+## [v1.6.0] - 2026-05-15
 ### Added
+- **Phase 3 & 4 - Edge Enforcement & Integration Assets**:
+  - Engineered Phase 4 Hono middleware interceptor ("The Bouncer") to block aggressive static scraping bots from directly hitting `/skills/*.md`, returning API endpoint directives instead.
+  - Formulated Phase 3 `openai-action.json` OpenAPI schema mapping Hono Edge endpoints to ChatGPT Custom Actions.
+  - Drafted `claude_desktop_config.json` defining remote proxy/bridge configuration to stream `skillsgem-mcp-server` into Claude Desktop/Cursor natively.
+  - Architected `gemini-tool-schema.json` mapping API operations contextually into Gemini Vertex functional declarations.
 - **Swarm CLI Architecture & SyncEngine**:
   - Engineered an extensible, Commander.js-driven CLI (`src/swarm/cli.ts`) supporting commands: `sync`, `pull`, `list`, `audit`, and `demo`.
   - Built `SyncEngine` (`src/swarm/core/SyncEngine.ts`) mapping parallel asynchronous remote payload fetching utilizing `Promise.allSettled`.
