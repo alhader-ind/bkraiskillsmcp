@@ -22,3 +22,15 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Generated Content
+.sync-cache.json
+public/skills
+public/llms.txt
+public/llms-full.txt
+public/llms.json
+public/MEMORY.md
+public/ROADMAP.md
+public/CHANGELOG.md
+public/APP_ANALYSIS_REPORT.md
+public/AGENTS.md

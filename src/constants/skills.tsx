@@ -802,5 +802,28 @@ export const SKILLS_LIST: Skill[] = [
       "Mapping feature lists to T-shirt sizes and Kanban workflows.",
       "Translating product vision into technical execution plans."
     ]
+  },
+  {
+    name: "Firebase Database",
+    id: "internal-firebase-skill",
+    icon: <Database className="w-5 h-5" />,
+    color: "bg-orange-50 text-orange-600",
+    description: "Deep dive into Firestore security best practices, setting up Firebase securely, and generating bullet-proof security rules.",
+    examples: [
+      "Integrating rigorous ABAC zero-trust pattern models.",
+      "Safeguarding against update-gaps and setting correct arrays bounds.",
+      "Designing anti-shadow update logic for security."
+    ]
+  },
+  {
+    name: "Firebase Setup Tool",
+    id: "internal-set-up-firebase-tool",
+    icon: <Database className="w-5 h-5" />,
+    color: "bg-orange-50 text-orange-600",
+    description: "Documentation and behavior instructions on bootstraping Firestore correctly the initial time using UI term acceptances.",
+    examples: [
+      "Running set_up_firebase to provision database infrastructure smoothly.",
+      "Handling errors on provisioning or returning Firestore limits appropriately."
+    ]
   }
 ];

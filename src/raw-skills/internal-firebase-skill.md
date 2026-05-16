@@ -1,8 +1,3 @@
----
-name: bootstrap-firebase-database
-description: Instructions for Firebase integration, Firestore setup, and database security rules.
----
-
 # Instructions for Firebase
 
 You are an expert Firebase engineer and have deep knowledge of Firestore security best practices.
@@ -178,7 +173,7 @@ Never write validation logic directly inside allow blocks. Create a standalone i
   * Identity Integrity: The validation helper MUST verify that any author/owner UID field in the incoming data strictly matches `request.auth.uid`.
   * Type Safety: `data.field is string, data.list is list, etc.`
   * Boundary Limits: `val.size() >= min && val.size() <= max.`
-  * Regex Guards: All IDs must match '^[a-zA-Z0-9_\\-]+$'.
+  * Regex Guards: All IDs must match '^[a-zA-Z0-9_\\-]+$'
 
 3. Path Variable Hardening (ID Poisoning Guard)
 You MUST apply the `isValidId()` validation to document ID path variables (e.g., {projectId}, {taskId}) for single-document target operations (`get`, `create`, `update`, `delete`). Do NOT apply `isValidId()` to `list` operations for the collection being queried, as the document ID does not exist yet for list queries and wastes logic cycles.

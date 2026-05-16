@@ -130,6 +130,10 @@ import reactCompositionPatterns from './raw-skills/react-composition-patterns.md
 import vercelAdrSkill from './raw-skills/vercel-adr-skill.md?raw';
 // @ts-ignore
 import prdDocumentationMaster from './raw-skills/prd-documentation-master.md?raw';
+// @ts-ignore
+import internalFirebaseSkill from './raw-skills/internal-firebase-skill.md?raw';
+// @ts-ignore
+import internalSetUpFirebaseTool from './raw-skills/internal-set-up-firebase-tool.md?raw';
 
 export const skillsData: Record<string, string> = {
   "google-search-grounding": googleSearchGrounding,
@@ -197,5 +201,7 @@ export const skillsData: Record<string, string> = {
   "cloudflare-agents-sdk": cloudflareAgentsSdk,
   "react-composition-patterns": reactCompositionPatterns,
   "vercel-adr-skill": vercelAdrSkill,
-  "prd-documentation-master": prdDocumentationMaster
+  "prd-documentation-master": prdDocumentationMaster,
+  "internal-firebase-skill": internalFirebaseSkill,
+  "internal-set-up-firebase-tool": internalSetUpFirebaseTool
 };
