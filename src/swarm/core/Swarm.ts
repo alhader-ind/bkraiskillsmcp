@@ -87,7 +87,7 @@ export class Swarm {
       
       // Alternatively, the agent execution could attach a "handoff" attribute 
       // if the tool was called. We'll simulate reading it from the Agent's state or sharedState
-      let nextAgentName = context.memory.getNextAgent();
+      const nextAgentName = context.memory.getNextAgent();
       if (nextAgentName) {
          context.memory.clearNextAgent();
       }

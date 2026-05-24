@@ -50,7 +50,7 @@ export class Agent {
     if (this.skills.length > 0) {
       instruction += `You have the following skills integrated:\n`;
       for (const skillId of this.skills) {
-        let skillContent = skillsData[skillId];
+        const skillContent = skillsData[skillId];
         if (skillContent) {
            instruction += `\n--- SKILL: ${skillId} ---\n${skillContent}\n`;
         } else {
@@ -77,7 +77,7 @@ export class Agent {
     
     // Convert generic SwarmMessages to Gemini API format
     // Note: This is an overly simplified mapping.
-    let contents = messages.map(msg => {
+    const contents = messages.map(msg => {
       return {
         role: msg.role === 'assistant' ? 'model' : 'user',
         parts: [{ text: `[${msg.name || msg.role}]: ${msg.content}` }]
