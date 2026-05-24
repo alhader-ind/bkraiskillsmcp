@@ -1,6 +1,8 @@
 import { Hono } from 'hono';
+import { GoogleGenAI } from '@google/genai';
 import { GitHubAuthService } from './services/githubAuth.js';
 import { GitHubPRService } from './services/githubPRService.js';
+import { Orchestrator } from './swarm/core/Orchestrator.js';
 
 type Bindings = {
   ASSETS: { fetch: (req: Request) => Promise<Response> };
@@ -435,6 +437,15 @@ app.get('/api/skills', async (c) => {
   }
 });
 
+// ESLint Compiler Check Fallback for Cloudflare Worker Isolate environment
+app.get('/api/lint', (c) => {
+  return c.json({
+    success: false,
+    error: "ESLint workspace execution is not available inside serverless edge CDNs.",
+    details: "Direct script/child_process execution is disabled in serverless edge isolates. To run workspace compiler and style checks, please execute this query in Node.js server environments or locally via 'npm run lint'."
+  });
+});
+
 // --- PHASE 3: SEMANTIC SEARCH ENDPOINT ---
 app.get('/api/skills/semantic-search', async (c) => {
   const query = c.req.query('q');
@@ -472,6 +483,128 @@ app.get('/api/skills/semantic-search', async (c) => {
   } catch (error: any) {
     console.error('Semantic search failed:', error);
     return c.json({ error: 'Semantic search execution failed', details: error.message }, 500);
+  }
+});
+
+// Dynamic Multi-Tiered Response Orchestrator (Reasoning Gate, Semantic Router, Context Manager)
+app.post('/api/skills/orchestrate', async (c) => {
+  try {
+    const body = await c.req.json();
+    const { prompt, apiKey, customInstructions } = body;
+
+    if (!prompt) {
+      return c.json({ error: 'Prompt parameter is required inside JSON body' }, 400);
+    }
+
+    const url = new URL(c.req.url);
+    const origin = url.origin;
+    const manifestUrl = new URL('/llms.json', origin).toString();
+    
+    let manifestResponse;
+    if (c.env?.ASSETS) {
+      manifestResponse = await c.env.ASSETS.fetch(new Request(manifestUrl));
+    } else {
+      manifestResponse = await fetch(manifestUrl);
+    }
+
+    if (!manifestResponse.ok) {
+      return c.json({ error: "Failed to fetch skills manifest /llms.json" }, 500);
+    }
+
+    const skills = await manifestResponse.json() as any[];
+
+    // 1. Run Reasoning Gate (Tier 1)
+    const effectiveKey = apiKey || c.env?.API_KEY || (typeof process !== 'undefined' ? process.env?.GEMINI_API_KEY : undefined);
+    const reasoningResult = await Orchestrator.runReasoningGate(prompt, skills, effectiveKey);
+
+    // 2. Run Semantic Router (Tier 2)
+    const routes = Orchestrator.runSemanticRouter(prompt, skills, reasoningResult.suggestedSkills);
+
+    // 3. Obtain Skill Contents (Tier 3 Context Manager needs the markdown contents)
+    const skillsContent: Record<string, string> = {};
+    const topMatches = routes.slice(0, 3);
+    
+    for (const match of topMatches) {
+      const skillSymbol = skills.find(s => s.path.includes(match.id));
+      if (skillSymbol) {
+        const skillUrl = new URL(skillSymbol.path, origin).toString();
+        let mdResponse;
+        if (c.env?.ASSETS) {
+          mdResponse = await c.env.ASSETS.fetch(new Request(skillUrl));
+        } else {
+          mdResponse = await fetch(skillUrl);
+        }
+        if (mdResponse.ok) {
+          skillsContent[match.id] = await mdResponse.text();
+        }
+      }
+    }
+
+    // 4. Build Context Blueprint (Tier 3)
+    const blueprint = Orchestrator.buildContextPayload(routes, skillsContent, customInstructions);
+
+    return c.json({
+      success: true,
+      prompt,
+      reasoningGate: reasoningResult,
+      semanticRouter: {
+        allMatches: routes,
+        topMatches: topMatches.map(m => ({ id: m.id, name: m.name, score: m.score }))
+      },
+      contextBlueprint: blueprint
+    });
+
+  } catch (err: any) {
+    console.error("Orchestration endpoint error:", err);
+    return c.json({ error: "Failed to orchestrate skills context", details: err.message }, 500);
+  }
+});
+
+// Dynamic Context Simulator
+app.post('/api/skills/simulate', async (c) => {
+  try {
+    const body = await c.req.json();
+    const { prompt, systemInstructions, apiKey } = body;
+
+    if (!prompt || !systemInstructions) {
+      return c.json({ error: 'Prompt and systemInstructions are required parameters inside JSON body' }, 400);
+    }
+
+    const key = apiKey || c.env?.API_KEY || (typeof process !== 'undefined' ? process.env?.GEMINI_API_KEY : undefined);
+    
+    if (!key || key === 'default_dev_key' || !key.startsWith('AIza')) {
+      return c.json({ 
+        success: false, 
+        error: "To run live LLM execution simulations, a valid GEMINI_API_KEY begins with 'AIza' must be stored in secrets/environment.",
+        simulationText: "Heuristic/Mock Execution Model: Once a valid API key is present in 'Settings -> Secrets', your prompt is processed live using the exact system instruction payload assembled above."
+      });
+    }
+
+    const ai = new GoogleGenAI({
+      apiKey: key,
+      httpOptions: {
+        headers: {
+          'User-Agent': 'aistudio-build',
+        }
+      }
+    });
+
+    const response = await ai.models.generateContent({
+      model: "gemini-3.5-flash",
+      contents: prompt,
+      config: {
+        systemInstruction: systemInstructions
+      }
+    });
+
+    return c.json({
+      success: true,
+      simulationText: response.text || "No response generated."
+    });
+
+  } catch (err: any) {
+    console.error("Simulation endpoint error:", err);
+    return c.json({ error: "LLM simulation execution failed", details: err.message }, 550);
   }
 });
 

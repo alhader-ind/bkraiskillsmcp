@@ -750,3 +750,44 @@ These instructions should be periodically updated to reflect:
 To refresh the skill catalog, re-fetch https://bkraiskillsmcp.pages.dev/llms.txt and update Section 3. Or invoke the Semantic Search endpoint (`/api/skills/semantic-search`) for intelligent matching mapped to the live Edge deployment.
 
 ---
+
+SECTION 10: Locked Persona & Platform-Specific Implementation Rules
+
+10.1 Code-Formatting & Engineering Standards
+To ensure consistent, production-ready, and high-performance execution, the Agent MUST adhere to these TypeScript and Frontend parameters:
+- Complete Code blocks: NO placeholders, mock indicators, or standard `TODO` block leaves. All code written must be production-ready and fully articulated.
+- Named Import Directives: Strictly use named import patterns (e.g., `import { name } from "library"`). Destructuring imports of entire modules is forbidden to preserve optimal tree-shaking efficiency at edge runtimes.
+- Enums: Declare type-safe structures using standard TypeScript `enum` formats. `const enum` declarations are prohibited due to compilation and runtime boundary safety.
+- Styling Paradigm: Fallback natively to inline Tailwind CSS classes. No CSS-in-JS libraries or custom raw CSS files should be introduced unless explicitly requested by the user.
+
+10.2 Strict Pull-Request & Autocommit Schema
+Every programmatic automated commit or pull-request issued via `/api/test-pr` or the MCP `github_create_pull_request` service must adhere to this unified conventional schema:
+- Title Convention: Utilize precise semantic prefixes:
+  - `feat([domain]): [Clear description of novel capability or new skill]`
+  - `fix([domain]): [Description of exact issue resolution, missing import, or compile error]`
+  - `docs([domain]): [Modifications targeting AGENTS.md, MEMORY.md, or other specs]`
+  - `refactor([domain]): [Code restructuring, performance tuning, or technical debt removal]`
+- PR/Commit Body Layout:
+  - **Problem / Intent Analysis**: Trace the user's root request and functional targets.
+  - **Active Skills Used**: List all SkillsGem IDs activated from the systems schema during execution.
+  - **Implementation Steps**: Bulleted chronological list of precise code edits made.
+  - **Validation Verification**: Explicit output logs showing build confirmation (`compile_applet` equivalents).
+  - **Repository Files Modified/Created**: Full list of affected file paths.
+
+10.3 State Persistence & Runtime Fallback Models
+- Local State Persistence: For client-side stores powered by Zustand, the application must hook into standard `localStorage` storage strategies using the Zustand `persist` middleware. This guards user-selected skills ("Skill Cart") from full browser refreshes.
+- Lazy Binding Initialization: Server-side integrations (such as Cloudflare bindings, Github integrations, or Web Crypto engines) must gracefully fall back to functional mocks if environment variables or secrets (e.g., `GITHUB_PRIVATE_KEY` or `GITHUB_APP_ID`) are not explicitly configured in the target container. This ensures local dev servers on port `3000` run smoothly without fatal crashes.
+
+10.4 Security Guardrails & Cryptographic Compliance
+- Constant-Time Comparison: All signature validations for hooks and web APIs must compute via constant-time loops. This mitigates timing-attack vectors completely.
+- Path-Traversal Defense: Resolving server file loads from user inputs (e.g., retrieving `skills/{id}.md`) must map values strictly against internal lists (such as `llms.json`). Raw string appending or directory parsing via raw paths is forbidden.
+- DER DER-Encoding: Converting external private keys on edge runs must use Web Crypto API standards. Converting PKCS#1 keys to PKCS#8 must rely on standard ASN.1 sequence headers without referencing node `crypto` packages.
+
+10.5 Static Code Analysis & Compiler Verification Protocols
+- Unified Lint Enforcement: The workspace is strictly monitored and structured under a Flat ESLint Configuration (`eslint.config.js`). Any structural modifications, new features, or API updates must adhere to typescript-eslint v8/v9 standards and pass `npm run lint`.
+- Diagnostic API Access (`/api/lint`): The application exposes a programmatic compiler validation highway. 
+  - On Node.js containers (`server.ts`), it triggers a child node thread executing `npx eslint . -f json`, processing and streaming real-time workspace health report structures.
+  - On serverless Edge environments (`src/worker.ts`), it gracefully yields an edge-safe fallback matrix explaining the sandbox isolation.
+- Pre-Deployment & Push Rules: Linter and compiler checks must be successfully verified before preparing codeline releases, dispatching pull requests, or sync operations.
+
+---

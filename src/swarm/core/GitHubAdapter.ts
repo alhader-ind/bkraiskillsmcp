@@ -12,6 +12,19 @@ export interface FetchContext {
 }
 
 export class GitHubAdapter {
+  private static lastFetchTime = 0;
+
+  private static async throttle() {
+    const minDelay = 200; // ms
+    const now = Date.now();
+    const elapsed = now - GitHubAdapter.lastFetchTime;
+    if (elapsed < minDelay) {
+      const wait = minDelay - elapsed;
+      await new Promise(resolve => setTimeout(resolve, wait));
+    }
+    GitHubAdapter.lastFetchTime = Date.now();
+  }
+
   /**
    * Fetches the contents of a directory on GitHub, handling pagination and rate limits.
    */
@@ -26,7 +39,9 @@ export class GitHubAdapter {
   /**
    * Fetches a file from GitHub, returning its content and its ETag for caching purposes.
    */
-  async fetchFile(downloadUrl: string, context: FetchContext = {}, etag?: string): Promise<{ content: string | null; etag: string | null; status: number }> {
+  async fetchFile(downloadUrl: string, context: FetchContext = {}, etag?: string, retries = 3, backoff = 1000): Promise<{ content: string | null; etag: string | null; status: number }> {
+    await GitHubAdapter.throttle();
+
     const headers: Record<string, string> = {};
     if (context.token) {
       headers['Authorization'] = `token ${context.token}`;
@@ -44,6 +59,23 @@ export class GitHubAdapter {
         return { content: null, etag, status: 304 }; // Not modified
       }
 
+      if (response.status === 403 || response.status === 429) {
+        if (retries > 0) {
+          const resetTime = response.headers.get('X-RateLimit-Reset');
+          let waitTime = backoff;
+          if (resetTime) {
+            const resetMs = parseInt(resetTime, 10) * 1000;
+            const now = Date.now();
+            if (resetMs > now && resetMs - now < 60000) {
+              waitTime = resetMs - now + 1000;
+            }
+          }
+          console.log(`[GitHubAdapter] fetchFile rate limited. Retrying in ${waitTime}ms... (${retries} retries left)`);
+          await new Promise(r => setTimeout(r, waitTime));
+          return this.fetchFile(downloadUrl, context, etag, retries - 1, backoff * 2);
+        }
+      }
+
       if (!response.ok) {
         return { content: null, etag: null, status: response.status };
       }
@@ -51,12 +83,19 @@ export class GitHubAdapter {
       const content = await response.text();
       return { content, etag: newEtag, status: response.status };
     } catch (err: any) {
+      if (retries > 0 && (err.message.includes('network') || err.message.includes('fetch'))) {
+         console.log(`[GitHubAdapter] fetchFile network error (${err.message}). Retrying in ${backoff}ms...`);
+         await new Promise(r => setTimeout(r, backoff));
+         return this.fetchFile(downloadUrl, context, etag, retries - 1, backoff * 2);
+      }
       console.error(`[GitHubAdapter] Error fetching file ${downloadUrl}: ${err.message}`);
       return { content: null, etag: null, status: 500 };
     }
   }
 
   private async fetchWithRetry(url: string, context: FetchContext, retries = 3, backoff = 1000): Promise<any> {
+    await GitHubAdapter.throttle();
+
     const headers: Record<string, string> = {
       'Accept': 'application/vnd.github.v3+json',
       'User-Agent': 'Agent-Swarm-CLI'
@@ -110,7 +149,7 @@ export class GitHubAdapter {
            if (Array.isArray(nextData)) {
               return data.concat(nextData);
            }
-        }
+         }
       }
 
       return data;

@@ -15,6 +15,7 @@
 ## 2. In-Flight State (Current Snapshot)
 - **Current Phase:** Phase 3 & 4 (Completed Bouncer Edge Enforcement & Platform Assets).
 - **Recent Milestones:**
+  - Formulated and appended **SECTION 10: Locked Persona & Platform-Specific Implementation Rules** inside `/AGENTS.md` to establish immutable formatting, pull-request schemas, Zustand localStorage state persistence, and cryptographic Timing-attack proof policies.
   - Implemented Phase 4 Edge Enforcement using Hono middleware to intercept and redirect bots trying to access `/skills/*.md` directly.
   - Generated Phase 3 integration assets: `openai-action.json`, `claude_desktop_config.json`, and `gemini-tool-schema.json`.
   - Conducted robust multi-phase system architecture analysis under the guidance of the `systems-architect` and `technical-documenter` protocols, codifying all structural and dependency findings formally into `APP_ANALYSIS_REPORT.md`.
@@ -44,12 +45,31 @@
   - Integrated Model Context Protocol (MCP) Server endpoints in Hono.
   - Implemented static fallback routing (`index.html` delivery for SPA navigation in Hono).
   - Designed the Memory Blueprint (you are reading it).
+  - **Resolved JSON Parsing Crash ("Unexpected token '<'"):** Discovered `llms.json` was omitted from start because it is gitignored and `sync-skills` task wasn't run on start. Configured `"dev"` script in `package.json` to auto-execute `npm run sync-skills` on dev launch. Guarded `fetchSkillsManifest()` in `skills.service.ts` to block and report non-JSON content-type responses (like SPA HTML fallbacks) with a clean human-readable error explanation instead of crashing.
+  - **Drafted AI Studio Instructions Prompt:** Designed and created `/GEMINI_SYSTEM_INSTRUCTIONS.md` containing a self-contained, high-performance system instructions prompt template optimized for Gemini models to strictly carry the SkillsGem AI persona, code invariants, and offline stability guarantees in `aistudio.google.com`.
+  - **ESLint & Workspace Compiler checking integration:** Installed modern ESLint v9, `@eslint/js`, and `typescript-eslint` packages as dev dependencies. Configured a unified ESLint Flat configuration file (`eslint.config.js`) supporting ignored directories and allowing appropriate TypeScript annotations. Added `"lint"` script to `package.json`, enabling streamlined syntax validation.
+  - **Engineered Programmatic Multi-Platform Compiler Check Endpoint (`/api/lint`)**:
+    - Completed highly optimized Node.js process check mapping inside `/server.ts` utilizing promisified `child_process.exec('npx eslint . -f json')` allowing the server to dynamically check files on demand, parse the diagnostic stream, and return pristine structured JSON.
+    - Integrated clean edge-sandbox fallback routes under `/src/worker.ts` returning informative status vectors when running on serverless global CDN isolations.
+  - **Engineered Multi-Tiered adaptive prompt orchestrator (Reasoning Gate, Semantic Router, Context Manager)**:
+    - Designed `/src/swarm/core/Orchestrator.ts` handling the 3 crucial phases of dynamic prompt preparation: *Tier 1: Reasoning Gate* (analyzing queries with LLMs or fast heuristic structures and isolating candidate skill targets), *Tier 2: Semantic Router* (ranking score correlations using custom keywords, tags, and gate signals), and *Tier 3: Context Manager* (combining active rules into packed payloads with character-based token trackers and alert buffers).
+    - Registered a POST route `/api/skills/orchestrate` inside Hono web-worker endpoints to act as the REST bridge for routing requests.
+    - Built a POST route `/api/skills/simulate` proxying to `@google/genai` to test physical execution under compiled prompt payloads recursively.
+    - Designed the interactive visual playground dashboard `/src/features/skills/components/SessionOrchestrator.tsx` and nested it smoothly inside the main SPA tab controls for instant utility mapping.
+- **Resolved Challenges/Bugs:**
+  - Resolved dynamic rate limiting issues with sources (Cloudflare/Vercel) during raw-skill syncing, completely integrating a `200ms` proactive API throttle into `GitHubAdapter.ts` and refactoring `SyncEngine` sequentialization to prevent nested recursive concurrency storms.
+  - Resolved duplicate React key warning inside the dynamic keyword mapping lists of `SessionOrchestrator.tsx`.
+  - Resolved `GoogleGenAI is not defined` ReferenceError inside `worker.ts` by adding imports from `@google/genai`.
+  - Bypassed API model failures on local key fallbacks by enforcing active checking for the standard `AIza` Gemini prefix format in `Orchestrator.ts` and `worker.ts`.
 - **Active Challenges/Bugs:**
   - Ensuring Cloudflare ASSETS binding accurately serves static files in remote environment.
 
 ## 3. Dependency & Infrastructure Matrix
 - **Critical Dependencies:**
   - `hono` (^4.x.x) - Routing.
+  - `eslint` (^9.x.x) - Linter engine.
+  - `typescript-eslint` (^8.x.x) - Type-safe eslint bindings.
+  - `@eslint/js` (^9.x.x) - Base ESLint recommended configurations.
   - `@hono/node-server` - Local prod execution.
   - `vite` - SPA build.
   - `@modelcontextprotocol/sdk` - Required for MCP server implementation.

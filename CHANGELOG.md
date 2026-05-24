@@ -3,7 +3,29 @@
 All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
+### Added
+- **Dynamic Multi-Tiered AI Prompt Orchestrator**:
+  - **Tier 1: The Reasoning Gate**: Built an LLM-powered module (with intelligent heuristic fallback) that intercepts user prompts, determines if they are technical developer tasks, logs its step-by-step reasoning trace, and flags matching candidate instruction slugs.
+  - **Tier 2: The Semantic Router**: Engineered a high-fidelity ranking engine that dynamically evaluates keyword overrides, tag intersections, description weights, and gate recommendation status to score and rank available skills contextually.
+  - **Tier 3: The Context Manager**: Implemented a synthesis pipeline that packages matched skills, aggregates custom user directives, computes estimated token sizes, raises warnings on context-bloat, and formats output into a unified instruction blueprint.
+  - **Live Execution Prompt Sandbox**: Added a programmatic simulation route `/api/skills/simulate` proxying to Gemini `gemini-3.5-flash` to evaluate custom-orchestrated instruction sets.
+  - **Interactive Playboard UI Dashboard**: Designed and deployed the **Adaptive Orchestrator Pro** playground tab inside `/src/features/skills/components/SessionOrchestrator.tsx` allowing interactive orchestration trials, log traces, and sandbox rendering.
+- **ESLint & Workspace Compiler Checking**: Built modern linter architecture using Flat configuration mode (`eslint.config.js`) supporting ignored system directories and customized lint thresholds (such as allowed comments, const assertions, etc.).
+- **Programmatic Lint Check Route (`/api/lint`)**: 
+  - Created a dual Hono routing architecture. In the Node.js production server (`server.ts`), runs the checker programmatically and safely via child processes, parsing and rendering real-time workspace health reports as high-fidelity structured JSON.
+  - Implemented standard edge fallbacks inside `/src/worker.ts` giving standard API feedback when running on read-only isolated global Edge nodes.
+- **Added Lint Script**: Integrated utility automation `"lint": "eslint ."` under `package.json` for manual or automated pre-flight checks.
+
+### Fixed
+- **Rate-Limiting ("Failed to process source Cloudflare/Vercel: Rate limit exceeded")**: 
+  - Restructured `SyncEngine` sequentialization to fetch resources in standard iterative order instead of high-concurrency parallel storms.
+  - Hardened the `GitHubAdapter` core with a proactive static `200ms` sleep queue and recursive error-backed retry support (status 403/429) inside the files-fetch channel to adhere strictly to the Rate-Limit-Safe Fetch protocol.
+- **JSON Parsing Crash ("Unexpected token '<'")**: Discovered that `llms.json` was gitignored (not tracked) and did not exist on fresh startup when using the standard `"dev": "vite"` script because the `sync-skills` task wasn't run automatically. 
+  - Refactored `package.json`'s `dev` script to chain `npm run sync-skills && vite`, ensuring index files are automatically compiled and served on launch.
+  - Hardened `skills.service.ts`'s `fetchSkillsManifest()` method with dynamic content-type shielding to block any malformed/HTML responses (like fallback SPA index redirects) and output an elegant, human-readable instructions alert instead of crashing on load.
 ### Documented
+- Crafted `/GEMINI_SYSTEM_INSTRUCTIONS.md` - a self-contained, high-performance system instructions markdown prompt template ready to import into `aistudio.google.com` to lock of Gemini models into SkillsGem AI workspace behaviors. Includes Multi-Dimensional Prompt Engine logic and Hybrid Skill Base mapping logic.
+- Synthesized and integrated **SECTION 10 (Locked Persona & Platform-Specific Implementation Rules)** at the end of `AGENTS.md`, wrapping critical TypeScript formatting boundaries, strict conventional commit schemas for Edge PRs, Zustand local storage persistence guidance, and zero-trust timing-attack cryptographic defenses.
 - Executed comprehensive architectural analysis, rewriting `APP_ANALYSIS_REPORT.md` following **systems-architect** and **technical-documenter** constraints. Encompasses the Hono Edge configurations, Swarm Core ingestion logic (`SyncEngine.ts`, `GitHubAdapter.ts`), multi-stage deployment patterns, and MCP interoperability.
 
 ## [v1.6.0] - 2026-05-15

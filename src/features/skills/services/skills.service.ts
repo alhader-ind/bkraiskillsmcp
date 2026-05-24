@@ -13,6 +13,10 @@ export const skillsService = {
     if (!response.ok) {
       throw new Error(`Failed to load dynamic skills: ${response.statusText}`);
     }
+    const contentType = response.headers.get('content-type') || '';
+    if (!contentType.includes('application/json')) {
+      throw new Error(`Failed to load dynamic skills: Expected JSON but received ${contentType || 'text/html'}. Please synchronize/recompile the skills index by running 'npm run sync-skills'.`);
+    }
     return response.json();
   },
 

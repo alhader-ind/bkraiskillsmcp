@@ -312,6 +312,18 @@
 - **Tokens**: ~735
 - **Granular API**: `/api/skills?id=image-generation&mode=text`
 
+### [string]: EntityDefinition;](/api/skills?id=internal-firebase-skill&mode=text)
+- **Description**: string;
+- **Tags**: Set up ESLint for Firestore Security, Phase 0: Payload-First Security, Auth
+- **Tokens**: ~7602
+- **Granular API**: `/api/skills?id=internal-firebase-skill&mode=text`
+
+### [set_up_firebase](/api/skills?id=internal-set-up-firebase-tool&mode=text)
+- **Description**: Documentation and instructions for the internal set_up_firebase tool behavior.
+- **Tags**: General
+- **Tokens**: ~1101
+- **Granular API**: `/api/skills?id=internal-set-up-firebase-tool&mode=text`
+
 ### [jwt-service-engineer](/api/skills?id=jwt-service-engineer&mode=text)
 - **Description**: Advanced stateless session management and token lifecycle engineering. Use this skill for secure JWT implementation, refresh token rotations, and claim-based authorization.
 - **Tags**: General
@@ -561,7 +573,7 @@
 ### [adr-skill](/api/skills?id=vercel-adr-skill&mode=text)
 - **Description**: Create and maintain Architecture Decision Records (ADRs) optimized for agentic coding workflows. Use when you need to propose, write, update, accept/reject, deprecate, or supersede an ADR; bootstrap an adr folder and index; consult existing ADRs before implementing changes; or enforce ADR conventions. This skill uses Socratic questioning to capture intent before drafting, and validates output against an agent-readiness checklist.
 - **Tags**: General
-- **Tokens**: ~4101
+- **Tokens**: ~4100
 - **Granular API**: `/api/skills?id=vercel-adr-skill&mode=text`
 
 ### [capture-api-response-test-fixture](/api/skills?id=vercel-capture-api-response-test-fixture&mode=text)

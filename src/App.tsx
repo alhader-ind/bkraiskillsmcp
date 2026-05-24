@@ -4,6 +4,7 @@ import { Footer } from './components/layout/Footer';
 import { Tabs } from './components/ui/Tabs';
 import { EnvironmentReport } from './features/environment/components/EnvironmentReport';
 import { SkillsReport } from './features/skills/components/SkillsReport';
+import { SessionOrchestrator } from './features/skills/components/SessionOrchestrator';
 
 /**
  * Main application entry point demonstrating the agent profile content and sections.
@@ -15,7 +16,8 @@ export default function App() {
 
   const tabs = [
     { id: 'env', label: 'Native Environment Build' },
-    { id: 'skills', label: 'Skill Knowledge Base' }
+    { id: 'skills', label: 'Skill Knowledge Base' },
+    { id: 'orchestrator', label: 'Adaptive Orchestrator Pro' }
   ];
 
   return (
@@ -26,7 +28,13 @@ export default function App() {
         <Tabs tabs={tabs} activeTab={activeTab} onChange={setActiveTab} />
 
         <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8">
-          {activeTab === 'env' ? <EnvironmentReport /> : <SkillsReport />}
+          {activeTab === 'env' ? (
+            <EnvironmentReport />
+          ) : activeTab === 'skills' ? (
+            <SkillsReport />
+          ) : (
+            <SessionOrchestrator />
+          )}
         </div>
 
         <Footer />

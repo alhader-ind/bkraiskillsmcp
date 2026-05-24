@@ -1,0 +1,1202 @@
+[
+  {
+    "name": "a11y-accessibility-auditor",
+    "description": "Advanced WCAG 2.1/2.2 compliance, semantic structural auditing, and assistive technology optimization. Use this skill for building inclusive, a11y-first web interfaces.",
+    "estimatedTokens": 1334,
+    "tags": [
+      "5. UI"
+    ],
+    "hash": "9be2ce00e8ad2822c5e2d381584832b14347e877a49bae3ee8c383cc84123e10",
+    "path": "/skills/a11y-accessibility-auditor.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=a11y-accessibility-auditor&mode=text"
+  },
+  {
+    "name": "api-function-caller",
+    "description": "Advanced tool orchestration, recursive parameter resolution, and autonomous action-chaining. Use this skill for transforming conversational intent into high-fidelity system executions.",
+    "estimatedTokens": 1303,
+    "tags": [
+      "Advanced API"
+    ],
+    "hash": "ddd3745bb735b16009fa7c85b2afddc46ef9c303cefe3a156d58ea34b9ff9a93",
+    "path": "/skills/api-function-caller.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=api-function-caller&mode=text"
+  },
+  {
+    "name": "api-integrator",
+    "description": "Advanced third-party ecosystem integration, secure webhook orchestration, and multi-provider OAuth implementation. Use this skill for building production-grade external service connections.",
+    "estimatedTokens": 1372,
+    "tags": [
+      "API",
+      "Phase A: Secure Handshake (Auth",
+      "2. Advanced Auth",
+      "3. Implementation: The API",
+      "5. Client vs. Server Integration Gui",
+      "Common API"
+    ],
+    "hash": "f073674aa879440bed5ac74fb8f2cf6587a1bb9603d81faa8884cc72337b3e95",
+    "path": "/skills/api-integrator.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=api-integrator&mode=text"
+  },
+  {
+    "name": "api-route-orchestrator",
+    "description": "Advanced endpoint engineering and request-response lifecycle management. Use this skill for designing high-performance REST/GraphQL APIs with strict validation and error consistency.",
+    "estimatedTokens": 450,
+    "tags": [
+      "API"
+    ],
+    "hash": "0a54c65e3626eda8f1ad59ca7df6314705b3954bbea9f59ad54471c26f4f5759",
+    "path": "/skills/api-route-orchestrator.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=api-route-orchestrator&mode=text"
+  },
+  {
+    "name": "astro-qwik-framework",
+    "description": "Guidelines for building ultra-fast, resumable web applications using Astro and Qwik. Use when creating content-heavy sites, highly interactive applications where TTI (Time to Interactive) is critical, or when combining SSG with resumable interactivity.",
+    "estimatedTokens": 1062,
+    "tags": [
+      "Astro & Qwik Framework Integration Gui",
+      "2. Astro Gui",
+      "3. Qwik Gui"
+    ],
+    "hash": "f07622521601fa9c68900c7d741afd1bbf99d645d17ee528e684ef7602944609",
+    "path": "/skills/astro-qwik-framework.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=astro-qwik-framework&mode=text"
+  },
+  {
+    "name": "auth-js-v5-architect",
+    "description": "Comprehensive configuration and implementation guide for Auth.js v5 (NextAuth) in modern JS frameworks, covering Next.js setup, JWT/Database sessions, edge compatibility, and CSRF defense.",
+    "estimatedTokens": 1195,
+    "tags": [
+      "Auth",
+      "You can generate this using `npx auth",
+      "Configuration (`auth",
+      "4. Edge-Compatible Database",
+      "5. JWT vs. Database"
+    ],
+    "hash": "0b3fa5915d8530bfc3ff6204889283edfd0f8ab6afb11dfb370049faa391f244",
+    "path": "/skills/auth-js-v5-architect.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=auth-js-v5-architect&mode=text"
+  },
+  {
+    "name": "auth-schema-architect",
+    "description": "Advanced authentication data modeling and identity integrity engineering. Use this skill for designing secure user schemas, multi-factor structures, and permission-based relational models.",
+    "estimatedTokens": 454,
+    "tags": [
+      "Auth",
+      "Phase D: Session & Security"
+    ],
+    "hash": "f5337295d767dad260c90d836e5f30302687dc8b3c9f03a0337727ce9f974afb",
+    "path": "/skills/auth-schema-architect.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=auth-schema-architect&mode=text"
+  },
+  {
+    "name": "authgear-identity-expert",
+    "description": "Implementation guide for Authgear, covering passkeys, B2B SaaS B2C authentication, UI customization, and multi-factor authentication (MFA).",
+    "estimatedTokens": 574,
+    "tags": [
+      "Auth",
+      "4. Auth"
+    ],
+    "hash": "2536554fc9400dbaa114351d4aa84699dc65190700e1c725142260c5e9b26b4b",
+    "path": "/skills/authgear-identity-expert.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=authgear-identity-expert&mode=text"
+  },
+  {
+    "name": "backend-engineer",
+    "description": "Advanced API orchestration, secure data modeling, and high-integrity server-side systems. Use this skill for building robust, scalable backends and complex server logic.",
+    "estimatedTokens": 1584,
+    "tags": [
+      "Advanced Backend",
+      "1. The Expert Backend",
+      "Phase A: API",
+      "Phase C: Zero-Trust Security",
+      "2. Advanced Backend",
+      "3. Implementation: The Backend",
+      "🖥️ Backend",
+      "6. Global Backend",
+      "Common Backend"
+    ],
+    "hash": "bbb192bed843901d8560b956eca49e486c7b61fa46d75ce2843bba91f670ae38",
+    "path": "/skills/backend-engineer.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=backend-engineer&mode=text"
+  },
+  {
+    "name": "better-auth-integration",
+    "description": "Implementation guide for Better Auth in modern JS/TS frameworks, covering type-safe authentication, database adapters, plugins, and session management.",
+    "estimatedTokens": 644,
+    "tags": [
+      "Better Auth",
+      "3. Database",
+      "4. API"
+    ],
+    "hash": "f935b6297d6617414dea0e7a12ee542ae1b072015db731fc939e946edda66e15",
+    "path": "/skills/better-auth-integration.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=better-auth-integration&mode=text"
+  },
+  {
+    "name": "bootstrap-astro-hybrid-site",
+    "description": "Strict, step-by-step initialization protocol for building an Astro hybrid site with React and Tailwind Integrations.",
+    "estimatedTokens": 1019,
+    "tags": [
+      "General"
+    ],
+    "hash": "a0ba51e24d3f3bfebe0c058892473e59877fc99d8cc9bca37adad5145beaf303",
+    "path": "/skills/bootstrap-astro-hybrid-site.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=bootstrap-astro-hybrid-site&mode=text"
+  },
+  {
+    "name": "bootstrap-express-react-fullstack",
+    "description": "Strict, step-by-step initialization protocol for building a bulletproof Express.js Backend + Vite React SPA Frontend environment. Solves CORS and port configuration limits.",
+    "estimatedTokens": 732,
+    "tags": [
+      "Step 2: The Backend Environment (`/backend",
+      "Step 3: The Frontend Environment (`/frontend"
+    ],
+    "hash": "37668bbd12ce8abd55371bad8d1a109a336d44d419c4d11553569d6e837a804b",
+    "path": "/skills/bootstrap-express-react-fullstack.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=bootstrap-express-react-fullstack&mode=text"
+  },
+  {
+    "name": "bootstrap-firebase-database",
+    "description": "Instructions for Firebase integration, Firestore setup, and database security rules.",
+    "estimatedTokens": 7637,
+    "tags": [
+      "Set up ESLint for Firestore Security",
+      "Phase 0: Payload-First Security",
+      "Auth"
+    ],
+    "hash": "19d35c7c38bc34ed02ad4d6df24377c4c12e1ad9b1e7f60773402fbfd979530b",
+    "path": "/skills/bootstrap-firebase-database.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=bootstrap-firebase-database&mode=text"
+  },
+  {
+    "name": "bootstrap-nestjs-api",
+    "description": "Strict, step-by-step initialization protocol for building a NestJS TypeScript API. Bypasses interactive prompts for enterprise backends.",
+    "estimatedTokens": 795,
+    "tags": [
+      "Bootstrap Protocol: NestJS API"
+    ],
+    "hash": "cbdef93c344965314d0cc195b487e3147a2bf5484f8379a8b8ff6a40264c9469",
+    "path": "/skills/bootstrap-nestjs-api.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=bootstrap-nestjs-api&mode=text"
+  },
+  {
+    "name": "bootstrap-nextjs-app-router",
+    "description": "Strict, step-by-step initialization protocol for building a bulletproof Next.js (App Router) environment. Prevents AI build failures during scaffolding.",
+    "estimatedTokens": 1169,
+    "tags": [
+      "General"
+    ],
+    "hash": "02ffc144fe5269086ccde97517faf7b9b361cf0ef43bc733ac09a4caaa9183c2",
+    "path": "/skills/bootstrap-nextjs-app-router.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=bootstrap-nextjs-app-router&mode=text"
+  },
+  {
+    "name": "bootstrap-nuxt-vue3",
+    "description": "Strict, step-by-step initialization protocol for building a Nuxt 3 + Vue 3 environment. Bypasses highly interactive Nuxt CLIs.",
+    "estimatedTokens": 751,
+    "tags": [
+      "Step 2: Install Requi",
+      "Step 4: UI"
+    ],
+    "hash": "3bbb92e79f44c5fc8a2c3bf9f7287fcabc7fab7f5130154fefd5a0c0379e612f",
+    "path": "/skills/bootstrap-nuxt-vue3.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=bootstrap-nuxt-vue3&mode=text"
+  },
+  {
+    "name": "bootstrap-python-fastapi-react",
+    "description": "Strict initialization protocol for a Python FastAPI Backend and Vite React Frontend. Teaches AI to handle venv and requirements.txt alongside Node.",
+    "estimatedTokens": 744,
+    "tags": [
+      "Bootstrap Protocol: Python FastAPI",
+      "Step 2: The Backend Environment (`/backend",
+      "Step 3: The Frontend Environment (`/frontend"
+    ],
+    "hash": "9dce8fd4a354229c6e503a6e1b670ec90e00841e909b4b384ed6eee1c219075b",
+    "path": "/skills/bootstrap-python-fastapi-react.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=bootstrap-python-fastapi-react&mode=text"
+  },
+  {
+    "name": "bootstrap-react-native-expo",
+    "description": "Strict initialization protocol for React Native using Expo Router. Prevents AI from breaking builds by touching native code.",
+    "estimatedTokens": 762,
+    "tags": [
+      "General"
+    ],
+    "hash": "e5292c6ce73b67184f6f441d2126885eb936df1ec351fd5c60b60e1119372dee",
+    "path": "/skills/bootstrap-react-native-expo.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=bootstrap-react-native-expo&mode=text"
+  },
+  {
+    "name": "bootstrap-remix-run-stack",
+    "description": "Strict, step-by-step initialization protocol for building a Remix stack. Bypasses interactive prompts and configures official templates.",
+    "estimatedTokens": 806,
+    "tags": [
+      "General"
+    ],
+    "hash": "3e8808babc567b8500f431a46011045944925182bc41e7dd14bc9f5fdc3ce50e",
+    "path": "/skills/bootstrap-remix-run-stack.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=bootstrap-remix-run-stack&mode=text"
+  },
+  {
+    "name": "bootstrap-sveltekit-app",
+    "description": "Strict, step-by-step initialization protocol for building a bulletproof SvelteKit + Svelte 5 environment. Bypasses interactive create-svelte CLIs.",
+    "estimatedTokens": 1087,
+    "tags": [
+      "General"
+    ],
+    "hash": "afc29358a48d23e28b32bab73aa10a33b30fee0476dd37cbdf50e7638c690450",
+    "path": "/skills/bootstrap-sveltekit-app.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=bootstrap-sveltekit-app&mode=text"
+  },
+  {
+    "name": "bootstrap-vite-react-spa",
+    "description": "Strict, step-by-step initialization protocol for building a bulletproof Vite + React SPA environment. Prevents AI build failures during scaffolding.",
+    "estimatedTokens": 1369,
+    "tags": [
+      "General"
+    ],
+    "hash": "27ee898bbf5a600bc4d8a9008da145724a712fde24e4de52137bc5854e823a84",
+    "path": "/skills/bootstrap-vite-react-spa.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=bootstrap-vite-react-spa&mode=text"
+  },
+  {
+    "name": "clerk-auth-architect",
+    "description": "Configuration and implementation guide for Clerk Auth in Next.js/React applications, covering UI components, middleware protection, and webhook synchronization.",
+    "estimatedTokens": 834,
+    "tags": [
+      "Clerk Auth",
+      "3. Middleware"
+    ],
+    "hash": "981241c03f0c6eb0588898d876135b5b50a9da9040e09ffa058063587378f320",
+    "path": "/skills/clerk-auth-architect.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=clerk-auth-architect&mode=text"
+  },
+  {
+    "name": "Cloudflare README",
+    "description": "Imported skill from Cloudflare repository.",
+    "estimatedTokens": 1018,
+    "tags": [
+      "General"
+    ],
+    "hash": "ed236f7d3da6426ed4019d61041e1aec2ca4d330b65ad7c077e01336a12739f2",
+    "path": "/skills/cloudflare-README.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=cloudflare-README&mode=text"
+  },
+  {
+    "name": "cloudflare-agents-sdk",
+    "description": "Expertise in building stateful AI agents on Cloudflare using the Agents SDK, Durable Objects, and MCP.",
+    "estimatedTokens": 489,
+    "tags": [
+      "General"
+    ],
+    "hash": "5044b07b688374b9fb0e18ae11f1944fda14e39efc9397d781e7dd1eacefe7e0",
+    "path": "/skills/cloudflare-agents-sdk.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=cloudflare-agents-sdk&mode=text"
+  },
+  {
+    "name": "Cloudflare commands",
+    "description": "Imported skill from Cloudflare repository.",
+    "estimatedTokens": 585,
+    "tags": [
+      "Bui"
+    ],
+    "hash": "ca05d7faa9bb63ffefdedc4c66b8e925992628d341dd1fe20c87d4801c8da108",
+    "path": "/skills/cloudflare-commands.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=cloudflare-commands&mode=text"
+  },
+  {
+    "name": "cloudflare-hosting",
+    "description": "Guidelines for deploying websites and application frameworks to Cloudflare Hosting Services (Pages and Workers). Use when setting up automated deployments or configuring full-stack applications for Cloudflare.",
+    "estimatedTokens": 1078,
+    "tags": [
+      "3. Cloudflare Workers Deployment (API",
+      "5. Environment Variables & Auth",
+      "6. Binding Storage and Database"
+    ],
+    "hash": "8da34b2caceae2d834409f42f8ac6fbaf8e91ce51c3d9011e9ad81c006d7fe85",
+    "path": "/skills/cloudflare-hosting.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=cloudflare-hosting&mode=text"
+  },
+  {
+    "name": "code-converter",
+    "description": "Advanced cross-language logic translation, idiomatic transpilation, and multi-framework architectural mapping. Use this skill for high-fidelity code migrations and polyglot system integrations.",
+    "estimatedTokens": 1425,
+    "tags": [
+      "General"
+    ],
+    "hash": "f9a8e6e20f33e4c814c69bae9dafdc0cc966c32c1f1707bb3734aca3e417e9c7",
+    "path": "/skills/code-converter.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=code-converter&mode=text"
+  },
+  {
+    "name": "clean-coder",
+    "description": "Advanced structural engineering, systemic debt reduction, and high-fidelity architectural synthesis. Use this skill for transforming chaotic legacy \"spaghetti\" logic into modular, SOLID, and highly maintainable systems.",
+    "estimatedTokens": 1724,
+    "tags": [
+      "General"
+    ],
+    "hash": "1682895f96b97b1511cdd35095b02261398b0c6dbd487b1e3ec199864dc72461",
+    "path": "/skills/code-refactoring-specialist.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=code-refactoring-specialist&mode=text"
+  },
+  {
+    "name": "code-reviewer-red-team",
+    "description": "Security audits, vulnerabilities. Use this skill when the user asks about review code, check security.",
+    "estimatedTokens": 1496,
+    "tags": [
+      "🛡️ Adversarial Security",
+      "Common Security"
+    ],
+    "hash": "9a29830354019eb4254c7a098a5a982c29fe6d4ac01e7642f0011460ed96cd3b",
+    "path": "/skills/code-reviewer-red-team.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=code-reviewer-red-team&mode=text"
+  },
+  {
+    "name": "context-manager",
+    "description": "Advanced project state persistence, technical memory synthesis, and session continuity management. Use this skill for synchronizing codebase state across distributed agent turns or complex project migrations.",
+    "estimatedTokens": 2657,
+    "tags": [
+      "Advanced Context Management & Project Continui"
+    ],
+    "hash": "03ac79b1a2861d12a12954e0bedbe4e146f84553f73e99f6626fc8ab368b5d4d",
+    "path": "/skills/context-manager.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=context-manager&mode=text"
+  },
+  {
+    "name": "data-extraction-specialist",
+    "description": "Advanced unstructured-to-structured synthesis, semantic entity resolution, and high-fidelity JSON orchestration. Use this skill for transforming chaotic text or documents into production-ready data schemas.",
+    "estimatedTokens": 1428,
+    "tags": [
+      "General"
+    ],
+    "hash": "7a9077c0255a62e11091d62e3d02568fb0ae483cc9242af294b1cdc8640a8647",
+    "path": "/skills/data-extraction-specialist.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=data-extraction-specialist&mode=text"
+  },
+  {
+    "name": "database-architect",
+    "description": "Advanced database schema design, multi-model data orchestration, and high-performance engineering. Use this skill for designing high-integrity SQL/NoSQL structures, optimization strategies, and transactional stability.",
+    "estimatedTokens": 1573,
+    "tags": [
+      "Advanced Database",
+      "3. Implementation: The Database",
+      "🗄️ Database",
+      "6. Global Database"
+    ],
+    "hash": "0b0025632768b1b55f58bf0a1d8dfa2859f54f7541bab10b756a85d3c2ea7774",
+    "path": "/skills/database-architect.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=database-architect&mode=text"
+  },
+  {
+    "name": "db-migration-expert",
+    "description": "Advanced database schema evolution and state-management engineering. Use this skill for zero-downtime migrations, data seeding, and schema versioning.",
+    "estimatedTokens": 439,
+    "tags": [
+      "Phase B: Staging & Shadow Testing"
+    ],
+    "hash": "b13b1233c9046cbbdb52ab22621bca78469d7c2fa154e6260567183482688cc6",
+    "path": "/skills/db-migration-expert.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=db-migration-expert&mode=text"
+  },
+  {
+    "name": "dependency-integrity-officer",
+    "description": "Advanced package management, dependency resolution, and version collision mitigation. Use this skill for fixing npm/yarn errors, peer dependency conflicts, and environment-specific installation failures.",
+    "estimatedTokens": 1499,
+    "tags": [
+      "Phase D: Automated Security",
+      "4. Stability & Security"
+    ],
+    "hash": "e89198a7414c38f37e8c2119ea1aabea19f66c1f0cfb38ad290a47f964b3f422",
+    "path": "/skills/dependency-integrity-officer.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=dependency-integrity-officer&mode=text"
+  },
+  {
+    "name": "devops-deployment-engineer",
+    "description": "Advanced cloud infrastructure engineering, CI/CD pipeline automation, and production-grade environment orchestration. Use this skill for deploying complex systems with high-fidelity Docker, Vercel, and Cloud Run configurations.",
+    "estimatedTokens": 1647,
+    "tags": [
+      "4. Security",
+      "Stage 1: Bui"
+    ],
+    "hash": "d01d4407651f273c3d9c6740425e4783c9070a18b0f20e84c01dc55edc5c8add",
+    "path": "/skills/devops-deployment-engineer.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=devops-deployment-engineer&mode=text"
+  },
+  {
+    "name": "divergent-brainstormer",
+    "description": "Advanced lateral thinking, combinatorial innovation, and speculative conceptual mapping. Use this skill for high-order creative strategy and non-linear problem solving.",
+    "estimatedTokens": 1189,
+    "tags": [
+      "General"
+    ],
+    "hash": "7e2750c4772e4c8055fc0043883abb169ac70ddeae9f04efbb80b4e77dbae9f2",
+    "path": "/skills/divergent-brainstormer.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=divergent-brainstormer&mode=text"
+  },
+  {
+    "name": "document-summarization",
+    "description": "Advanced semantic distillation, high-fidelity metadata extraction, and multi-document intelligence synthesis. Use this skill for transforming massive text corpora into actionable decision-logic.",
+    "estimatedTokens": 1396,
+    "tags": [
+      "5. Security"
+    ],
+    "hash": "47a8daa2105051f9b9935fdd0951ae19a4e665b0f9aeb1572337fdf094b91193",
+    "path": "/skills/document-summarization.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=document-summarization&mode=text"
+  },
+  {
+    "name": "failure-mode-preemptor",
+    "description": "Advanced root-cause isolation, stack-trace deconstruction, and deterministic recovery paths. Use this skill when a build fails, a runtime error occurs, or when the LLM is stuck in an \"Error-Fix-Error\" loop.",
+    "estimatedTokens": 1574,
+    "tags": [
+      "Goal: Break a loop where Prisma is failing to bui",
+      "2. Check the logs for the actual database"
+    ],
+    "hash": "c7f247442aff84d9883867123ff156d6d1e0797567200934a024493ebe011e5c",
+    "path": "/skills/failure-mode-preemptor.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=failure-mode-preemptor&mode=text"
+  },
+  {
+    "name": "firebase-database-principles",
+    "description": "Guidelines for setting up a Firebase database and writing hardened security rules.",
+    "estimatedTokens": 688,
+    "tags": [
+      "Firebase Database",
+      "2. Hardened Security"
+    ],
+    "hash": "784bab064151b7baa74f96c86ba3a38149f7850f4c42e2c8c5eeb6d2653ae412",
+    "path": "/skills/firebase-database-principles.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=firebase-database-principles&mode=text"
+  },
+  {
+    "name": "focus-mode",
+    "description": "Instructions for responding to UI element selection (CSS selectors).",
+    "estimatedTokens": 662,
+    "tags": [
+      "General"
+    ],
+    "hash": "a03c7316acdf768878ccd6b211afa3451481a20416247c1884881cece6a33180",
+    "path": "/skills/focus-mode.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=focus-mode&mode=text"
+  },
+  {
+    "name": "force-latest-dependencies",
+    "description": "Strict override protocol preventing AI from using outdated package versions from its training data. Enforces live web/npm search to determine the latest framework and library versions.",
+    "estimatedTokens": 760,
+    "tags": [
+      "General"
+    ],
+    "hash": "43177b1f0ac17d004fe9b9d7142170aaa3350e0d661ac5c89848b4651fcf7841",
+    "path": "/skills/force-latest-dependencies.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=force-latest-dependencies&mode=text"
+  },
+  {
+    "name": "\"frontend-design\"",
+    "description": "Advanced visual architecture, design systems orchestration, and performance-tuned UI recipes. Use this skill to build distinctive, high-fidelity interfaces across all web applications.",
+    "estimatedTokens": 1297,
+    "tags": [
+      "4. Continuity & Flui",
+      "5. UI"
+    ],
+    "hash": "30274bb0c1398d77a8a17ef13158c65d0b83372e3d378a4f75132d71fb1dfe2a",
+    "path": "/skills/frontend-design.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=frontend-design&mode=text"
+  },
+  {
+    "name": "frontend-engineer",
+    "description": "Advanced UI engineering, component lifecycle orchestration, and high-performance interactive systems. Use this skill for building complex React/TypeScript applications with production-grade polish.",
+    "estimatedTokens": 1395,
+    "tags": [
+      "Advanced Frontend",
+      "3. Implementation: The Frontend",
+      "6. Global Frontend",
+      "Common Frontend"
+    ],
+    "hash": "146931cb2f022c40a795c59c428afac12dc4b56deba0e328af9c52c461a5e043",
+    "path": "/skills/frontend-engineer.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=frontend-engineer&mode=text"
+  },
+  {
+    "name": "\"gemini-api\"",
+    "description": ">",
+    "estimatedTokens": 10070,
+    "tags": [
+      "Gemini API gui",
+      "@google/genai Coding Gui",
+      "Calling Gemini API",
+      "API",
+      "Combine Function Calling with the other bui",
+      "API",
+      "Live API",
+      "API"
+    ],
+    "hash": "b7f52ee8674b10021b8ceeb69d9d982e3107f77ce29ba90a766cb88fc0194948",
+    "path": "/skills/gemini-api.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=gemini-api&mode=text"
+  },
+  {
+    "name": "git-master",
+    "description": "Advanced version control engineering, disaster recovery, and high-fidelity repository management. Use this skill for solving complex merge conflicts, rebasing, and repository restoration.",
+    "estimatedTokens": 1549,
+    "tags": [
+      "Result: 2 clean, bui"
+    ],
+    "hash": "ec8a36942a6f81d3dc47187d154b7991549337c612a6f537c4507dac2d01f391",
+    "path": "/skills/git-master.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=git-master&mode=text"
+  },
+  {
+    "name": "\"github-import-migration\"",
+    "description": ">-",
+    "estimatedTokens": 1259,
+    "tags": [
+      "General"
+    ],
+    "hash": "f5072cfb1e75eea60d24e419e814d441ca856a0d1ec0872db34ba675b0adfc17",
+    "path": "/skills/github-import-migration.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=github-import-migration&mode=text"
+  },
+  {
+    "name": "google-search-grounding",
+    "description": "Advanced real-time intelligence gathering and verification. Use this skill for deep research, fact-checking, and tracking fast-moving events.",
+    "estimatedTokens": 1345,
+    "tags": [
+      "5. Handling \"No Results\" or Ambigui"
+    ],
+    "hash": "e6a0809b8a25d68abe7812a947ebb7a9a4d6903c7dd77c2c0b05484b5d0245eb",
+    "path": "/skills/google-search-grounding.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=google-search-grounding&mode=text"
+  },
+  {
+    "name": "Hono Framework",
+    "description": "Guidelines for building fast, edge-optimized web applications and APIs using the Hono framework.",
+    "estimatedTokens": 591,
+    "tags": [
+      "Hono Framework Gui",
+      "3. Middleware"
+    ],
+    "hash": "c66818e39d38ef146e03f34c895e78037081c194cea2a9f15141aea17921abb8",
+    "path": "/skills/hono-framework.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=hono-framework&mode=text"
+  },
+  {
+    "name": "\"image-generation\"",
+    "description": ">",
+    "estimatedTokens": 735,
+    "tags": [
+      "Prompt Gui"
+    ],
+    "hash": "b0781f47c30e7d396e29147860914d32c4c5944cc33e4a0cf5437592d1e0e8cb",
+    "path": "/skills/image-generation.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=image-generation&mode=text"
+  },
+  {
+    "name": "string]: EntityDefinition;",
+    "description": "string;",
+    "estimatedTokens": 7602,
+    "tags": [
+      "Set up ESLint for Firestore Security",
+      "Phase 0: Payload-First Security",
+      "Auth"
+    ],
+    "hash": "bf362b8f45be8d2dcd1727745dfdb2839d6c7b18fe65722925d451c4df75992e",
+    "path": "/skills/internal-firebase-skill.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=internal-firebase-skill&mode=text"
+  },
+  {
+    "name": "set_up_firebase",
+    "description": "Documentation and instructions for the internal set_up_firebase tool behavior.",
+    "estimatedTokens": 1101,
+    "tags": [
+      "General"
+    ],
+    "hash": "15f53025b878a0b7dbe3f0acdb1985f41fd2f2403b678c0ecc3f67991e947ef1",
+    "path": "/skills/internal-set-up-firebase-tool.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=internal-set-up-firebase-tool&mode=text"
+  },
+  {
+    "name": "jwt-service-engineer",
+    "description": "Advanced stateless session management and token lifecycle engineering. Use this skill for secure JWT implementation, refresh token rotations, and claim-based authorization.",
+    "estimatedTokens": 450,
+    "tags": [
+      "General"
+    ],
+    "hash": "54877281f4f4e41f0df4ad429947546d2e04db8747c2ef0bf87a3e32a18550e2",
+    "path": "/skills/jwt-service-engineer.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=jwt-service-engineer&mode=text"
+  },
+  {
+    "name": "kinde-auth-implementer",
+    "description": "Configuration and implementation instructions for Kinde Auth, focusing on passwordless login, Next.js App Router integration, and feature flags.",
+    "estimatedTokens": 465,
+    "tags": [
+      "Kinde Auth",
+      "3. Next.js API Route for Auth"
+    ],
+    "hash": "6a7034662a09751341e3c7624b4f39de61c46df8e1074ca50825941d9b6f8978",
+    "path": "/skills/kinde-auth-implementer.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=kinde-auth-implementer&mode=text"
+  },
+  {
+    "name": "Laravel Framework",
+    "description": "Guidelines for building robust, full-stack PHP applications using Laravel 11/12/13.",
+    "estimatedTokens": 729,
+    "tags": [
+      "Laravel Framework Gui",
+      "3. Frontend"
+    ],
+    "hash": "08977f334e3800ef2d2e24c6b79651cb1e2f5f55d418eaf895ce22bade0cb05b",
+    "path": "/skills/laravel-framework.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=laravel-framework&mode=text"
+  },
+  {
+    "name": "login-ui-specialist",
+    "description": "High-conversion authentication interface engineering. Use this skill for building intuitive, accessible, and high-performance login flows with seamless validation.",
+    "estimatedTokens": 430,
+    "tags": [
+      "Login UI Specialist: Auth",
+      "Phase B: guide: In-Line Validation (Gui"
+    ],
+    "hash": "d4304a061ef2cb475c162245941dbe8fff74f0fbcd850388cc4d077e4cadf4b1",
+    "path": "/skills/login-ui-specialist.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=login-ui-specialist&mode=text"
+  },
+  {
+    "name": "logto-auth-engineer",
+    "description": "Guide for setting up Logto as an open-source OIDC identity provider, managing machine-to-machine tokens, RBAC, and frontend SDK integration.",
+    "estimatedTokens": 515,
+    "tags": [
+      "Logto Auth",
+      "4. API"
+    ],
+    "hash": "44bcfeb90d8efaebbda9e0eb5f8e4a4dbe591e31158b623914bc9a1bda3071bc",
+    "path": "/skills/logto-auth-engineer.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=logto-auth-engineer&mode=text"
+  },
+  {
+    "name": "middleware-engineer",
+    "description": "Advanced request interception and cross-cutting concern orchestration. Use this skill for building security guards, logging pipelines, and multi-tenant routing logic.",
+    "estimatedTokens": 422,
+    "tags": [
+      "Middleware"
+    ],
+    "hash": "842c67fb2414d735722bc03df10b2fbe3ab1a3bdd38739bebff600da0b567d2d",
+    "path": "/skills/middleware-engineer.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=middleware-engineer&mode=text"
+  },
+  {
+    "name": "multimodal-vision",
+    "description": "Advanced spatial cognition, semantic deconstruction, and visual-to-logic translation. Use this skill when interpreting complex UI screenshots, architectural diagrams, or high-entropy images.",
+    "estimatedTokens": 1395,
+    "tags": [
+      "5. Security"
+    ],
+    "hash": "19b86b8c8d829e743a8649685f6e1b5c95481386adc161be82667f5ca9f186f6",
+    "path": "/skills/multimodal-vision.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=multimodal-vision&mode=text"
+  },
+  {
+    "name": "mysql-architect",
+    "description": "Advanced MySQL schema engineering, query optimization, and high-performance data orchestration. Use this skill for designing scalable, ACID-compliant relational systems, complex SQL tuning, and transactional stability.",
+    "estimatedTokens": 1556,
+    "tags": [
+      "General"
+    ],
+    "hash": "8b6afeab799da425cffa8bee6bbea4f75d33eaa42fa48aee516e7a5eb7da47b0",
+    "path": "/skills/mysql-architect.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=mysql-architect&mode=text"
+  },
+  {
+    "name": "nextjs-framework",
+    "description": "Guidelines for building modern React web applications using Next.js App Router. Use when creating full-stack apps or static sites that require Server Components and SEO.",
+    "estimatedTokens": 909,
+    "tags": [
+      "Next.js (App Router) Integration Gui",
+      "API"
+    ],
+    "hash": "6c53bbe8fec4d3097e2fc2e8c49a1b4efa60d13e89a58882a450bb774ebd4197",
+    "path": "/skills/nextjs-framework.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=nextjs-framework&mode=text"
+  },
+  {
+    "name": "Nuxt Framework",
+    "description": "Guidelines for building modern Vue web applications using Nuxt 3+.",
+    "estimatedTokens": 482,
+    "tags": [
+      "Nuxt 3+ Framework Gui"
+    ],
+    "hash": "bbf308bdbc99673ab470ec762488fc6d8b15934761a5306f9326ecc1d97a9f8a",
+    "path": "/skills/nuxt-framework.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=nuxt-framework&mode=text"
+  },
+  {
+    "name": "\"oauth-integration\"",
+    "description": ">",
+    "estimatedTokens": 2632,
+    "tags": [
+      "OAuth Integration Gui",
+      "1. Use Popup-Based OAuth",
+      "Server-Side: Construct OAuth",
+      "4. OAuth"
+    ],
+    "hash": "3c75cc3b7978d3a42289d18ae67e8a6de0d69e875c883249b021ffd25bfddb51",
+    "path": "/skills/oauth-integration.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=oauth-integration&mode=text"
+  },
+  {
+    "name": "orm-migration-specialist",
+    "description": "Advanced database schema evolution, ORM orchestration (Prisma, Drizzle, TypeORM), and high-fidelity migration engineering. Use this skill for designing robust schemas, resolving migration drifts, and managing complex database state.",
+    "estimatedTokens": 1431,
+    "tags": [
+      "General"
+    ],
+    "hash": "d671cae95555d7b559f07b2c11f6d9098d3c9bf51992e19c2ce526bf590eabd7",
+    "path": "/skills/orm-migration-specialist.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=orm-migration-specialist&mode=text"
+  },
+  {
+    "name": "performance-profiler",
+    "description": "Advanced Core Web Vitals optimization, bundle engineering, and high-frequency rendering performance. Use this skill for building lightning-fast, production-grade web applications.",
+    "estimatedTokens": 1331,
+    "tags": [
+      "4. Stability & Flui"
+    ],
+    "hash": "f21da46a1652549c5196fecf420c7bd1332cdc806ea117eb2638755afe97fcdb",
+    "path": "/skills/performance-profiler.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=performance-profiler&mode=text"
+  },
+  {
+    "name": "prd-documentation-master",
+    "description": "Advanced Product Requirements Document (PRD) engineering, incorporating precise T-shirt sizing for features and Kanban workflows for full-lifecycle execution from inception to production.",
+    "estimatedTokens": 1279,
+    "tags": [
+      "Product Requi"
+    ],
+    "hash": "5d0f1fef893bc29817f7ae2ac5f06a8fc1a662b33076f460d99c6ed2e744a487",
+    "path": "/skills/prd-documentation-master.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=prd-documentation-master&mode=text"
+  },
+  {
+    "name": "prompt-optimizer",
+    "description": "Advanced linguistic engineering, intent synthesis, and meta-prompt optimization. Use this skill to transform vague user requests into high-fidelity AI instructions.",
+    "estimatedTokens": 1234,
+    "tags": [
+      "General"
+    ],
+    "hash": "0793891f134844b2386e901f85d0d373a7cc4d298b810e7f4ad12b9fd3a5a511",
+    "path": "/skills/prompt-optimizer.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=prompt-optimizer&mode=text"
+  },
+  {
+    "name": "propelauth-b2b-auth",
+    "description": "Guide for setting up PropelAuth for B2B/multi-tenant applications, focusing on organization management, RBAC, and SSO integration in React/Next.js environments.",
+    "estimatedTokens": 561,
+    "tags": [
+      "PropelAuth B2B Auth Gui",
+      "4. API"
+    ],
+    "hash": "3c55afd0133da1bffe22672ae939610005dda2d650e6d72e2ff00550cdc2c201",
+    "path": "/skills/propelauth-b2b-auth.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=propelauth-b2b-auth&mode=text"
+  },
+  {
+    "name": "python-code-execution",
+    "description": "Advanced sandboxed data analysis, mathematical modeling, and visualization. Use this skill for complex calculations, chart generation, and data processing.",
+    "estimatedTokens": 1140,
+    "tags": [
+      "4. Sandbox Constraints & Security"
+    ],
+    "hash": "275a6a6da325c0a3358184c93c6a785cad91a0d13a61c400f86bd60fea7b27ac",
+    "path": "/skills/python-code-execution.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=python-code-execution&mode=text"
+  },
+  {
+    "name": "python-excel-architect",
+    "description": "Advanced Excel spreadsheet engineering using Python and openpyxl. Use this skill to generate sophisticated reports, configure office-style formatting, conditional formatting, charts, data validation, pane freezing, and row grouping.",
+    "estimatedTokens": 1146,
+    "tags": [
+      "Python Excel Architect (`openpyxl` Gui"
+    ],
+    "hash": "709c6e6503d376432679600046057b649f3cc77e6edcc3b0d91ac7f0c1e743eb",
+    "path": "/skills/python-excel-architect.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=python-excel-architect&mode=text"
+  },
+  {
+    "name": "qa-test-engineer",
+    "description": "Advanced quality assurance automation, systemic edge-case discovery, and full-spectrum testing engineering. Use this skill for building resilient unit, integration, and E2E test suites with high-fidelity verification.",
+    "estimatedTokens": 1765,
+    "tags": [
+      "Advanced QA",
+      "3. Implementation: The Test Sui",
+      "6. Global QA"
+    ],
+    "hash": "4903e3ff2acce8c2a5f0541c2487a5a79e70946b73188259e9e5a10e512d982d",
+    "path": "/skills/qa-test-engineer.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=qa-test-engineer&mode=text"
+  },
+  {
+    "name": "qa-test-specialist",
+    "description": "Advanced quality assurance and systemic regression protection. Use this skill for building E2E Playwright flows, TDD unit suites, and CI/CD testing pipelines.",
+    "estimatedTokens": 440,
+    "tags": [
+      "QA",
+      "Phase A: Requi"
+    ],
+    "hash": "7be6345213c747b677c295ee0015f5f4b4d9869f44aa1fdcae8d25b1ae27dc74",
+    "path": "/skills/qa-test-specialist.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=qa-test-specialist&mode=text"
+  },
+  {
+    "name": "rate-limiting-officer",
+    "description": "Advanced traffic control and resource exhaustion protection. Use this skill for designing sliding-window limiters, IP-based blocking, and DDoS mitigation strategies.",
+    "estimatedTokens": 443,
+    "tags": [
+      "General"
+    ],
+    "hash": "f1b2ba7ffcf9642cd1342ab0b2d6cf68827411fa63ab2132457c907124cde162",
+    "path": "/skills/rate-limiting-officer.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=rate-limiting-officer&mode=text"
+  },
+  {
+    "name": "react-composition-patterns",
+    "description": "Advanced React component composition patterns focusing on modularity, flexibility, and render performance. Use when building complex UI systems or internal component libraries.",
+    "estimatedTokens": 508,
+    "tags": [
+      "General"
+    ],
+    "hash": "bc58f9f9e8f85bc88a65febea85a1f4a452f54cd782978c360a3dedb38459563",
+    "path": "/skills/react-composition-patterns.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=react-composition-patterns&mode=text"
+  },
+  {
+    "name": "\"real-time-and-multi-user\"",
+    "description": ">",
+    "estimatedTokens": 2087,
+    "tags": [
+      "Real-Time & Multi-User Gui",
+      "Library API"
+    ],
+    "hash": "83b4323571ffbab1ce031e979dcc9a6264291d18dccac888c05b34bf0e344c2c",
+    "path": "/skills/real-time-and-multi-user.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=real-time-and-multi-user&mode=text"
+  },
+  {
+    "name": "regex-crafter",
+    "description": "Advanced string-matching engineering, catastrophic backtracking prevention, and high-fidelity pattern synthesis. Use this skill for building robust, performant, and secure regular expressions across multiple engines.",
+    "estimatedTokens": 1351,
+    "tags": [
+      "4. Performance & Security"
+    ],
+    "hash": "002ca5eb9776775c467128c414e87e45bec5ce6027830c844007bd48b83613c0",
+    "path": "/skills/regex-crafter.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=regex-crafter&mode=text"
+  },
+  {
+    "name": "remix-framework",
+    "description": "Guidelines for building full-stack web applications using the Remix framework. Use when creating React-based applications that require robust server-side rendering, nested routing, and standard web fetch APIs via loaders and actions.",
+    "estimatedTokens": 1088,
+    "tags": [
+      "Remix Framework Integration Gui"
+    ],
+    "hash": "850c83696500651f293cda10c7659c2d73a5dc464f45485ba7a6e5dd19889061",
+    "path": "/skills/remix-framework.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=remix-framework&mode=text"
+  },
+  {
+    "name": "rubber-duck-debugger",
+    "description": "Socratic debugging when fully stuck. Use this skill when the user asks about nothing works, completely stuck, frustrated.",
+    "estimatedTokens": 224,
+    "tags": [
+      "General"
+    ],
+    "hash": "8acd2e957c2d0f7429e3b144df41a5c57506ba2cfd87927d6904eb6a0202808b",
+    "path": "/skills/rubber-duck-debugger.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=rubber-duck-debugger&mode=text"
+  },
+  {
+    "name": "secops-security-engineer",
+    "description": "Advanced zero-trust architecture, cryptographic integrity, and adversarial threat mitigation. Use this skill for building mission-critical, secure-by-default applications.",
+    "estimatedTokens": 1247,
+    "tags": [
+      "1. The Zero-Trust Security",
+      "Phase A: Identity & Access Orchestration (Auth",
+      "3. Implementation: The Security",
+      "🛡️ Security",
+      "6. Global Security",
+      "Common Security"
+    ],
+    "hash": "06a8873755b9a9c25dd2d22903f46a98edccd4ca82b74a460299eaab0348c107",
+    "path": "/skills/secops-security-engineer.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=secops-security-engineer&mode=text"
+  },
+  {
+    "name": "shadcn-ui",
+    "description": ">",
+    "estimatedTokens": 688,
+    "tags": [
+      "General"
+    ],
+    "hash": "36dadb4c66111cde2212d66e52f125a492c5124133a9b7c8b132361814858d26",
+    "path": "/skills/shadcn-ui.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=shadcn-ui&mode=text"
+  },
+  {
+    "name": "signup-ui-specialist",
+    "description": "Growth-optimized user onboarding and registration engineering. Use this skill for building high-conversion multi-step signups and verification flows.",
+    "estimatedTokens": 414,
+    "tags": [
+      "Signup UI"
+    ],
+    "hash": "d3e1684daacb371702dca1378e7b51bafe791daec8d930e5ffc4edaebeba70c8",
+    "path": "/skills/signup-ui-specialist.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=signup-ui-specialist&mode=text"
+  },
+  {
+    "name": "state-management-strategist",
+    "description": "Advanced state orchestration, reactivity modeling, and high-fidelity data flow engineering. Use this skill for building scalable, high-performance frontend state systems with atomic stores and optimistic synchronization.",
+    "estimatedTokens": 1701,
+    "tags": [
+      "General"
+    ],
+    "hash": "537ca4577bf821e26764bb5f09d2e579bb9c1e67e6287c5f26effde0196c82d6",
+    "path": "/skills/state-management-strategist.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=state-management-strategist&mode=text"
+  },
+  {
+    "name": "step-by-step-reasoner",
+    "description": "Advanced recursive logic, first-principles deduction, and multi-path decision analysis. Use this skill for complex problem solving, mathematical proofs, and high-stakes strategy.",
+    "estimatedTokens": 1269,
+    "tags": [
+      "General"
+    ],
+    "hash": "302f3946aeb35d33f7f324ce0cb0ef808614db5433806d86478890a83d874e39",
+    "path": "/skills/step-by-step-reasoner.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=step-by-step-reasoner&mode=text"
+  },
+  {
+    "name": "supabase-auth-specialist",
+    "description": "Comprehensive configuration guide for Supabase Authentication, including SSR setup in Next.js, RLS policies, and OAuth integrations.",
+    "estimatedTokens": 674,
+    "tags": [
+      "Supabase Auth",
+      "4. Middleware",
+      "5. Security (Row Level Security"
+    ],
+    "hash": "84f60c6d5cbb5f26b3fd46bf26770e470b7aa0c8c15e3c3ace218cc9e257d412",
+    "path": "/skills/supabase-auth-specialist.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=supabase-auth-specialist&mode=text"
+  },
+  {
+    "name": "surgical-debugger",
+    "description": "Advanced root-cause isolation, stack-trace deconstruction, and minimal-disruption bug resolution. Use this skill for identifying and fixing mission-critical system failures.",
+    "estimatedTokens": 1350,
+    "tags": [
+      "General"
+    ],
+    "hash": "4b03037df4ad46729dd616276b56dc4e94391db69631e71975c1e11e088be573",
+    "path": "/skills/surgical-debugger.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=surgical-debugger&mode=text"
+  },
+  {
+    "name": "svelte-framework",
+    "description": "Guidelines for building reactive web applications using Svelte 5 and SvelteKit. Use when creating modern, highly reactive full-stack apps or static sites.",
+    "estimatedTokens": 942,
+    "tags": [
+      "Svelte & SvelteKit Integration Gui",
+      "API",
+      "6. Snippets (Reusable UI"
+    ],
+    "hash": "ba99f3ddef82464d40462d942fdf559fbcc02484830269f2e52b69e37c5a187f",
+    "path": "/skills/svelte-framework.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=svelte-framework&mode=text"
+  },
+  {
+    "name": "systems-architect",
+    "description": "Advanced technical stack orchestration, high-fidelity repository engineering, and multi-tier scalability roadmapping. Use this skill for building production-grade system blueprints and complex refactorings.",
+    "estimatedTokens": 1588,
+    "tags": [
+      "Atomic UI",
+      "Bounded Contexts (Auth",
+      "Feature-specific UI"
+    ],
+    "hash": "b466a88ee2d7b3dc43847e0c22e6508de67b5beec616e01955c438460e0c4e5e",
+    "path": "/skills/systems-architect.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=systems-architect&mode=text"
+  },
+  {
+    "name": "technical-documenter",
+    "description": "Advanced technical memory management, multi-audience documentation engineering, and architectural mapping. Use this skill for building high-fidelity READMEs, API specs, and system walkthroughs.",
+    "estimatedTokens": 1238,
+    "tags": [
+      "🛠️ Qui"
+    ],
+    "hash": "441bb2ae7d79afbe138091b4470b6153dc7c315c0f1156de49e2eac7175a7a09",
+    "path": "/skills/technical-documenter.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=technical-documenter&mode=text"
+  },
+  {
+    "name": "technical-memory-manager",
+    "description": "Technical memory management, project state persistence, and architectural mapping. Use this skill to maintain a CONTEXT.md or MAP.md that tracks implemented features, technical debt, and pending tasks.",
+    "estimatedTokens": 1237,
+    "tags": [
+      "4. Continui"
+    ],
+    "hash": "b037b571a7063e5d43feebd65e3f5a57c78715dd3f87fd359114e871957331b8",
+    "path": "/skills/technical-memory-manager.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=technical-memory-manager&mode=text"
+  },
+  {
+    "name": "tone-style-mimic",
+    "description": "Brand voice, character copywriting. Use this skill when the user asks about rewrite in style, brand voice.",
+    "estimatedTokens": 1435,
+    "tags": [
+      "Phase A: Lingui"
+    ],
+    "hash": "f2e3555db8299c5d5672ea1fd23ff03159e9adc11add06cb6b7bd0deadb4853f",
+    "path": "/skills/tone-style-mimic.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=tone-style-mimic&mode=text"
+  },
+  {
+    "name": "ui-ux-polisher",
+    "description": "Advanced interaction engineering, micro-motion orchestration, and aesthetic refinement. Use this skill for transforming functional UI into distinctive, high-fidelity user experiences.",
+    "estimatedTokens": 1280,
+    "tags": [
+      "UI",
+      "✨ UI",
+      "4. Precision & Flui",
+      "Common UI"
+    ],
+    "hash": "562baa0ee4ea1a05a36c2f04b02deac766afd01922a3e720e9b618f6f92cff62",
+    "path": "/skills/ui-ux-polisher.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=ui-ux-polisher&mode=text"
+  },
+  {
+    "name": "add-function-examples",
+    "description": "Guide for adding new AI function examples, for testing specific features against the actual provider APIs.",
+    "estimatedTokens": 234,
+    "tags": [
+      "General"
+    ],
+    "hash": "b4befbc5a0e0571abac81826be97aa3f457cd93561188974b49048921fe22331",
+    "path": "/skills/vercel-add-function-examples.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=vercel-add-function-examples&mode=text"
+  },
+  {
+    "name": "add-provider-package",
+    "description": "Guide for adding new AI provider packages to the AI SDK. Use when creating a new @ai-sdk/<provider> package to integrate an AI service into the SDK.",
+    "estimatedTokens": 2598,
+    "tags": [
+      "Step-by-Step Gui",
+      "4. Configure Bui",
+      "14. Bui",
+      "Security"
+    ],
+    "hash": "ace1f177ae3c80505de9def37ca49e06473bef09d06fedb9bea8ec3a3c8b35fb",
+    "path": "/skills/vercel-add-provider-package.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=vercel-add-provider-package&mode=text"
+  },
+  {
+    "name": "adr-skill",
+    "description": "Create and maintain Architecture Decision Records (ADRs) optimized for agentic coding workflows. Use when you need to propose, write, update, accept/reject, deprecate, or supersede an ADR; bootstrap an adr folder and index; consult existing ADRs before implementing changes; or enforce ADR conventions. This skill uses Socratic questioning to capture intent before drafting, and validates output against an agent-readiness checklist.",
+    "estimatedTokens": 4100,
+    "tags": [
+      "General"
+    ],
+    "hash": "98d3ebb3d8298650a647dbda600e4b1955e65d47a6f4e21da152ffa1b5adab99",
+    "path": "/skills/vercel-adr-skill.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=vercel-adr-skill&mode=text"
+  },
+  {
+    "name": "capture-api-response-test-fixture",
+    "description": "Capture API response test fixture.",
+    "estimatedTokens": 512,
+    "tags": [
+      "API",
+      "generateText (doGenerate testing",
+      "streamText (doStream testing"
+    ],
+    "hash": "590e748db94b0adcdef24efadf90e977ad74135ecff5e9ab02f89e3f2a43f61a",
+    "path": "/skills/vercel-capture-api-response-test-fixture.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=vercel-capture-api-response-test-fixture&mode=text"
+  },
+  {
+    "name": "develop-ai-functions-example",
+    "description": "Develop examples for AI SDK functions. Use when creating, running, or modifying examples under examples/ai-functions/src to validate provider support, demonstrate features, or create test fixtures.",
+    "estimatedTokens": 1960,
+    "tags": [
+      "General"
+    ],
+    "hash": "9d77f7652e8edda503bb95db8032db3ce781904c4444ec22ecdc307e3ac7fc0d",
+    "path": "/skills/vercel-develop-ai-functions-example.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=vercel-develop-ai-functions-example&mode=text"
+  },
+  {
+    "name": "list-npm-package-content",
+    "description": "List the contents of an npm package tarball before publishing. Use when the user wants to see what files are included in an npm bundle, verify package contents, or debug npm publish issues.",
+    "estimatedTokens": 264,
+    "tags": [
+      "General"
+    ],
+    "hash": "77d8cd66c4fdb6a229bdc812894fc98cc81d79bbb548f33ba9bc2f48ef8c44e9",
+    "path": "/skills/vercel-list-npm-package-content.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=vercel-list-npm-package-content&mode=text"
+  },
+  {
+    "name": "major-version-mode",
+    "description": "\"Context for working on the next AI SDK major release. Only use when explicitly invoked by the user (e.g. via '/major-version-mode'). Do NOT trigger autonomously based on task content.\"",
+    "estimatedTokens": 800,
+    "tags": [
+      "Breaking Change Gui"
+    ],
+    "hash": "d1a8fd62e49149a8781dd84c98524ae5adc3a1ee4d16c1d5aace2add61654769",
+    "path": "/skills/vercel-major-version-mode.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=vercel-major-version-mode&mode=text"
+  },
+  {
+    "name": "update-provider-models",
+    "description": "Add new or remove obsolete model IDs for existing AI SDK providers. Use when adding a model to a provider, removing an obsolete model, or processing a list of model changes from an issue. Triggers on \"add model\", \"remove model\", \"new model ID\", \"obsolete model\", \"update model IDs\".",
+    "estimatedTokens": 2396,
+    "tags": [
+      "General"
+    ],
+    "hash": "cf44e87acc2a81a72605b07f141becff5a808b02182939d1cdda3d73f79a7a13",
+    "path": "/skills/vercel-update-provider-models.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=vercel-update-provider-models&mode=text"
+  },
+  {
+    "name": "ai-sdk",
+    "description": "'Answer questions about the AI SDK and help build AI-powered features. Use when developers: (1) Ask about AI SDK functions like generateText, streamText, ToolLoopAgent, embed, or tools, (2) Want to build AI agents, chatbots, RAG systems, or text generation features, (3) Have questions about AI providers (OpenAI, Anthropic, Google, etc.), streaming, tool calling, structured output, or embeddings, (4) Use React hooks like useChat or useCompletion. Triggers on: \"AI SDK\", \"Vercel AI SDK\", \"generateText\", \"streamText\", \"add AI to my app\", \"build an agent\", \"tool calling\", \"structured output\", \"useChat\".'",
+    "estimatedTokens": 1171,
+    "tags": [
+      "Prerequi",
+      "Bui"
+    ],
+    "hash": "07e3ac5f423104015bb6e324d9840c61f9df52542ad6f3141de0a419d8aefd2f",
+    "path": "/skills/vercel-use-ai-sdk.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=vercel-use-ai-sdk&mode=text"
+  },
+  {
+    "name": "wasp-framework",
+    "description": "Guidelines for building full-stack Web applications using the Wasp framework. Use when building React/Node.js full-stack apps where Wasp's declarative configuration handles routing, auth, and database setups.",
+    "estimatedTokens": 1140,
+    "tags": [
+      "Wasp Framework Integration Gui",
+      "3. Database"
+    ],
+    "hash": "f05c391b3721b7f8eeb9246bb6c916333975fd44c421fb32cd48d3ebff89ae35",
+    "path": "/skills/wasp-framework.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=wasp-framework&mode=text"
+  },
+  {
+    "name": "workos-sso-setup",
+    "description": "Instructions for integrating WorkOS for Enterprise Single Sign-On (SSO), SCIM directory sync, and user identity management APIs.",
+    "estimatedTokens": 507,
+    "tags": [
+      "3. Auth",
+      "4. Manual SSO Integration (Without Auth"
+    ],
+    "hash": "6f61c1f8c1012644e0f38a29876b9dfdfee94230bbd9b2740a52a30754c34d61",
+    "path": "/skills/workos-sso-setup.md",
+    "rawUrl": "https://bkraiskillsmcp.pages.dev/api/skills?id=workos-sso-setup&mode=text"
+  }
+]

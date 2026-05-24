@@ -51,22 +51,20 @@ export class SyncEngine {
 
     const cache = this.loadCache();
 
-    console.log('Fetching remote skills concurrently...');
+    console.log('Fetching remote skills sequentially...');
 
-    // Process all remote repos concurrently using Promise.allSettled
-    const results = await Promise.allSettled(
-      sources.map(async (source) => {
+    for (const source of sources) {
+      try {
         const files = await this.github.fetchDirectoryContents(source, { token });
         const itemsToProcess = [];
 
-        if (!Array.isArray(files)) return;
+        if (!Array.isArray(files)) continue;
 
         for (const f of files) {
           if (f.type === 'file' && f.name.endsWith('.md')) {
             itemsToProcess.push(f);
           } else if (f.type === 'dir') {
-             // For subdirectories, fetch their skill.md concurrently if needed.
-             // We can do another fetch here. Doing it sequentially for simplicity inside this branch, or map it.
+             // Fetch subdirectory skill.md sequentially
              const dirFiles = await this.github.fetchDirectoryContents({
                 name: source.name, repo: source.repo, branch: source.branch, basePath: `${source.basePath ? source.basePath + '/' : ''}${f.name}`
              }, { token });
@@ -76,43 +74,44 @@ export class SyncEngine {
                   itemsToProcess.push({ ...skillMd, name: `${f.name}.md` });
                 }
              }
+             // Pause between subdirectory fetches of same repository config 
+             await new Promise(r => setTimeout(r, 200));
           }
         }
 
-        // Process all files concurrently
-        await Promise.allSettled(itemsToProcess.map(async (file) => {
-           const localPath = path.join(this.srcDir, `${source.name.toLowerCase()}-${file.name}`);
-           const cacheKey = `github:${source.repo}:${file.path}`;
-           const etag = cache[cacheKey];
+        // Process all files sequentially to respect Rate-Limit-Safe Fetch Policy
+        for (const file of itemsToProcess) {
+          const localPath = path.join(this.srcDir, `${source.name.toLowerCase()}-${file.name}`);
+          const cacheKey = `github:${source.repo}:${file.path}`;
+          const etag = cache[cacheKey];
 
-           const { content, etag: newEtag, status } = await this.github.fetchFile(file.download_url, { token }, etag);
+          const { content, etag: newEtag, status } = await this.github.fetchFile(file.download_url, { token }, etag);
 
-           if (status === 304) {
-             console.log(`[Skipped] Unmodified: ${source.name} - ${file.name}`);
-             return; // Unmodified, skip
-           }
+          if (status === 304) {
+            console.log(`[Skipped] Unmodified: ${source.name} - ${file.name}`);
+            continue;
+          }
 
-           if (content !== null) {
-              let finalizedContent = content;
-              if (!finalizedContent.includes('name:')) {
-                const skillName = file.name.replace('.md', '');
-                finalizedContent = `---\nname: ${source.name} ${skillName}\ndescription: Imported skill from ${source.name} repository.\n---\n\n${finalizedContent}`;
-              }
+          if (content !== null) {
+            let finalizedContent = content;
+            if (!finalizedContent.includes('name:')) {
+              const skillName = file.name.replace('.md', '');
+              finalizedContent = `---\nname: ${source.name} ${skillName}\ndescription: Imported skill from ${source.name} repository.\n---\n\n${finalizedContent}`;
+            }
 
-              finalizedContent = this.sanitizeContent(finalizedContent);
-              fs.writeFileSync(localPath, finalizedContent);
-              if (newEtag) cache[cacheKey] = newEtag;
-              console.log(`[Imported] ${source.name} - ${file.name}`);
-           }
-        }));
-      })
-    );
-
-    results.forEach((result, idx) => {
-       if (result.status === 'rejected') {
-          console.error(`[SyncEngine] Failed to process source ${sources[idx].name}:`, result.reason);
-       }
-    });
+            finalizedContent = this.sanitizeContent(finalizedContent);
+            fs.writeFileSync(localPath, finalizedContent);
+            if (newEtag) cache[cacheKey] = newEtag;
+            console.log(`[Imported] ${source.name} - ${file.name}`);
+          }
+          
+          // Pause between individual file downloads
+          await new Promise(r => setTimeout(r, 200));
+        }
+      } catch (err: any) {
+        console.error(`[SyncEngine] Failed to process source ${source.name}:`, err);
+      }
+    }
 
     this.saveCache(cache);
   }
